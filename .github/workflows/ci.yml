@@ -1,0 +1,41 @@
+# The checks of the review copy. They are the same checks that our main repository runs on openmrs/.
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  openmrs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+        with:
+          bun-version: 1.4.4
+      - name: Install openmrs packages
+        run: cd openmrs && bun install --frozen-lockfile
+      - name: openmrs/scripts/check.sh types test build
+        run: openmrs/scripts/check.sh types test build
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 26.13.0
+      - name: Install OpenMRS frontend packages
+        working-directory: openmrs/packages/esm-nexo-care-app
+        run: bun install --frozen-lockfile --linker hoisted
+      - name: Test OpenMRS frontend
+        working-directory: openmrs/packages/esm-nexo-care-app
+        run: bun run test
+      - name: Build OpenMRS frontend for production
+        working-directory: openmrs/packages/esm-nexo-care-app
+        run: bun run build
+  openmrs-omod:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: openmrs/scripts/check.sh omod
+        run: openmrs/scripts/check.sh omod

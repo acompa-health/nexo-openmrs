@@ -1,0 +1,147 @@
+{
+  "note": "Synthetic simulation authority for this exact prepared hypertension content; no clinical approval.",
+  "trust": {
+    "mode": "simulation",
+    "site": "site-fixture",
+    "max_internal_steps": 64,
+    "roles": [
+      {
+        "role": "care_coordinator",
+        "actor": {
+          "id": "SIM-COORD",
+          "kind": "simulation"
+        },
+        "owner": {
+          "id": "owner-care-coordinator",
+          "revision": "r1"
+        },
+        "site": "site-fixture"
+      },
+      {
+        "role": "screening_worker",
+        "actor": {
+          "id": "sim-screener-01",
+          "kind": "simulation"
+        },
+        "owner": {
+          "id": "owner-care-coordinator",
+          "revision": "r1"
+        },
+        "site": "site-fixture"
+      },
+      {
+        "role": "assessing_clinician",
+        "actor": {
+          "id": "sim-clinician-03",
+          "kind": "simulation"
+        },
+        "owner": {
+          "id": "owner-care-coordinator",
+          "revision": "r1"
+        },
+        "site": "site-fixture"
+      },
+      {
+        "role": "pharmacy_worker",
+        "actor": {
+          "id": "sim-pharmacy-01",
+          "kind": "simulation"
+        },
+        "owner": {
+          "id": "owner-care-coordinator",
+          "revision": "r1"
+        },
+        "site": "site-fixture"
+      },
+      {
+        "role": "receiving_clinician",
+        "actor": {
+          "id": "sim-receiving-clinician-01",
+          "kind": "simulation"
+        },
+        "owner": {
+          "id": "owner-care-coordinator",
+          "revision": "r1"
+        },
+        "site": "site-fixture"
+      }
+    ],
+    "authorizations": [
+      {
+        "id": "rwanda.htn_screening_assessment_2024@1.0#categorize_screening",
+        "revision": "sim-r1",
+        "content": {
+          "protocol": "rwanda.htn_screening_assessment_2024",
+          "revision": "1.0",
+          "identity": "sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca"
+        },
+        "scope": {
+          "workflow": "htn_screening_assessment",
+          "state": "screening_reading"
+        },
+        "site": "site-fixture",
+        "mode": "simulation"
+      },
+      {
+        "id": "rwanda.htn_screening_assessment_2024@1.0#route_first_visit",
+        "revision": "sim-r1",
+        "content": {
+          "protocol": "rwanda.htn_screening_assessment_2024",
+          "revision": "1.0",
+          "identity": "sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca"
+        },
+        "scope": {
+          "workflow": "htn_screening_assessment",
+          "state": "first_visit"
+        },
+        "site": "site-fixture",
+        "mode": "simulation"
+      },
+      {
+        "id": "rwanda.htn_screening_assessment_2024@1.0#check_second_visit",
+        "revision": "sim-r1",
+        "content": {
+          "protocol": "rwanda.htn_screening_assessment_2024",
+          "revision": "1.0",
+          "identity": "sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca"
+        },
+        "scope": {
+          "workflow": "htn_screening_assessment",
+          "state": "second_information_pending"
+        },
+        "site": "site-fixture",
+        "mode": "simulation"
+      },
+      {
+        "id": "rwanda.htn_screening_assessment_2024@1.0#start_hc_workup",
+        "revision": "sim-r1",
+        "content": {
+          "protocol": "rwanda.htn_screening_assessment_2024",
+          "revision": "1.0",
+          "identity": "sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca"
+        },
+        "scope": {
+          "workflow": "htn_hc_first_treatment",
+          "state": "workup"
+        },
+        "site": "site-fixture",
+        "mode": "simulation"
+      },
+      {
+        "id": "rwanda.htn_screening_assessment_2024@1.0#select_fig9_band",
+        "revision": "sim-r1",
+        "content": {
+          "protocol": "rwanda.htn_screening_assessment_2024",
+          "revision": "1.0",
+          "identity": "sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca"
+        },
+        "scope": {
+          "workflow": "htn_hc_first_treatment",
+          "state": "treatment_band"
+        },
+        "site": "site-fixture",
+        "mode": "simulation"
+      }
+    ]
+  }
+}

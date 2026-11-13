@@ -1,0 +1,16 @@
+{
+  "version": "v2026-09-24",
+  "file": "ciel-v2026-09-24.jsonl.gz",
+  "source": "https://app.openconceptlab.org/#/orgs/CIEL/sources/CIEL/v2026-09-24/",
+  "archive": "orgs_CIEL_sources_CIEL_v2026-09-24_2026-09-24_030336.zip",
+  "archive_sha256": "6e6e6622c03035da0e4478485a5f13fd725e75ef96d06282be648620f7a762f6",
+  "sha256": "e7361717f7703ad18f8c3630aba4de68434df0adb7d2c275736abf995c17f095",
+  "jsonl_sha256": "fac35e455389dc4a8fe2eabca53c3c264d6717c19428790048a03d38cd6ff6f8",
+  "concepts": 58870,
+  "unique_concepts": 58869,
+  "identical_duplicate_ids": ["149996"],
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "credit": "Columbia International eHealth Laboratory (CIEL), Columbia University; distributed by Open Concept Lab.",
+  "generator": "core/vocabulary/ciel/index.py"
+}

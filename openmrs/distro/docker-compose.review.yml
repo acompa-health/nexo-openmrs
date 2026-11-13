@@ -1,0 +1,11 @@
+# Loads the review build of the rwanda-htn forms in place of the production forms. In the review build each section
+# and question shows its reason on the page (docs/form-design.md, rule D4). Use it on a review server only, on top of
+# the other files:
+#   docker-compose -p nexo-o3 -f distro/docker-compose.yml -f distro/docker-compose.nexo.yml \
+#     -f distro/docker-compose.review.yml up -d backend
+# To go back, run the same command without this file. The review files have the same names as the production files,
+# so each start replaces them. Paths are relative to this distro/ folder.
+services:
+  backend:
+    volumes:
+      - ../protocols/rwanda-htn/build/o3-review/ampathforms:/openmrs/distribution/openmrs_config/ampathforms/nexo:ro

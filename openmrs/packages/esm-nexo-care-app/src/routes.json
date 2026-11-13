@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json.openmrs.org/routes.schema.json",
+  "backendDependencies": {
+    "webservices.rest": ">=2.2.0",
+    "o3forms": ">=2.1.0",
+    "nexo": ">=0.1.0-0"
+  },
+  "extensions": [
+    {
+      "name": "nexo-care-pathway-dashboard",
+      "slot": "patient-chart-dashboard-slot",
+      "component": "carePathwayDashboardLink",
+      "meta": {
+        "slot": "patient-chart-nexo-care-pathway-dashboard-slot",
+        "path": "care-pathway",
+        "title": "Care pathway"
+      },
+      "order": 1
+    },
+    {
+      "name": "nexo-care-pathway-widget",
+      "slot": "patient-chart-nexo-care-pathway-dashboard-slot",
+      "component": "carePathwayWidget",
+      "meta": {
+        "fullWidth": true
+      },
+      "order": 0
+    }
+  ],
+  "pages": [],
+  "workspaces2": [
+    {
+      "name": "nexo-care-task-workspace",
+      "component": "careTaskWorkspace",
+      "window": "nexo-care-task-window"
+    }
+  ],
+  "workspaceWindows2": [
+    {
+      "name": "nexo-care-task-window",
+      "group": "patient-chart",
+      "width": "extra-wide",
+      "canMaximize": true
+    }
+  ]
+}

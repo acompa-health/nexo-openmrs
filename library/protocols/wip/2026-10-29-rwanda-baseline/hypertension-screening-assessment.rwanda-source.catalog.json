@@ -1,0 +1,662 @@
+{
+  "note": "Synthetic shared host contracts for the Rwanda hypertension source reference and national facility build with proposed default SOPs. A host attests patient-correlated assessment, existing prescription and supply objects through event receipts. Optional values remain unknown. No clinical authority or local stock value is supplied by this catalog.",
+  "extension": {
+    "objects": {
+      "patient": {
+        "fields": {
+          "sex": {
+            "type": {
+              "type": "listed",
+              "values": [
+                "female",
+                "male"
+              ]
+            },
+            "optional": true
+          },
+          "birth_date": {
+            "type": {
+              "type": "date"
+            },
+            "optional": true
+          }
+        }
+      },
+      "encounter": {
+        "fields": {
+          "patient": {
+            "type": {
+              "type": "reference",
+              "target": "object:patient"
+            }
+          },
+          "hypertension_symptoms": {
+            "type": {
+              "type": "yes_no"
+            },
+            "optional": true
+          },
+          "organ_damage_evidence": {
+            "type": {
+              "type": "yes_no"
+            },
+            "optional": true
+          },
+          "care_level": {
+            "type": {
+              "type": "listed",
+              "values": [
+                "health_center",
+                "medicalized_health_center",
+                "district_hospital",
+                "provincial_hospital",
+                "level_2_teaching_hospital",
+                "referral_hospital",
+                "university_teaching_hospital"
+              ]
+            },
+            "optional": true
+          },
+          "pregnant": {
+            "type": {
+              "type": "yes_no"
+            },
+            "optional": true
+          },
+          "diabetes": {
+            "type": {
+              "type": "yes_no"
+            },
+            "optional": true
+          },
+          "coronary_artery_disease": {
+            "type": {
+              "type": "yes_no"
+            },
+            "optional": true
+          },
+          "chronic_kidney_disease": {
+            "type": {
+              "type": "yes_no"
+            },
+            "optional": true
+          }
+        }
+      },
+      "observation": {
+        "fields": {
+          "patient": {
+            "type": {
+              "type": "reference",
+              "target": "object:patient"
+            }
+          },
+          "systolic": {
+            "type": {
+              "type": "quantity",
+              "unit": "mm[Hg]"
+            }
+          },
+          "diastolic": {
+            "type": {
+              "type": "quantity",
+              "unit": "mm[Hg]"
+            }
+          },
+          "setting": {
+            "type": {
+              "type": "listed",
+              "values": [
+                "office",
+                "home",
+                "ambulatory"
+              ]
+            }
+          },
+          "encounter": {
+            "type": {
+              "type": "reference",
+              "target": "object:encounter"
+            }
+          },
+          "time": {
+            "type": {
+              "type": "instant"
+            }
+          }
+        }
+      },
+      "laboratory_result": {
+        "fields": {
+          "patient": {
+            "type": {
+              "type": "reference",
+              "target": "object:patient"
+            }
+          },
+          "potassium": {
+            "type": {
+              "type": "quantity",
+              "unit": "mmol/L"
+            },
+            "optional": true
+          }
+        }
+      },
+      "htn_assessment": {
+        "fields": {
+          "patient": {
+            "type": {
+              "type": "reference",
+              "target": "object:patient"
+            }
+          },
+          "reading": {
+            "type": {
+              "type": "reference",
+              "target": "object:observation"
+            }
+          },
+          "time": {
+            "type": {
+              "type": "instant"
+            }
+          },
+          "no_current_regimen": {
+            "type": {
+              "type": "yes_no"
+            },
+            "optional": true
+          },
+          "current_prescription": {
+            "type": {
+              "type": "reference",
+              "target": "object:htn_prescription"
+            },
+            "optional": true
+          },
+          "ckd_stage": {
+            "type": {
+              "type": "listed",
+              "values": [
+                "stage_1_3",
+                "stage_4_5"
+              ]
+            },
+            "optional": true
+          },
+          "confirmed_htn": {
+            "type": {
+              "type": "yes_no"
+            },
+            "optional": true
+          },
+          "pregnant": {
+            "type": {
+              "type": "yes_no"
+            },
+            "optional": true
+          },
+          "symptoms": {
+            "type": {
+              "type": "yes_no"
+            },
+            "optional": true
+          },
+          "organ_damage": {
+            "type": {
+              "type": "yes_no"
+            },
+            "optional": true
+          },
+          "new_concern": {
+            "type": {
+              "type": "yes_no"
+            },
+            "optional": true
+          },
+          "diabetes": {
+            "type": {
+              "type": "yes_no"
+            },
+            "optional": true
+          },
+          "cad": {
+            "type": {
+              "type": "yes_no"
+            },
+            "optional": true
+          },
+          "ckd": {
+            "type": {
+              "type": "yes_no"
+            },
+            "optional": true
+          },
+          "renal_reviewed": {
+            "type": {
+              "type": "yes_no"
+            },
+            "optional": true
+          },
+          "contraindications_reviewed": {
+            "type": {
+              "type": "yes_no"
+            },
+            "optional": true
+          },
+          "medication_reviewed": {
+            "type": {
+              "type": "yes_no"
+            },
+            "optional": true
+          },
+          "adherence_reviewed": {
+            "type": {
+              "type": "yes_no"
+            },
+            "optional": true
+          },
+          "adverse_effects": {
+            "type": {
+              "type": "yes_no"
+            },
+            "optional": true
+          },
+          "target_tolerated": {
+            "type": {
+              "type": "yes_no"
+            },
+            "optional": true
+          },
+          "specialist_required": {
+            "type": {
+              "type": "yes_no"
+            },
+            "optional": true
+          }
+        }
+      },
+      "htn_prescription": {
+        "fields": {
+          "patient": {
+            "type": {
+              "type": "reference",
+              "target": "object:patient"
+            }
+          },
+          "medicine": {
+            "type": {
+              "type": "listed",
+              "values": [
+                "amlodipine",
+                "hydrochlorothiazide",
+                "indapamide_sr",
+                "enalapril",
+                "lisinopril"
+              ]
+            }
+          },
+          "dose": {
+            "type": {
+              "type": "quantity",
+              "unit": "mg"
+            }
+          },
+          "second_medicine": {
+            "type": {
+              "type": "listed",
+              "values": [
+                "none",
+                "amlodipine",
+                "hydrochlorothiazide",
+                "indapamide_sr"
+              ]
+            }
+          },
+          "second_dose": {
+            "type": {
+              "type": "quantity",
+              "unit": "mg"
+            },
+            "optional": true
+          },
+          "valid_until": {
+            "type": {
+              "type": "instant"
+            }
+          },
+          "status": {
+            "type": {
+              "type": "listed",
+              "values": [
+                "active",
+                "stopped"
+              ]
+            }
+          },
+          "prescriber": {
+            "type": {
+              "type": "reference",
+              "target": "actor"
+            }
+          }
+        }
+      },
+      "htn_supply": {
+        "fields": {
+          "patient": {
+            "type": {
+              "type": "reference",
+              "target": "object:patient"
+            }
+          },
+          "prescription": {
+            "type": {
+              "type": "reference",
+              "target": "work"
+            }
+          },
+          "medicine": {
+            "type": {
+              "type": "listed",
+              "values": [
+                "amlodipine",
+                "hydrochlorothiazide",
+                "indapamide_sr",
+                "enalapril",
+                "lisinopril"
+              ]
+            }
+          },
+          "dose": {
+            "type": {
+              "type": "quantity",
+              "unit": "mg"
+            }
+          },
+          "second_medicine": {
+            "type": {
+              "type": "listed",
+              "values": [
+                "none",
+                "amlodipine",
+                "hydrochlorothiazide",
+                "indapamide_sr"
+              ]
+            }
+          },
+          "second_dose": {
+            "type": {
+              "type": "quantity",
+              "unit": "mg"
+            },
+            "optional": true
+          },
+          "stock_available": {
+            "type": {
+              "type": "yes_no"
+            },
+            "optional": true
+          },
+          "packed": {
+            "type": {
+              "type": "yes_no"
+            },
+            "optional": true
+          },
+          "coverage_until": {
+            "type": {
+              "type": "instant"
+            },
+            "optional": true
+          },
+          "time": {
+            "type": {
+              "type": "instant"
+            }
+          }
+        }
+      },
+      "htn_receipt": {
+        "fields": {
+          "patient": {
+            "type": {
+              "type": "reference",
+              "target": "object:patient"
+            }
+          },
+          "prescription": {
+            "type": {
+              "type": "reference",
+              "target": "work"
+            }
+          },
+          "dispensing": {
+            "type": {
+              "type": "reference",
+              "target": "work"
+            }
+          },
+          "received": {
+            "type": {
+              "type": "yes_no"
+            }
+          },
+          "time": {
+            "type": {
+              "type": "instant"
+            }
+          },
+          "proof": {
+            "type": {
+              "type": "text"
+            }
+          }
+        }
+      },
+      "htn_external_work": {
+        "fields": {
+          "patient": {
+            "type": {
+              "type": "reference",
+              "target": "object:patient"
+            }
+          },
+          "destination": {
+            "type": {
+              "type": "identifier"
+            }
+          },
+          "owner": {
+            "type": {
+              "type": "reference",
+              "target": "actor"
+            }
+          },
+          "kind": {
+            "type": {
+              "type": "listed",
+              "values": [
+                "clinical_assessment",
+                "medicine_supply",
+                "diagnostic_assessment",
+                "maternal_assessment",
+                "child_assessment"
+              ]
+            }
+          },
+          "status": {
+            "type": {
+              "type": "listed",
+              "values": [
+                "accepted",
+                "planned"
+              ]
+            }
+          },
+          "due_at": {
+            "type": {
+              "type": "instant"
+            }
+          }
+        }
+      }
+    },
+    "events": {
+      "measurement.recorded": {
+        "payload": {
+          "reading": {
+            "type": {
+              "type": "reference",
+              "target": "object:observation"
+            }
+          },
+          "asserted_at": {
+            "type": {
+              "type": "instant"
+            },
+            "optional": true
+          }
+        }
+      },
+      "result.received.hc_investigations": {
+        "payload": {
+          "result": {
+            "type": {
+              "type": "reference",
+              "target": "object:laboratory_result"
+            }
+          }
+        }
+      }
+    },
+    "orders": {
+      "laboratory": {
+        "content": {
+          "tests": {
+            "type": {
+              "type": "list",
+              "items": {
+                "type": "identifier"
+              }
+            }
+          },
+          "care_level": {
+            "type": {
+              "type": "listed",
+              "values": [
+                "health_center",
+                "medicalized_health_center",
+                "district_hospital",
+                "provincial_hospital",
+                "level_2_teaching_hospital",
+                "referral_hospital",
+                "university_teaching_hospital"
+              ]
+            }
+          }
+        }
+      },
+      "prescription": {
+        "content": {
+          "medicine": {
+            "type": {
+              "type": "identifier"
+            }
+          },
+          "dose": {
+            "type": {
+              "type": "quantity",
+              "unit": "mg"
+            }
+          },
+          "frequency": {
+            "type": {
+              "type": "listed",
+              "values": [
+                "od",
+                "bid"
+              ]
+            }
+          },
+          "printed_line": {
+            "type": {
+              "type": "text"
+            }
+          },
+          "selected_by": {
+            "type": {
+              "type": "reference",
+              "target": "actor"
+            }
+          },
+          "second_medicine": {
+            "type": {
+              "type": "listed",
+              "values": [
+                "none",
+                "amlodipine",
+                "hydrochlorothiazide",
+                "indapamide_sr"
+              ]
+            },
+            "optional": true
+          },
+          "second_dose": {
+            "type": {
+              "type": "quantity",
+              "unit": "mg"
+            },
+            "optional": true
+          },
+          "second_frequency": {
+            "type": {
+              "type": "listed",
+              "values": [
+                "od"
+              ]
+            },
+            "optional": true
+          },
+          "valid_until": {
+            "type": {
+              "type": "instant"
+            },
+            "optional": true
+          },
+          "action": {
+            "type": {
+              "type": "listed",
+              "values": [
+                "start",
+                "renew",
+                "change",
+                "refer"
+              ]
+            },
+            "optional": true
+          },
+          "target_met": {
+            "type": {
+              "type": "yes_no"
+            },
+            "optional": true
+          },
+          "issued_at": {
+            "type": {
+              "type": "instant"
+            },
+            "optional": true
+          },
+          "follow_up_interval": {
+            "type": {
+              "type": "identifier"
+            },
+            "optional": true
+          }
+        }
+      }
+    }
+  }
+}

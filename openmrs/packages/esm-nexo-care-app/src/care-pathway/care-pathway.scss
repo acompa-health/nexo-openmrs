@@ -1,0 +1,178 @@
+@use '@carbon/layout';
+@use '@carbon/type';
+@use '@openmrs/esm-styleguide/src/vars' as *;
+
+.widget {
+  background-color: $ui-background;
+  border: 1px solid $ui-03;
+  margin-bottom: layout.$spacing-05;
+  padding-bottom: layout.$spacing-05;
+}
+
+.banner {
+  max-inline-size: none;
+  inline-size: auto;
+  margin: 0 layout.$spacing-05 layout.$spacing-05;
+}
+
+.section {
+  padding: 0 layout.$spacing-05;
+  margin-top: layout.$spacing-06;
+}
+
+.sectionTitle {
+  @include type.type-style('heading-compact-01');
+  color: $text-02;
+  margin-bottom: layout.$spacing-03;
+  padding-bottom: layout.$spacing-02;
+  border-bottom: 1px solid $ui-03;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: layout.$spacing-03;
+  align-items: center;
+  margin-top: layout.$spacing-04;
+}
+
+.empty {
+  @include type.type-style('body-compact-01');
+  color: $text-02;
+}
+
+.task {
+  border: 1px solid $ui-03;
+  border-left: 4px solid $interactive-01;
+  margin-bottom: layout.$spacing-04;
+  background-color: $ui-01;
+}
+
+.taskHead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: layout.$spacing-03 layout.$spacing-04;
+}
+
+.taskTitle {
+  @include type.type-style('heading-compact-02');
+  color: $color-gray-100;
+}
+
+.taskMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: layout.$spacing-02;
+}
+
+.context {
+  margin-top: layout.$spacing-04;
+}
+
+.contextTitle {
+  @include type.type-style('label-01');
+  color: $text-02;
+  margin-bottom: layout.$spacing-02;
+}
+
+.contextList {
+  display: grid;
+  grid-template-columns: fit-content(40%) minmax(0, 1fr);
+  column-gap: layout.$spacing-05;
+  row-gap: layout.$spacing-02;
+  @include type.type-style('body-compact-01');
+
+  dt {
+    color: $text-02;
+  }
+}
+
+.missing {
+  @include type.type-style('body-compact-01');
+  margin-top: layout.$spacing-04;
+  color: $danger;
+}
+
+.list {
+  margin-bottom: 0;
+}
+
+.mono {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+}
+
+.history {
+  list-style: none;
+}
+
+.historyItem {
+  padding: layout.$spacing-03 0;
+  border-bottom: 1px solid $ui-03;
+}
+
+.historyHead {
+  display: flex;
+  gap: layout.$spacing-04;
+  align-items: baseline;
+}
+
+.historyTime {
+  @include type.type-style('label-01');
+  color: $text-02;
+  min-width: 9rem;
+}
+
+.historyType {
+  @include type.type-style('heading-compact-01');
+  flex: 1;
+}
+
+.historySeq {
+  @include type.type-style('label-01');
+  color: $text-03;
+}
+
+.decisions {
+  list-style: none;
+  margin: layout.$spacing-02 0 0 calc(9rem + #{layout.$spacing-04});
+
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: layout.$spacing-03;
+    padding: layout.$spacing-02 0;
+  }
+}
+
+.rule {
+  @include type.type-style('body-compact-01');
+}
+
+
+
+.orders {
+  list-style: none;
+}
+
+.order {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: layout.$spacing-02 layout.$spacing-04;
+  padding: layout.$spacing-03 0;
+  border-bottom: 1px solid $ui-03;
+}
+
+.orderTitle {
+  @include type.type-style('heading-compact-01');
+}
+
+.orderContext {
+  @include type.type-style('body-compact-01');
+  color: $text-02;
+  flex-basis: 100%;
+}

@@ -1,0 +1,18 @@
+{
+  "name": "abrazos-openmrs",
+  "private": true,
+  "type": "module",
+  "workspaces": ["packages/nexo-forms"],
+  "scripts": {
+    "build:protocol": "bun protocols/rwanda-htn/build.ts",
+    "compile": "bun packages/nexo-forms/src/cli.ts protocols/rwanda-htn",
+    "test": "bun test packages/nexo-forms scripts",
+    "typecheck": "tsc --noEmit -p .",
+    "check": "scripts/check.sh"
+  },
+  "devDependencies": {
+    "@openmrs/esm-expression-evaluator": "11.0.0",
+    "@types/bun": "1.4.4",
+    "typescript": "5.9.3"
+  }
+}

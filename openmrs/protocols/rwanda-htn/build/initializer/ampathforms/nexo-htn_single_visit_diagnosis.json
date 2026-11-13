@@ -1,0 +1,66 @@
+{
+  "name": "Nexo: Assess diagnosis and treatment now after the first office visit",
+  "uuid": "f6b24a5c-5d54-3ccd-86c2-774344300f62",
+  "version": "1",
+  "description": "The clinician records the diagnosis after this one office reading and assesses treatment without routine repeat-visit delay. BP alone does not record a diagnosis. Nexo rwanda.htn_screening_assessment_2024 1.0 (sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca).",
+  "encounterType": "8216442b-9e89-5860-8156-cd2d83195a7b",
+  "encounter": "Nexo Assess diagnosis and treatment now after th…",
+  "processor": "EncounterFormProcessor",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Assess diagnosis and treatment now after the first office visit",
+      "sections": [
+        {
+          "label": "About this step",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "nexo_context",
+              "label": "About this step",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Assess diagnosis and treatment now after the first office visit**",
+                "Done by: Assessing clinician.",
+                "What the protocol needs: The clinician records the diagnosis after this one office reading and assesses treatment without routine repeat-visit delay. BP alone does not record a diagnosis.",
+                "Generated from Nexo. Draft for clinical review, not for care."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Decision",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "diagnosis",
+              "label": "Diagnosis",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "547676c4-295c-5ae8-8424-7e0e3ea9b39a",
+                "answers": [
+                  {
+                    "concept": "CIEL:117399",
+                    "label": "Hypertension"
+                  },
+                  {
+                    "concept": "9508e5ad-fd68-556a-a9fd-abd06d280259",
+                    "label": "Not hypertension"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

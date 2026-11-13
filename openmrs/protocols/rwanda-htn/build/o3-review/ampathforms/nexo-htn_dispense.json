@@ -1,0 +1,345 @@
+{
+  "name": "Nexo: Dispense the authorized hypertension prescription",
+  "uuid": "fe5f701c-1c95-3a58-9da0-60c146b7c6e0",
+  "version": "1",
+  "description": "Review build: shows why each question is asked. Attributed pharmacy report tied to this patient, prescription ID and occurrence, both medicine names and doses, stock, packing, and coverage end. Stock availability alone is not dispensing. Nexo rwanda.htn_screening_assessment_2024 1.0 (sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca).",
+  "encounterType": "bb376f27-86ec-5a84-8f8b-b70629413dce",
+  "encounter": "Nexo HTN dispensing",
+  "processor": "EncounterFormProcessor",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Dispense the authorized hypertension prescription",
+      "sections": [
+        {
+          "label": "About this step",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "nexo_context",
+              "label": "About this step",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Dispense the authorized hypertension prescription**",
+                "Done by: Pharmacy worker.",
+                "What the protocol needs: Attributed pharmacy report tied to this patient, prescription ID and occurrence, both medicine names and doses, stock, packing, and coverage end. Stock availability alone is not dispensing.",
+                "Generated from Nexo. Draft for clinical review, not for care.",
+                "**Review build.** Each section and question shows why it is there. Production shows only the ⓘ."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Stock and packing",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "review__section__1",
+              "label": "Why these questions",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Why these questions are together.** One answer here can end this step: the rule moves the case to \"Supply recovery\" and opens \"Resolve failed medicine supply\" (stop row `supply_unavailable`). So these questions come first.",
+                "**Heading** \"Stock and packing\": agent's choice, review pending. B1, A4: a \"no\" to either question sends the supply to recovery (stop row supply_unavailable), so they come first."
+              ]
+            },
+            {
+              "id": "supply__stock_available",
+              "label": "Medicine in stock",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "b316d3b0-5b55-512e-9ba3-f4255b74fa0b",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__supply__stock_available",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`verify_htn_dispensing`)",
+                "**Required:** yes. A rule needs the answer to decide. \"Not known\" is allowed: the protocol then asks for it later.",
+                "**Shows:** always.",
+                "**How the rules use it:** one answer alone can end this step: the rule moves the case to \"Supply recovery\" and opens \"Resolve failed medicine supply\".",
+                "**ⓘ in production:** none."
+              ]
+            },
+            {
+              "id": "supply__packed",
+              "label": "Supply packed for the patient",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "5aecf5f2-c80d-5d82-936d-41ba22433f06",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__supply__packed",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`verify_htn_dispensing`)",
+                "**Required:** yes. A rule needs the answer to decide. \"Not known\" is allowed: the protocol then asks for it later.",
+                "**Shows:** always.",
+                "**How the rules use it:** one answer alone can end this step: the rule moves the case to \"Supply recovery\" and opens \"Resolve failed medicine supply\".",
+                "**ⓘ in production:** none."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Medicines dispensed",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "review__section__2",
+              "label": "Why these questions",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Why these questions are together.** The other answers of this step. They keep the order of the protocol, except that a question that shows after an answer follows that answer, and questions whose answer changes nothing, and free text, go last.",
+                "**Heading** \"Medicines dispensed\": agent's choice, review pending. B1: what the pharmacy gave and until when, checked against the prescription."
+              ]
+            },
+            {
+              "id": "supply__medicine",
+              "label": "Medicine",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "b1a469c6-4e8e-5d5d-a680-709acebb8fc0",
+                "answers": [
+                  {
+                    "concept": "CIEL:71137",
+                    "label": "Amlodipine"
+                  },
+                  {
+                    "concept": "CIEL:77696",
+                    "label": "Hydrochlorothiazide"
+                  },
+                  {
+                    "concept": "CIEL:77985",
+                    "label": "Indapamide SR"
+                  },
+                  {
+                    "concept": "CIEL:75633",
+                    "label": "Enalapril"
+                  },
+                  {
+                    "concept": "CIEL:78945",
+                    "label": "Lisinopril"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__supply__medicine",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`verify_htn_dispensing`)",
+                "**Required:** yes. The task declares it required, so the pathway refuses the step without it.",
+                "**Shows:** always.",
+                "**How the rules use it:** the answer must hold together with the other answers that the rule reads.",
+                "**ⓘ in production:** none.",
+                "**For the protocol author:** when \"Medicine in stock\" is \"No\", no rule reads Medicine, Dose and Second medicine. The task still requires them, so the form still asks them.",
+                "**For the protocol author:** when \"Supply packed for the patient\" is \"No\", no rule reads Medicine, Dose and Second medicine. The task still requires them, so the form still asks them."
+              ]
+            },
+            {
+              "id": "supply__dose",
+              "label": "Dose (mg)",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c8248a33-e8a5-5011-8386-24f9c1d2daf3",
+                "min": "0"
+              },
+              "hideSteppers": true
+            },
+            {
+              "id": "review__supply__dose",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`verify_htn_dispensing`)",
+                "**Required:** yes. The task declares it required, so the pathway refuses the step without it.",
+                "**Shows:** always.",
+                "**How the rules use it:** the answer must hold together with the other answers that the rule reads.",
+                "**ⓘ in production:** none.",
+                "**For the protocol author:** when \"Medicine in stock\" is \"No\", no rule reads Medicine, Dose and Second medicine. The task still requires them, so the form still asks them.",
+                "**For the protocol author:** when \"Supply packed for the patient\" is \"No\", no rule reads Medicine, Dose and Second medicine. The task still requires them, so the form still asks them."
+              ]
+            },
+            {
+              "id": "supply__second_medicine",
+              "label": "Second medicine",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "2b0abcbc-b575-5298-8525-4960ee0cc425",
+                "answers": [
+                  {
+                    "concept": "5f7e7e31-77da-5c92-b714-f61ece2b9ed8",
+                    "label": "None"
+                  },
+                  {
+                    "concept": "CIEL:71137",
+                    "label": "Amlodipine"
+                  },
+                  {
+                    "concept": "CIEL:77696",
+                    "label": "Hydrochlorothiazide"
+                  },
+                  {
+                    "concept": "CIEL:77985",
+                    "label": "Indapamide SR"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__supply__second_medicine",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`verify_htn_dispensing`)",
+                "**Required:** yes. The task declares it required, so the pathway refuses the step without it.",
+                "**Shows:** always.",
+                "**How the rules use it:** the answer must hold together with the other answers that the rule reads.",
+                "**ⓘ in production:** none.",
+                "**For the protocol author:** when \"Medicine in stock\" is \"No\", no rule reads Medicine, Dose and Second medicine. The task still requires them, so the form still asks them.",
+                "**For the protocol author:** when \"Supply packed for the patient\" is \"No\", no rule reads Medicine, Dose and Second medicine. The task still requires them, so the form still asks them."
+              ]
+            },
+            {
+              "id": "supply__second_dose",
+              "label": "Second medicine dose (mg)",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "6f88ad22-712b-5e5f-a3c4-d0b8bec5daa6",
+                "min": "0"
+              },
+              "hide": {
+                "hideWhenExpression": "[0].indexOf(extractRepeatingGroupValues('concept', allFields[extractRepeatingGroupValues('id', allFields).indexOf('supply__stock_available')].questionOptions.answers).filter(Boolean).indexOf(supply__stock_available)) === -1 || [0].indexOf(extractRepeatingGroupValues('concept', allFields[extractRepeatingGroupValues('id', allFields).indexOf('supply__packed')].questionOptions.answers).filter(Boolean).indexOf(supply__packed)) === -1 || [1, 2, 3].indexOf(extractRepeatingGroupValues('concept', allFields[extractRepeatingGroupValues('id', allFields).indexOf('supply__second_medicine')].questionOptions.answers).filter(Boolean).indexOf(supply__second_medicine)) === -1"
+              },
+              "hideSteppers": true
+            },
+            {
+              "id": "review__supply__second_dose",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`verify_htn_dispensing`)",
+                "**Required:** yes. A rule needs the answer to decide.",
+                "**Shows:** only when Medicine in stock is Yes and Supply packed for the patient is Yes and Second medicine is Amlodipine or Hydrochlorothiazide or Indapamide SR.",
+                "**How the rules use it:** one of several answers that can select a rule.",
+                "**ⓘ in production:** none. Candidate, because it shows only after an earlier answer. Decide in forms.layout.json."
+              ],
+              "hide": {
+                "hideWhenExpression": "[0].indexOf(extractRepeatingGroupValues('concept', allFields[extractRepeatingGroupValues('id', allFields).indexOf('supply__stock_available')].questionOptions.answers).filter(Boolean).indexOf(supply__stock_available)) === -1 || [0].indexOf(extractRepeatingGroupValues('concept', allFields[extractRepeatingGroupValues('id', allFields).indexOf('supply__packed')].questionOptions.answers).filter(Boolean).indexOf(supply__packed)) === -1 || [1, 2, 3].indexOf(extractRepeatingGroupValues('concept', allFields[extractRepeatingGroupValues('id', allFields).indexOf('supply__second_medicine')].questionOptions.answers).filter(Boolean).indexOf(supply__second_medicine)) === -1"
+              }
+            },
+            {
+              "id": "supply__coverage_until",
+              "label": "Supply lasts until",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "datetime",
+                "concept": "5ec48ad1-69b7-5c72-9cee-d12c736951cc"
+              },
+              "hide": {
+                "hideWhenExpression": "[0].indexOf(extractRepeatingGroupValues('concept', allFields[extractRepeatingGroupValues('id', allFields).indexOf('supply__stock_available')].questionOptions.answers).filter(Boolean).indexOf(supply__stock_available)) === -1 || [0].indexOf(extractRepeatingGroupValues('concept', allFields[extractRepeatingGroupValues('id', allFields).indexOf('supply__packed')].questionOptions.answers).filter(Boolean).indexOf(supply__packed)) === -1"
+              }
+            },
+            {
+              "id": "review__supply__coverage_until",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`verify_htn_dispensing`)",
+                "**Required:** yes. A rule needs the answer to decide.",
+                "**Shows:** only when Medicine in stock is Yes and Supply packed for the patient is Yes.",
+                "**How the rules use it:** the answer must hold together with the other answers that the rule reads.",
+                "**ⓘ in production:** none. Candidate, because it shows only after an earlier answer. Decide in forms.layout.json."
+              ],
+              "hide": {
+                "hideWhenExpression": "[0].indexOf(extractRepeatingGroupValues('concept', allFields[extractRepeatingGroupValues('id', allFields).indexOf('supply__stock_available')].questionOptions.answers).filter(Boolean).indexOf(supply__stock_available)) === -1 || [0].indexOf(extractRepeatingGroupValues('concept', allFields[extractRepeatingGroupValues('id', allFields).indexOf('supply__packed')].questionOptions.answers).filter(Boolean).indexOf(supply__packed)) === -1"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "name": "Nexo: Arrange and acknowledge the receiving service handover",
+  "uuid": "a69a9ea0-9ca5-3a29-97a4-e0a37dbffdc3",
+  "version": "1",
+  "description": "Review build: shows why each question is asked. The receiving clinician identifies this patient and named service, accepts responsibility and supplies a resolved external next-work record with matching patient/service, that clinician as its owner, work kind, accepted status and due instant. This is attributed external evidence; it does not execute or complete the receiving service work. Sending a referral or completing a checklist does not prove acceptance. Nexo rwanda.htn_screening_assessment_2024 1.0 (sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca).",
+  "encounterType": "33b859c7-2b98-5347-aa25-74df293527bd",
+  "encounter": "Nexo Arrange and acknowledge the receiving servi…",
+  "processor": "EncounterFormProcessor",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Arrange and acknowledge the receiving service handover",
+      "sections": [
+        {
+          "label": "About this step",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "nexo_context",
+              "label": "About this step",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Arrange and acknowledge the receiving service handover**",
+                "Done by: Receiving clinician.",
+                "What the protocol needs: The receiving clinician identifies this patient and named service, accepts responsibility and supplies a resolved external next-work record with matching patient/service, that clinician as its owner, work kind, accepted status and due instant. This is attributed external evidence; it does not execute or complete the receiving service work. Sending a referral or completing a checklist does not prove acceptance.",
+                "Generated from Nexo. Draft for clinical review, not for care.",
+                "**Review build.** Each section and question shows why it is there. Production shows only the ⓘ."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Decision",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "review__section__1",
+              "label": "Why these questions",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Why these questions are together.** The other answers of this step. They keep the order of the protocol, except that a question that shows after an answer follows that answer, and questions whose answer changes nothing, and free text, go last.",
+                "**Heading** \"Decision\": the name of the record or task. No person chose it."
+              ]
+            },
+            {
+              "id": "destination",
+              "label": "Receiving service",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "98fdb869-5893-5aed-a5cd-d75ebc90da95"
+              }
+            },
+            {
+              "id": "review__destination",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`accept_owned_handover`)",
+                "**Required:** yes. The task declares it required, so the pathway refuses the step without it.",
+                "**Shows:** always.",
+                "**How the rules use it:** the answer must hold together with the other answers that the rule reads.",
+                "**ⓘ in production:** none.",
+                "**For the protocol author:** when \"Receiving service accepts the patient\" is \"No\", no rule reads Receiving service, Type of next care, Status of next care and Next care due. The task still requires them, so the form still asks them.",
+                "**For the protocol author:** when \"Status of next care\" is \"Planned\", no rule reads Receiving service, Receiving service accepts the patient, Type of next care and Next care due. The task still requires them, so the form still asks them."
+              ]
+            },
+            {
+              "id": "accepted",
+              "label": "Receiving service accepts the patient",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "e3f59b0e-054b-58b0-9861-4ea68abaec46",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__accepted",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`accept_owned_handover`)",
+                "**Required:** yes. The task declares it required, so the pathway refuses the step without it.",
+                "**Shows:** always.",
+                "**How the rules use it:** the answer must hold together with the other answers that the rule reads.",
+                "**ⓘ in production:** none.",
+                "**For the protocol author:** when \"Status of next care\" is \"Planned\", no rule reads Receiving service, Receiving service accepts the patient, Type of next care and Next care due. The task still requires them, so the form still asks them."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Accepted next care",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "review__section__2",
+              "label": "Why these questions",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Why these questions are together.** The other answers of this step. They keep the order of the protocol, except that a question that shows after an answer follows that answer, and questions whose answer changes nothing, and free text, go last.",
+                "**Heading** \"Accepted next care\": the name of the record or task. No person chose it."
+              ]
+            },
+            {
+              "id": "next_work__kind",
+              "label": "Type of next care",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "2e9a1d14-dc2b-5c6f-bf80-c089dbb7efa9",
+                "answers": [
+                  {
+                    "concept": "04f03bd2-d749-5dab-ba70-ac8eddb18f9f",
+                    "label": "Clinical assessment"
+                  },
+                  {
+                    "concept": "82f0b1ba-921d-578d-8537-1cb1372e5112",
+                    "label": "Medicine supply"
+                  },
+                  {
+                    "concept": "16f6fcbb-dac6-5384-b0ae-053859970d61",
+                    "label": "Diagnostic assessment"
+                  },
+                  {
+                    "concept": "f17c8cff-7ea4-517b-8af8-1cf41eb62ddc",
+                    "label": "Maternal assessment"
+                  },
+                  {
+                    "concept": "c014fe9c-26cd-5c62-a5d2-bc816d161820",
+                    "label": "Child assessment"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__next_work__kind",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`accept_owned_handover`)",
+                "**Required:** yes. The task declares it required, so the pathway refuses the step without it.",
+                "**Shows:** always.",
+                "**How the rules use it:** the answer must hold together with the other answers that the rule reads.",
+                "**ⓘ in production:** none.",
+                "**For the protocol author:** when \"Receiving service accepts the patient\" is \"No\", no rule reads Receiving service, Type of next care, Status of next care and Next care due. The task still requires them, so the form still asks them.",
+                "**For the protocol author:** when \"Status of next care\" is \"Planned\", no rule reads Receiving service, Receiving service accepts the patient, Type of next care and Next care due. The task still requires them, so the form still asks them."
+              ]
+            },
+            {
+              "id": "next_work__status",
+              "label": "Status of next care",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "a478fd08-a94e-5609-a636-72099e9c6dcc",
+                "answers": [
+                  {
+                    "concept": "6691a58c-d5e6-59fd-b89b-dbd4f095c0a4",
+                    "label": "Accepted"
+                  },
+                  {
+                    "concept": "3e1935d9-c200-5e51-8af9-1b22203b3df8",
+                    "label": "Planned"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__next_work__status",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`accept_owned_handover`)",
+                "**Required:** yes. The task declares it required, so the pathway refuses the step without it.",
+                "**Shows:** always.",
+                "**How the rules use it:** the answer must hold together with the other answers that the rule reads.",
+                "**ⓘ in production:** none.",
+                "**For the protocol author:** when \"Receiving service accepts the patient\" is \"No\", no rule reads Receiving service, Type of next care, Status of next care and Next care due. The task still requires them, so the form still asks them."
+              ]
+            },
+            {
+              "id": "next_work__due_at",
+              "label": "Next care due",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "datetime",
+                "concept": "98b20e1a-00bf-537c-99c1-e9f0c264e33c"
+              }
+            },
+            {
+              "id": "review__next_work__due_at",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`accept_owned_handover`)",
+                "**Required:** yes. The task declares it required, so the pathway refuses the step without it.",
+                "**Shows:** always.",
+                "**How the rules use it:** the answer must hold together with the other answers that the rule reads.",
+                "**ⓘ in production:** none.",
+                "**For the protocol author:** when \"Receiving service accepts the patient\" is \"No\", no rule reads Receiving service, Type of next care, Status of next care and Next care due. The task still requires them, so the form still asks them.",
+                "**For the protocol author:** when \"Status of next care\" is \"Planned\", no rule reads Receiving service, Receiving service accepts the patient, Type of next care and Next care due. The task still requires them, so the form still asks them.",
+                "**For the protocol author:** when \"Type of next care\" is \"Medicine supply\", no rule reads Next care due. The task still requires it, so the form still asks it.",
+                "**For the protocol author:** when \"Type of next care\" is \"Diagnostic assessment\", no rule reads Next care due. The task still requires it, so the form still asks it.",
+                "**For the protocol author:** when \"Type of next care\" is \"Maternal assessment\", no rule reads Next care due. The task still requires it, so the form still asks it.",
+                "**For the protocol author:** when \"Type of next care\" is \"Child assessment\", no rule reads Next care due. The task still requires it, so the form still asks it."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

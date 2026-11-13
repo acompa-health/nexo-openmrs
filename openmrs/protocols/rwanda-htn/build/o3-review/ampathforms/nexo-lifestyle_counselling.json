@@ -1,0 +1,40 @@
+{
+  "name": "Nexo: Lifestyle advice",
+  "uuid": "ae96fb76-a03c-32c9-9f9f-a24b2d431a0a",
+  "version": "1",
+  "description": "Review build: shows why each question is asked. Recorded advice given for each listed item Nexo rwanda.htn_screening_assessment_2024 1.0 (sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca).",
+  "encounterType": "508e3a9c-e6e6-5983-bf37-a3688f9e5a68",
+  "encounter": "Nexo Lifestyle advice",
+  "processor": "EncounterFormProcessor",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Lifestyle advice",
+      "sections": [
+        {
+          "label": "About this step",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "nexo_context",
+              "label": "About this step",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Lifestyle advice**",
+                "Done by: Assessing clinician.",
+                "What the protocol needs: Recorded advice given for each listed item",
+                "Generated from Nexo. Draft for clinical review, not for care.",
+                "**Review build.** Each section and question shows why it is there. Production shows only the ⓘ."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

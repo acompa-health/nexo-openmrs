@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+	<!-- One row for each entry in a patient's Nexo event log. entry_json holds the entry as the client sent it,
+	     with the server's seq. The other columns copy fields out of the entry for lookups. -->
+	<changeSet id="nexo-2026-11-07-create-nexo-event" author="nexo">
+		<preConditions onFail="MARK_RAN">
+			<not>
+				<tableExists tableName="nexo_event"/>
+			</not>
+		</preConditions>
+		<createTable tableName="nexo_event">
+			<column name="id" type="int" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false"/>
+			</column>
+			<column name="uuid" type="char(38)">
+				<constraints nullable="false" unique="true" uniqueConstraintName="nexo_event_uuid"/>
+			</column>
+			<column name="patient_uuid" type="char(38)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="seq" type="int">
+				<constraints nullable="false"/>
+			</column>
+			<column name="kind" type="varchar(20)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="event_id" type="varchar(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="event_type" type="varchar(100)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="occurred_at" type="varchar(40)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="encounter_uuid" type="char(38)"/>
+			<column name="protocol_identity" type="varchar(120)"/>
+			<column name="entry_json" type="LONGTEXT">
+				<constraints nullable="false"/>
+			</column>
+			<column name="creator" type="int">
+				<constraints nullable="false"/>
+			</column>
+			<column name="date_created" type="datetime">
+				<constraints nullable="false"/>
+			</column>
+		</createTable>
+		<!-- The two unique keys start with patient_uuid, so they also serve as the patient_uuid index. -->
+		<addUniqueConstraint tableName="nexo_event" columnNames="patient_uuid, seq"
+		                     constraintName="nexo_event_patient_seq"/>
+		<addUniqueConstraint tableName="nexo_event" columnNames="patient_uuid, event_id"
+		                     constraintName="nexo_event_patient_event"/>
+		<addForeignKeyConstraint baseTableName="nexo_event" baseColumnNames="creator"
+		                         constraintName="nexo_event_creator_fk"
+		                         referencedTableName="users" referencedColumnNames="user_id"/>
+	</changeSet>
+
+	<!-- The database's default collation ignores case and trailing spaces, but the module compares event IDs
+	     exactly. Compare patient and event IDs byte for byte, so "ev-1" and "EV-1" are different events. -->
+	<changeSet id="nexo-2026-11-07-binary-ids" author="nexo" dbms="mysql,mariadb">
+		<sql>ALTER TABLE nexo_event
+			MODIFY patient_uuid char(38) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+			MODIFY event_id varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL</sql>
+	</changeSet>
+</databaseChangeLog>

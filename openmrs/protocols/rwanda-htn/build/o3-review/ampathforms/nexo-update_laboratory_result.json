@@ -1,0 +1,83 @@
+{
+  "name": "Nexo: Update laboratory result",
+  "uuid": "0c01af9d-8dd6-3aa3-a280-f5a0c1c79605",
+  "version": "1",
+  "description": "Review build: shows why each question is asked. A new revision of this laboratory result. The protocol reads the fields it named as missing. Nexo rwanda.htn_screening_assessment_2024 1.0 (sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca).",
+  "encounterType": "bdd70d19-30af-5c78-b620-a62dc0b66850",
+  "encounter": "Nexo Update laboratory result",
+  "processor": "EncounterFormProcessor",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Update laboratory result",
+      "sections": [
+        {
+          "label": "About this step",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "nexo_context",
+              "label": "About this step",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Update laboratory result**",
+                "What the protocol needs: A new revision of this laboratory result. The protocol reads the fields it named as missing.",
+                "Generated from Nexo. Draft for clinical review, not for care.",
+                "**Review build.** Each section and question shows why it is there. Production shows only the ⓘ."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Laboratory result",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "review__section__1",
+              "label": "Why these questions",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Why these questions are together.** The other answers of this step. They keep the order of the protocol, except that a question that shows after an answer follows that answer, and questions whose answer changes nothing, and free text, go last.",
+                "**Heading** \"Laboratory result\": the name of the record or task. No person chose it."
+              ]
+            },
+            {
+              "id": "laboratory_result__potassium",
+              "label": "Serum potassium (mmol/L) (optional)",
+              "type": "obs",
+              "required": false,
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "CIEL:1133",
+                "min": "0"
+              },
+              "hideSteppers": true
+            },
+            {
+              "id": "review__laboratory_result__potassium",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** a later step: \"Make the hypertension prescription decision\" (`authorize_htn_prescription`), \"Make the first hypertension prescription decision\" (`authorize_htn_first_prescription`)",
+                "**Required:** when the protocol names it as missing.",
+                "**Shows:** always.",
+                "**ⓘ in production:** none."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

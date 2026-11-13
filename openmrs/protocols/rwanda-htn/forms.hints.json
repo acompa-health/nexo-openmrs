@@ -1,0 +1,291 @@
+{
+  "$comment": "Light declarative input for the generated forms. It may only (1) rename (labels, encounterTypes, units), (2) bind CIEL concepts (concepts, values), (3) say how the host supplies values a person should not retype: objects it looks up (existing), stable facts that carry over as an editable prefill (carryOver), the role that records events (roles), and explicit object-reference choices (references), and (4) add a field with a written reason (extra). Every other field and rule comes from the Nexo document and catalog.",
+  "concepts": {
+    "observation.systolic": "CIEL:5085",
+    "observation.diastolic": "CIEL:5086",
+    "laboratory_result.potassium": "CIEL:1133",
+    "encounter.pregnant": "CIEL:5272",
+    "htn_assessment.pregnant": "CIEL:5272"
+  },
+  "values": {
+    "yes": "CIEL:1065",
+    "no": "CIEL:1066",
+    "amlodipine": "CIEL:71137",
+    "hydrochlorothiazide": "CIEL:77696",
+    "indapamide_sr": "CIEL:77985",
+    "enalapril": "CIEL:75633",
+    "lisinopril": "CIEL:78945",
+    "hypertension": "CIEL:117399",
+    "not_known": "CIEL:1067"
+  },
+  "existing": {
+    "htn_prescription": {
+      "fromWork": {
+        "template": "prescription",
+        "fields": {
+          "medicine": "medicine",
+          "dose": "dose",
+          "second_medicine": "second_medicine",
+          "second_dose": "second_dose",
+          "valid_until": "valid_until",
+          "prescriber": "selected_by"
+        },
+        "set": {
+          "status": "active"
+        }
+      }
+    }
+  },
+  "carryOver": [
+    "encounter.diabetes",
+    "encounter.coronary_artery_disease",
+    "encounter.chronic_kidney_disease",
+    "encounter.care_level"
+  ],
+  "roles": {
+    "event": "assessing_clinician",
+    "start": {
+      "htn_screening_assessment": "screening_worker"
+    }
+  },
+  "units": {
+    "mm[Hg]": "mmHg"
+  },
+  "labels": {
+    "assessing_clinician": "Assessing clinician",
+    "screening_worker": "Screening worker",
+    "care_coordinator": "Care coordinator",
+    "pharmacy_worker": "Pharmacy worker",
+    "receiving_clinician": "Receiving clinician",
+    "measurement.recorded": "Record a blood-pressure reading",
+    "observation": "Blood-pressure reading",
+    "encounter": "Visit findings",
+    "htn_assessment": "Assessment",
+    "htn_supply": "Dispensing",
+    "htn_receipt": "Receipt",
+    "laboratory_result": "Laboratory result",
+    "htn_external_work": "Accepted next care",
+    "systolic": "Systolic BP",
+    "diastolic": "Diastolic BP",
+    "setting": "Where was BP measured",
+    "office": "Office or clinic",
+    "home": "Home",
+    "ambulatory": "Ambulatory (24 h)",
+    "hypertension_symptoms": "Symptoms of hypertension",
+    "organ_damage_evidence": "Evidence of organ damage",
+    "organ_damage": "Evidence of organ damage",
+    "symptoms": "Symptoms of hypertension",
+    "care_level": "Care level of this facility",
+    "health_center": "Health centre",
+    "medicalized_health_center": "Medicalized health centre",
+    "district_hospital": "District hospital",
+    "provincial_hospital": "Provincial hospital",
+    "level_2_teaching_hospital": "Level 2 teaching hospital",
+    "referral_hospital": "Referral hospital",
+    "university_teaching_hospital": "University teaching hospital",
+    "pregnant": "Currently pregnant",
+    "diabetes": "Diabetes",
+    "cad": "Coronary artery disease",
+    "coronary_artery_disease": "Coronary artery disease",
+    "ckd": "Chronic kidney disease",
+    "chronic_kidney_disease": "Chronic kidney disease",
+    "ckd_stage": "CKD stage",
+    "stage_1_3": "Stage 1 to 3",
+    "stage_4_5": "Stage 4 to 5",
+    "confirmed_htn": "Hypertension confirmed",
+    "new_concern": "New clinical concern",
+    "renal_reviewed": "Renal function reviewed",
+    "contraindications_reviewed": "Contraindications reviewed",
+    "medication_reviewed": "Current medicines reviewed",
+    "adherence_reviewed": "Adherence reviewed",
+    "adverse_effects": "Adverse effects of medicines",
+    "target_tolerated": "Patient tolerates the BP target",
+    "specialist_required": "Specialist care required",
+    "action": "Prescription decision",
+    "start": "Start treatment",
+    "renew": "Renew current treatment",
+    "change": "Change treatment",
+    "refer": "Refer for an individual plan",
+    "medicine": "Medicine",
+    "dose": "Dose",
+    "second_medicine": "Second medicine",
+    "second_dose": "Second medicine dose",
+    "none": "None",
+    "indapamide_sr": "Indapamide SR",
+    "valid_until": "Prescription valid until",
+    "reason": "Reason for the decision",
+    "potassium": "Serum potassium",
+    "stock_available": "Medicine in stock",
+    "packed": "Supply packed for the patient",
+    "coverage_until": "Supply lasts until",
+    "received": "Patient received the medicines",
+    "proof": "How receipt was confirmed",
+    "diagnosis": "Diagnosis",
+    "hypertension": "Hypertension",
+    "not_hypertension": "Not hypertension",
+    "disposition": "What to do next",
+    "retry_pharmacy": "Retry the pharmacy",
+    "receiving_service": "Hand over to the receiving service",
+    "contacted": "Patient contacted",
+    "note": "What was arranged",
+    "destination": "Receiving service",
+    "accepted_work": "Accepted next care",
+    "due_at": "Next care due",
+    "clinical_assessment": "Clinical assessment",
+    "medicine_supply": "Medicine supply",
+    "diagnostic_assessment": "Diagnostic assessment",
+    "maternal_assessment": "Maternal assessment",
+    "child_assessment": "Child assessment",
+    "planned": "Planned",
+    "od": "Once daily",
+    "bid": "Twice daily",
+    "follow_up": "Follow-up",
+    "initial": "Initial",
+    "mode": "Visit type",
+    "target_met": "BP target met",
+    "initial_combination_required": "Combination therapy indicated",
+    "requested_at": "Requested at",
+    "prescription": "Prescription",
+    "dispensing": "Dispensing",
+    "dispensed_at": "Dispensed at",
+    "reading": "Reading",
+    "assessment": "Assessment",
+    "missing_inputs": "Missing information",
+    "first_reading": "First reading",
+    "second_reading": "Second reading",
+    "htn_handover.accepted": "Receiving service accepts the patient",
+    "value:accepted": "Accepted",
+    "htn_screening_assessment": "Hypertension screening",
+    "htn_hc_first_treatment": "First treatment at the health centre",
+    "htn_longitudinal_care": "Hypertension care",
+    "htn_scheduled_review": "Scheduled review",
+    "htn_overdue_contact": "Overdue contact",
+    "htn_screening_recall": "Screening recall",
+    "htn_owned_handover": "Handover to a receiving service",
+    "selected_by": "Selected by",
+    "printed_line": "Printed line",
+    "follow_up_interval": "Review interval",
+    "issued_at": "Issued at",
+    "frequency": "Frequency",
+    "second_frequency": "Second medicine frequency",
+    "tests": "Tests",
+    "advice": "Advice",
+    "value:not_known": "Not known",
+    "htn_external_work.kind": "Type of next care",
+    "htn_external_work.status": "Status of next care",
+    "retry": "Try the handover again",
+    "htn_prescription": "Hypertension prescription",
+    "htn_prescription.status": "Prescription status",
+    "active": "Active",
+    "stopped": "Stopped",
+    "amlodipine": "Amlodipine",
+    "hydrochlorothiazide": "Hydrochlorothiazide",
+    "enalapril": "Enalapril",
+    "lisinopril": "Lisinopril",
+    "current_regimen": "Current antihypertensive regimen",
+    "htn_no_regimen_attestation": "No current antihypertensive attestation",
+    "value:htn_prescription": "Use the current prescription shown above",
+    "value:htn_no_regimen_attestation": "I confirm that this patient takes no antihypertensive medicine",
+    "htn_first_prescription_review.current_regimen": "No current antihypertensive attestation",
+    "reviewed_by": "Assessment completed by",
+    "attested_by": "Attested by",
+    "second reading, exact observation chronology, and patient-correlated encounter findings": "Second blood-pressure reading, with its time and the visit findings",
+    "title:lifestyle_counselling": "Lifestyle advice",
+    "dash_diet": "DASH diet",
+    "physical_activity_150_min_week": "Moderate-to-vigorous physical activity: 150 minutes per week",
+    "glycaemia": "Blood glucose",
+    "hba1c": "HbA1c",
+    "cbc": "Full blood count"
+  },
+  "$labelDecisions": {
+    "$comment": "Display names that an agent chose for the care pathway and the forms where the protocol's own words are authoring text. The protocol is unchanged. Each entry names a label above and gives its reason, who decided (agent or Kuang) and its status (review pending or accepted), as in forms.layout.json.",
+    "second reading, exact observation chronology, and patient-correlated encounter findings": {
+      "reason": "I#390: the second-reading task names its missing information in authoring words, and the history and task card showed them as is. The label uses the terms of the form that collects it: the blood-pressure reading, the time that the form records with it, and the visit findings.",
+      "decidedBy": "agent",
+      "status": "review pending"
+    },
+    "title:lifestyle_counselling": {
+      "reason": "The protocol title \"Lifestyle modification advice (RBCNCD24 PDF p.25); the source names no cadre\" carries a citation and an authoring note. The label is the wording proposed to I#324 (docs/o3-walkthrough.md). It renames the form too, so Initializer gives the form a new UUID.",
+      "decidedBy": "agent",
+      "status": "review pending"
+    },
+    "dash_diet": {
+      "reason": "Lifestyle advice item. RBCNCD24 PDF p.25 reads \"DASH diet\" (Dietary Approaches to Stop Hypertension); the generated name read \"Dash diet\". The wording proposed to I#324.",
+      "decidedBy": "agent",
+      "status": "review pending"
+    },
+    "physical_activity_150_min_week": {
+      "reason": "Lifestyle advice item. The generated name read \"Physical activity 150 min week\". RBCNCD24 PDF p.25 reads \"Moderate-to-vigorous activity 150 min/week\", and the label keeps that intensity so that it gives the same advice as the source. Care check: the label states the advice of RBCNCD24 PDF p.25, so the direction of care does not change. The wording proposed to I#324.",
+      "decidedBy": "agent",
+      "status": "review pending"
+    },
+    "glycaemia": {
+      "reason": "Laboratory test in the health centre work-up. RBCNCD24 PDF p.25 reads \"glycemia\"; the generated name read \"Glycaemia\". The wording proposed to I#324. I#324 Part 2 B is to confirm the local clinician term.",
+      "decidedBy": "agent",
+      "status": "review pending"
+    },
+    "hba1c": {
+      "reason": "Laboratory test in the health centre work-up. RBCNCD24 PDF p.25 reads \"HbA1c\"; the generated name read \"Hba1c\". The wording proposed to I#324. I#324 Part 2 B is to confirm the local clinician term.",
+      "decidedBy": "agent",
+      "status": "review pending"
+    },
+    "cbc": {
+      "reason": "Laboratory test in the health centre work-up. RBCNCD24 PDF p.25 reads \"CBC\"; the generated name read \"Cbc\". The wording proposed to I#324. I#324 Part 2 B is to confirm the local clinician term.",
+      "decidedBy": "agent",
+      "status": "review pending"
+    }
+  },
+  "encounterTypes": {
+    "measurement.recorded": "Nexo BP reading",
+    "htn_clinical_review": "Nexo HTN assessment",
+    "htn_prescription_review": "Nexo HTN prescription decision",
+    "htn_dispense": "Nexo HTN dispensing",
+    "htn_receipt": "Nexo HTN medicine receipt",
+    "htn_next_review": "Nexo HTN next review",
+    "diagnosis_review": "Nexo HTN diagnosis decision",
+    "repeat_office_visit": "Nexo HTN repeat office visit",
+    "collect_information": "Nexo missing information",
+    "screening_recall": "Nexo HTN screening recall",
+    "htn_first_prescription_review": "Nexo HTN first prescription decision"
+  },
+  "extra": {
+    "measurement.recorded": [
+      {
+        "id": "weight",
+        "label": "Weight (kg)",
+        "type": {
+          "type": "quantity",
+          "unit": "kg"
+        },
+        "concept": "CIEL:5089",
+        "reason": "RBCNCD24 PDF p.12, section I.B and Table 1: screen adults for obesity with BMI and waist circumference. No hypertension rule reads it. Decided by an agent, sign-off pending."
+      },
+      {
+        "id": "height",
+        "label": "Height (cm)",
+        "type": {
+          "type": "quantity",
+          "unit": "cm"
+        },
+        "concept": "CIEL:5090",
+        "reason": "RBCNCD24 PDF p.12, Table 1: BMI needs height. No hypertension rule reads it. Decided by an agent, sign-off pending."
+      },
+      {
+        "id": "waist",
+        "label": "Waist circumference (cm)",
+        "type": {
+          "type": "quantity",
+          "unit": "cm"
+        },
+        "concept": "CIEL:163080",
+        "reason": "RBCNCD24 PDF p.12, Table 1: waist circumference marks risk even at normal weight. No hypertension rule reads it. Decided by an agent, sign-off pending."
+      }
+    ]
+  },
+  "references": {
+    "htn_assessment.current_regimen": {
+      "htn_prescription": "latest",
+      "htn_no_regimen_attestation": "attest"
+    }
+  }
+}

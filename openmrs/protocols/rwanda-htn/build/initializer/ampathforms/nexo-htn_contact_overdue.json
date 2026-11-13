@@ -1,0 +1,77 @@
+{
+  "name": "Nexo: Contact the patient and NCD service about overdue review",
+  "uuid": "b00a4ed5-bff7-3980-9b80-49faf1460db4",
+  "version": "1",
+  "description": "Document contact and the next arrangement. Contact does not satisfy the still-open clinical review. Nexo rwanda.htn_screening_assessment_2024 1.0 (sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca).",
+  "encounterType": "63601918-00ea-567c-af52-a4ab3b45f4f7",
+  "encounter": "Nexo Contact the patient and NCD service about o…",
+  "processor": "EncounterFormProcessor",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Contact the patient and NCD service about overdue review",
+      "sections": [
+        {
+          "label": "About this step",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "nexo_context",
+              "label": "About this step",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Contact the patient and NCD service about overdue review**",
+                "Done by: Care coordinator.",
+                "What the protocol needs: Document contact and the next arrangement. Contact does not satisfy the still-open clinical review.",
+                "Generated from Nexo. Draft for clinical review, not for care."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Decision",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "contacted",
+              "label": "Patient contacted",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "b14539d4-6a56-541e-8a13-a6745b6545d0",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "note",
+              "label": "What was arranged",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "adbcb9c9-6dc2-5444-9e1e-584be05bb464",
+                "rows": 3
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

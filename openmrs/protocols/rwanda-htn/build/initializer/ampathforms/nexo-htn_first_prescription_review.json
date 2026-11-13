@@ -1,0 +1,206 @@
+{
+  "name": "Nexo: Make the first hypertension prescription decision",
+  "uuid": "511390b3-73e5-3e81-a28d-9df06e0778b2",
+  "version": "1",
+  "description": "Attributed clinician first-prescription decision after an explicit same-patient, attributed and dated no-regimen attestation. Only supported starting doses are eligible. Nexo rwanda.htn_screening_assessment_2024 1.0 (sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca).",
+  "encounterType": "3de40289-73a0-5893-988d-bb4ea8f1052b",
+  "encounter": "Nexo HTN first prescription decision",
+  "processor": "EncounterFormProcessor",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Make the first hypertension prescription decision",
+      "sections": [
+        {
+          "label": "About this step",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "nexo_context",
+              "label": "About this step",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Make the first hypertension prescription decision**",
+                "Done by: Assessing clinician.",
+                "What the protocol needs: Attributed clinician first-prescription decision after an explicit same-patient, attributed and dated no-regimen attestation. Only supported starting doses are eligible.",
+                "Generated from Nexo. Draft for clinical review, not for care."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Prescribe or refer",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "action",
+              "label": "Prescription decision",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "d5c652ee-b0f8-52a2-a448-dcbd0bb7d54a",
+                "answers": [
+                  {
+                    "concept": "61cc1d99-9328-5ca8-9275-9b3a17029353",
+                    "label": "Start treatment"
+                  },
+                  {
+                    "concept": "5ec5613f-16c9-5570-928b-3e171e8390ea",
+                    "label": "Renew current treatment"
+                  },
+                  {
+                    "concept": "afeacb99-7684-53a4-a109-2b17f4a0945d",
+                    "label": "Change treatment"
+                  },
+                  {
+                    "concept": "e6beb88c-a35f-5a3e-9386-a9bfd392e08c",
+                    "label": "Refer for an individual plan"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Prescription",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "medicine",
+              "label": "Medicine",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "b2a0e624-fe8f-5a54-aaac-5de3027262ef",
+                "answers": [
+                  {
+                    "concept": "CIEL:71137",
+                    "label": "Amlodipine"
+                  },
+                  {
+                    "concept": "CIEL:77696",
+                    "label": "Hydrochlorothiazide"
+                  },
+                  {
+                    "concept": "CIEL:77985",
+                    "label": "Indapamide SR"
+                  },
+                  {
+                    "concept": "CIEL:75633",
+                    "label": "Enalapril"
+                  },
+                  {
+                    "concept": "CIEL:78945",
+                    "label": "Lisinopril"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "potassium_result__potassium",
+              "label": "Serum potassium (mmol/L)",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "CIEL:1133",
+                "min": "0"
+              },
+              "questionInfo": "Asked because enalapril and lisinopril need a potassium result for this patient (RBCNCD24 PDF p.27, Fig. 9).",
+              "hide": {
+                "hideWhenExpression": "!(action === '61cc1d99-9328-5ca8-9275-9b3a17029353') || [3, 4].indexOf(extractRepeatingGroupValues('concept', allFields[extractRepeatingGroupValues('id', allFields).indexOf('medicine')].questionOptions.answers).filter(Boolean).indexOf(medicine)) === -1"
+              },
+              "hideSteppers": true
+            },
+            {
+              "id": "dose",
+              "label": "Dose (mg)",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "e05d9b3f-3c2a-5195-8593-2e79a0599f5c",
+                "min": "0"
+              },
+              "hideSteppers": true
+            },
+            {
+              "id": "second_medicine",
+              "label": "Second medicine",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c4e427b7-0e08-5c14-8e59-94a405888777",
+                "answers": [
+                  {
+                    "concept": "5f7e7e31-77da-5c92-b714-f61ece2b9ed8",
+                    "label": "None"
+                  },
+                  {
+                    "concept": "CIEL:71137",
+                    "label": "Amlodipine"
+                  },
+                  {
+                    "concept": "CIEL:77696",
+                    "label": "Hydrochlorothiazide"
+                  },
+                  {
+                    "concept": "CIEL:77985",
+                    "label": "Indapamide SR"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "second_dose",
+              "label": "Second medicine dose (mg)",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "d8f089b2-484f-59c0-a9e0-9a6ff08f1570",
+                "min": "0"
+              },
+              "hide": {
+                "hideWhenExpression": "!(action === '61cc1d99-9328-5ca8-9275-9b3a17029353') || [3, 4].indexOf(extractRepeatingGroupValues('concept', allFields[extractRepeatingGroupValues('id', allFields).indexOf('medicine')].questionOptions.answers).filter(Boolean).indexOf(medicine)) === -1 || [1, 2, 3].indexOf(extractRepeatingGroupValues('concept', allFields[extractRepeatingGroupValues('id', allFields).indexOf('second_medicine')].questionOptions.answers).filter(Boolean).indexOf(second_medicine)) === -1"
+              },
+              "hideSteppers": true
+            },
+            {
+              "id": "valid_until",
+              "label": "Prescription valid until",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "datetime",
+                "concept": "b53619c8-8aa3-59ed-8b19-8c5ef4aebb71"
+              }
+            },
+            {
+              "id": "reason",
+              "label": "Reason for the decision",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "3809b0ac-c014-57c4-82a6-710cac4ad5ff",
+                "rows": 3
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

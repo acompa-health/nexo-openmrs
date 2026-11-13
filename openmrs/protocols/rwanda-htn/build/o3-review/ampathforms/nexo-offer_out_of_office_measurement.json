@@ -1,0 +1,40 @@
+{
+  "name": "Nexo: Offer out-of-office BP measurement (ABPM or HBPM)",
+  "uuid": "4fb0852e-9e53-392c-bc53-7011f2e091d0",
+  "version": "1",
+  "description": "Review build: shows why each question is asked. Recorded clinician selection: ordered, declined, or not available Nexo rwanda.htn_screening_assessment_2024 1.0 (sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca).",
+  "encounterType": "a4c88877-f6c5-5557-b9ee-391b5d875149",
+  "encounter": "Nexo Offer out-of-office BP measurement",
+  "processor": "EncounterFormProcessor",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Offer out-of-office BP measurement (ABPM or HBPM)",
+      "sections": [
+        {
+          "label": "About this step",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "nexo_context",
+              "label": "About this step",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Offer out-of-office BP measurement (ABPM or HBPM)**",
+                "Done by: Assessing clinician.",
+                "What the protocol needs: Recorded clinician selection: ordered, declined, or not available",
+                "Generated from Nexo. Draft for clinical review, not for care.",
+                "**Review build.** Each section and question shows why it is there. Production shows only the ⓘ."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "name": "Nexo: Resolve failed medicine supply",
+  "uuid": "e7d209ab-f5b7-33d6-82c9-a024ab4d97ce",
+  "version": "1",
+  "description": "Review build: shows why each question is asked. Coordinator records the stock or receipt failure and either arranges another pharmacy attempt or requests an acknowledged NCD service handover. No medicine is silently substituted. Nexo rwanda.htn_screening_assessment_2024 1.0 (sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca).",
+  "encounterType": "8c0b8db1-3866-5bf0-90b4-6db6473a1e11",
+  "encounter": "Nexo Resolve failed medicine supply",
+  "processor": "EncounterFormProcessor",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Resolve failed medicine supply",
+      "sections": [
+        {
+          "label": "About this step",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "nexo_context",
+              "label": "About this step",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Resolve failed medicine supply**",
+                "Done by: Care coordinator.",
+                "What the protocol needs: Coordinator records the stock or receipt failure and either arranges another pharmacy attempt or requests an acknowledged NCD service handover. No medicine is silently substituted.",
+                "Generated from Nexo. Draft for clinical review, not for care.",
+                "**Review build.** Each section and question shows why it is there. Production shows only the ⓘ."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Decision",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "review__section__1",
+              "label": "Why these questions",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Why these questions are together.** The other answers of this step. They keep the order of the protocol, except that a question that shows after an answer follows that answer, and questions whose answer changes nothing, and free text, go last.",
+                "**Heading** \"Decision\": the name of the record or task. No person chose it."
+              ]
+            },
+            {
+              "id": "disposition",
+              "label": "What to do next",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "7974d5d3-af93-5799-b645-5ce6815ff7ff",
+                "answers": [
+                  {
+                    "concept": "c483996a-068c-5ac0-b34f-62cb99d42524",
+                    "label": "Retry the pharmacy"
+                  },
+                  {
+                    "concept": "7cda6b0b-2c57-5525-81af-5db193a256fe",
+                    "label": "Hand over to the receiving service"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__disposition",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`resolve_htn_supply`)",
+                "**Required:** yes. The task declares it required, so the pathway refuses the step without it.",
+                "**Shows:** always.",
+                "**How the rules use it:** one answer alone can end this step: the rule moves the case to \"Supply pending\" and opens \"Dispense the authorized hypertension prescription\".",
+                "**ⓘ in production:** none."
+              ]
+            },
+            {
+              "id": "note",
+              "label": "What was arranged",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "875770f2-3aa2-526d-88dc-0bb535d86959",
+                "rows": 3
+              }
+            },
+            {
+              "id": "review__note",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`resolve_htn_supply`)",
+                "**Required:** yes. The task declares it required, so the pathway refuses the step without it.",
+                "**Shows:** always.",
+                "**ⓘ in production:** none."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,580 @@
+{
+  "numberWords": {
+    "one": 1,
+    "two": 2,
+    "three": 3,
+    "four": 4,
+    "five": 5,
+    "six": 6,
+    "seven": 7,
+    "eight": 8,
+    "nine": 9,
+    "ten": 10,
+    "eleven": 11,
+    "twelve": 12,
+    "fifteen": 15,
+    "twenty": 20,
+    "thirty": 30,
+    "forty": 40,
+    "fifty": 50,
+    "sixty": 60,
+    "hundred": 100,
+    "twice": 2,
+    "thrice": 3,
+    "half": 0.5
+  },
+  "unitSynonyms": [
+    {
+      "pattern": "^bpm\\b",
+      "unit": "/min"
+    },
+    {
+      "pattern": "^ml\\s*/\\s*min\\s*/\\s*(?:\\{1\\.73_m2\\}|1\\.73\\s*m[2²])",
+      "unit": "mL/min/{1.73_m2}"
+    },
+    {
+      "pattern": "^mg\\s*/\\s*kg\\b",
+      "unit": "mg/kg"
+    },
+    {
+      "pattern": "^mg\\s*/\\s*mmol\\b",
+      "unit": "mg/mmol"
+    },
+    {
+      "pattern": "^mg\\s*/\\s*g\\b",
+      "unit": "mg/g"
+    },
+    {
+      "pattern": "^(?:minutes?|mins?|min)\\s*/\\s*(?:weeks?|wks?|wk)\\b",
+      "unit": "min/wk"
+    },
+    {
+      "pattern": "^/\\s*[Ll]\\b",
+      "unit": "/L"
+    },
+    {
+      "pattern": "^a\\b",
+      "unit": "a"
+    },
+    {
+      "pattern": "^(?:years?|yrs?|yo|y)\\b",
+      "unit": "a"
+    },
+    {
+      "pattern": "^(?:months?|mths?|mos?)\\b",
+      "unit": "mo"
+    },
+    {
+      "pattern": "^(?:weeks?|wks?)\\b",
+      "unit": "wk"
+    },
+    {
+      "pattern": "^(?:days?|d)\\b",
+      "unit": "d"
+    },
+    {
+      "pattern": "^(?:hours?|hrs?|h)\\b",
+      "unit": "h"
+    },
+    {
+      "pattern": "^(?:minutes?|mins?)\\b",
+      "unit": "min"
+    },
+    {
+      "pattern": "^(?:seconds?|secs?|s)\\b",
+      "unit": "s"
+    },
+    {
+      "pattern": "^mg\\s*\\/\\s*dl\\b",
+      "unit": "mg/dL"
+    },
+    {
+      "pattern": "^g\\s*\\/\\s*dl\\b",
+      "unit": "g/dL"
+    },
+    {
+      "pattern": "^g\\s*\\/\\s*l\\b",
+      "unit": "g/L"
+    },
+    {
+      "pattern": "^mmol\\s*\\/\\s*l\\b",
+      "unit": "mmol/L"
+    },
+    {
+      "pattern": "^(?:µ|μ|u)mol\\s*\\/\\s*l\\b",
+      "unit": "umol/L"
+    },
+    {
+      "pattern": "^mm\\s*\\[?hg\\]?",
+      "unit": "mm[Hg]"
+    },
+    {
+      "pattern": "^(?:mcg|µg|μg|ug)\\b",
+      "unit": "ug"
+    },
+    {
+      "pattern": "^mg\\b",
+      "unit": "mg"
+    },
+    {
+      "pattern": "^kg\\s*\\/\\s*m(?:2|²)",
+      "unit": "kg/m2"
+    },
+    {
+      "pattern": "^kg\\b",
+      "unit": "kg"
+    },
+    {
+      "pattern": "^g\\b",
+      "unit": "g"
+    },
+    {
+      "pattern": "^cm\\b",
+      "unit": "cm"
+    },
+    {
+      "pattern": "^mm\\b",
+      "unit": "mm"
+    },
+    {
+      "pattern": "^%",
+      "unit": "%"
+    },
+    {
+      "pattern": "^(?:°\\s*c|cel|degrees?)\\b",
+      "unit": "Cel"
+    },
+    {
+      "pattern": "^(?:\\/\\s*min|per minute|breaths)\\b",
+      "unit": "/min"
+    },
+    {
+      "pattern": "^copies",
+      "unit": "{copies}/mL"
+    },
+    {
+      "pattern": "^(?:tablets?|tabs?)\\b",
+      "unit": "{tablet}"
+    },
+    {
+      "pattern": "^(?:doses?)\\b",
+      "unit": "dose"
+    },
+    {
+      "pattern": "^(?:ml)\\b",
+      "unit": "mL"
+    },
+    {
+      "pattern": "^(?:iu|units?)\\b",
+      "unit": "IU"
+    },
+    {
+      "pattern": "^(?:puffs?)\\b",
+      "unit": "puff"
+    },
+    {
+      "pattern": "^(?:times)\\b",
+      "unit": "times"
+    }
+  ],
+  "comparators": [
+    {
+      "before": "\\b(?:at least|no less than|not less than)\\s*$",
+      "op": ">="
+    },
+    {
+      "before": "\\b(?:at most|no more than|not more than)\\s*$",
+      "op": "<="
+    },
+    {
+      "before": "\\b(?:more than|greater than|above|over)\\s*$",
+      "op": ">"
+    },
+    {
+      "before": "(?:less than|under|below|up to)\\s*$",
+      "op": "<"
+    },
+    {
+      "after": "^\\s*(?:or more|or higher|and above)\\b",
+      "op": ">="
+    },
+    {
+      "after": "^\\s*(?:or less|or lower)\\b",
+      "op": "<="
+    }
+  ],
+  "symbolFont": {
+    "": "µ",
+    "": "≥",
+    "": "≤",
+    "": "±",
+    "": "×",
+    "": "°",
+    "": "≈",
+    "": ">",
+    "": "<"
+  },
+  "glyphComparands": [
+    "SBP",
+    "DBP",
+    "BP",
+    "Hb",
+    "HbA1c",
+    "eGFR",
+    "FBG",
+    "RBS",
+    "GA",
+    "age"
+  ],
+  "types": [
+    "table",
+    "schedule",
+    "text",
+    "diagram"
+  ],
+  "noteWords": [
+    "Not stated",
+    "Not snipped",
+    "Image",
+    "Misprint",
+    "Unclear",
+    "Normalized",
+    "Reading",
+    "Contradicts",
+    "See"
+  ],
+  "headers": [
+    "Applies to",
+    "At",
+    "Who acts",
+    "Strength",
+    "Until",
+    "Medicine",
+    "Target"
+  ],
+  "scheduleFields": [
+    "when",
+    "first",
+    "gap",
+    "anchor",
+    "overdue",
+    "expires",
+    "done",
+    "end",
+    "owner"
+  ],
+  "nodeKinds": [
+    "remark",
+    "embedded",
+    "exit",
+    "all",
+    "one"
+  ],
+  "lineKinds": [
+    "caption",
+    "title",
+    "header",
+    "key",
+    "attribution",
+    "footnote",
+    "lane"
+  ],
+  "conditionExclusions": [
+    "except",
+    "unless"
+  ],
+  "conditionTruthWords": {
+    "yes": ["yes", "true", "present", "any"],
+    "no": ["no", "false", "absent"]
+  },
+  "conditionTruthLiterals": ["yes", "no", "true", "false"],
+  "conditionNegativeNames": ["unable", "non"],
+  "conditionNegationOperators": ["not", "without"],
+  "conditionClauseJoins": ["and", "or", "but"],
+  "conditionClauseIntroducers": ["if", "when", "where", "there"],
+  "conditionCopulas": ["has", "have", "is", "are"],
+  "conditionArticles": ["a", "an", "the"],
+  "conditionAnaphora": ["thereafter"],
+  "conditionReason": "^(.+?)\\s+is\\s+a\\s+reason\\s+to\\b",
+  "referralNonActionPatterns": [
+    "\\breview\\s+how\\b[^.;!?]*?\\bwas\\s+referred\\b",
+    "\\bsupervision\\s+was\\s+expanded\\s+to\\s+assess\\b[^.;!?]*?\\breferral\\s+by\\b"
+  ],
+  "referralDescriptionHead": "^The (?:\\w+ )?(?:cells?|blocks?)\\s*(?:,|(?:is|are)\\b)",
+  "referralLabelIntroduction": "^The (?:\\w+ )?(?:cells?|blocks?)\\s*,\\s*$",
+  "negations": [
+    "not",
+    "no",
+    "never",
+    "avoid",
+    "without",
+    "nor",
+    "none",
+    "unless",
+    "except",
+    "contraindicated",
+    "stop",
+    "withhold"
+  ],
+  "modals": [
+    "must",
+    "should",
+    "may",
+    "can",
+    "consider",
+    "recommended",
+    "required",
+    "optional",
+    "preferred"
+  ],
+  "urgency": [
+    "urgent",
+    "urgently",
+    "immediately",
+    "emergency",
+    "rapid",
+    "immediate",
+    "prompt",
+    "promptly",
+    "timely",
+    "as soon as possible"
+  ],
+  "romanNumbers": [
+    "i",
+    "ii",
+    "iii",
+    "iv",
+    "v",
+    "vi",
+    "vii",
+    "viii",
+    "ix",
+    "x"
+  ],
+  "lenientFlags": [
+    "garbled",
+    "ocr",
+    "no-text",
+    "lost-glyph"
+  ],
+  "stop": [
+    "a",
+    "an",
+    "the",
+    "of",
+    "to",
+    "and",
+    "or",
+    "in",
+    "on",
+    "at",
+    "for",
+    "with",
+    "by",
+    "from",
+    "as",
+    "is",
+    "are",
+    "be",
+    "been",
+    "if",
+    "then",
+    "this",
+    "that",
+    "these",
+    "those",
+    "it",
+    "its",
+    "their",
+    "there",
+    "was",
+    "were",
+    "has",
+    "have",
+    "had",
+    "who",
+    "which",
+    "when",
+    "while",
+    "than",
+    "into",
+    "per",
+    "each",
+    "they",
+    "them",
+    "she",
+    "he",
+    "we",
+    "you"
+  ],
+  "imperatives": [
+    "diagnose",
+    "give",
+    "start",
+    "take",
+    "administer",
+    "prescribe",
+    "refer",
+    "treat",
+    "use",
+    "provide",
+    "add",
+    "stop",
+    "do",
+    "check",
+    "measure",
+    "monitor",
+    "repeat",
+    "continue",
+    "increase",
+    "reduce",
+    "assess",
+    "counsel",
+    "screen",
+    "admit",
+    "transfer",
+    "conduct",
+    "initiate",
+    "ensure",
+    "advise",
+    "change",
+    "switch",
+    "begin",
+    "offer",
+    "perform",
+    "arrange",
+    "manage",
+    "evaluate",
+    "investigate",
+    "tick",
+    "circle",
+    "record",
+    "weigh"
+  ],
+  "temporal": [
+    "after",
+    "before",
+    "during",
+    "until",
+    "under",
+    "over",
+    "every",
+    "all",
+    "any"
+  ],
+  "frequency": {
+    "1": "\\b(once|daily|a day|per day|each day|every day|weekly|a week|per week|monthly|a month|annually|annual|yearly|a year|per year|nightly|at night|morning|evening|od|qd|mane|nocte|each|every)\\b",
+    "2": "\\b(twice|bid|b\\.i\\.d|bd|two times|2 times)\\b",
+    "3": "\\b(three times|thrice|tid|t\\.i\\.d|tds|3 times)\\b",
+    "4": "\\b(four times|qid|q\\.i\\.d|qds|4 times)\\b"
+  },
+  "frequencyPeriods": {
+    "d": "\\b(?:d|days?|daily|nightly|od|qd|mane|nocte|morning|evening|bid|b\\.i\\.d|bd|tid|t\\.i\\.d|tds|qid|q\\.i\\.d|qds)\\b",
+    "wk": "\\b(?:wks?|weeks?|weekly)\\b",
+    "mo": "\\b(?:mos?|months?|monthly)\\b",
+    "a": "\\b(?:a|years?|yearly|annual|annually)\\b",
+    "h": "\\b(?:h|hrs?|hours?|hourly)\\b",
+    "min": "\\b(?:mins?|minutes?|minutely)\\b",
+    "s": "\\b(?:s|secs?|seconds?)\\b"
+  },
+  "oneWords": "\\b(a|an|one|once|next|single|each|every|daily|weekly|monthly|per)\\b",
+  "articleKinds": [
+    "evaluation",
+    "trial",
+    "review",
+    "cohort",
+    "article"
+  ],
+  "emptyCells": [
+    "none",
+    "nil",
+    "-",
+    "–",
+    "—"
+  ],
+  "urgencyExclusions": "\\brapid diagnostic tests?\\b|\\brdts?\\b|\\bimmediate[ -]release\\b",
+  "negationEquivalents": {
+    "unless": [
+      "not"
+    ]
+  },
+  "conditionContinuations": [
+    "and",
+    "or",
+    "after",
+    "at",
+    "before",
+    "when",
+    "while",
+    "in",
+    "on",
+    "if",
+    "with",
+    "without",
+    "unless",
+    "from",
+    "during",
+    "for",
+    "no response"
+  ],
+  "wordFamilies": {
+    "contraindication": "contraindicated",
+    "contraindications": "contraindicated"
+  },
+  "anaphoricIncludes": "^These include\\b",
+  "sharedContextHeaders": [
+    "Applies to",
+    "At",
+    "Who acts"
+  ],
+  "captureAnnotations": "\\{fill:[^}]*\\}",
+  "coverageImperatives": [
+    "give",
+    "refer",
+    "treat",
+    "start",
+    "stop",
+    "check",
+    "measure",
+    "prescribe",
+    "administer",
+    "repeat",
+    "monitor",
+    "advise",
+    "counsel",
+    "test",
+    "screen",
+    "admit",
+    "transfer",
+    "do not",
+    "avoid",
+    "never",
+    "continue",
+    "increase",
+    "reduce",
+    "assess",
+    "ask",
+    "look",
+    "record",
+    "tick",
+    "weigh",
+    "take"
+  ],
+  "labelLenientFlags": [
+    "garbled",
+    "columns",
+    "ocr",
+    "no-text"
+  ],
+  "nonClaimKinds": [
+    "caption",
+    "title",
+    "header",
+    "attribution",
+    "lane"
+  ],
+  "onlyIfConnectors": [
+    "only",
+    "where"
+  ]
+}

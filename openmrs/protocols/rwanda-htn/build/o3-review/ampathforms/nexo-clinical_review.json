@@ -1,0 +1,40 @@
+{
+  "name": "Nexo: Clinical review of an undetermined decision",
+  "uuid": "1a80805a-0fc4-36c3-bc4b-8fa363e11667",
+  "version": "1",
+  "description": "Review build: shows why each question is asked. Reviewer's recorded decision and rationale For unassessed danger, record immediate assessment or escalation, its urgency, the accepting clinician or service and preserved treatment. Collection alone does not complete this duty. Nexo rwanda.htn_screening_assessment_2024 1.0 (sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca).",
+  "encounterType": "58b36be2-8af2-518d-89e3-8e8781d60aa2",
+  "encounter": "Nexo Clinical review of an undetermined decision",
+  "processor": "EncounterFormProcessor",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Clinical review of an undetermined decision",
+      "sections": [
+        {
+          "label": "About this step",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "nexo_context",
+              "label": "About this step",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Clinical review of an undetermined decision**",
+                "Done by: Assessing clinician.",
+                "What the protocol needs: Reviewer's recorded decision and rationale For unassessed danger, record immediate assessment or escalation, its urgency, the accepting clinician or service and preserved treatment. Collection alone does not complete this duty.",
+                "Generated from Nexo. Draft for clinical review, not for care.",
+                "**Review build.** Each section and question shows why it is there. Production shows only the ⓘ."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "name": "Nexo: Confirm that the patient received the medicines",
+  "uuid": "52ad7e46-39da-3157-8030-76321034c993",
+  "version": "1",
+  "description": "Patient-linked receipt for the exact prescription and dispensing task, with date and receipt proof. Pharmacy packing alone is not patient receipt or medicine use. Nexo rwanda.htn_screening_assessment_2024 1.0 (sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca).",
+  "encounterType": "f392d0ea-c62d-57ed-9277-b8c4f64e9f54",
+  "encounter": "Nexo HTN medicine receipt",
+  "processor": "EncounterFormProcessor",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Confirm that the patient received the medicines",
+      "sections": [
+        {
+          "label": "About this step",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "nexo_context",
+              "label": "About this step",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Confirm that the patient received the medicines**",
+                "Done by: Care coordinator.",
+                "What the protocol needs: Patient-linked receipt for the exact prescription and dispensing task, with date and receipt proof. Pharmacy packing alone is not patient receipt or medicine use.",
+                "Generated from Nexo. Draft for clinical review, not for care."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Receipt",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "receipt__received",
+              "label": "Patient received the medicines",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "0a64d136-b194-5ea4-8eab-2228c04a0f2b",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "receipt__proof",
+              "label": "How receipt was confirmed",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "100d65bd-92f8-5c1b-be36-db333e517531",
+                "rows": 3
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

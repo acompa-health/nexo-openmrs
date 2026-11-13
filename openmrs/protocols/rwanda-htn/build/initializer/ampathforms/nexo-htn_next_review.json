@@ -1,0 +1,294 @@
+{
+  "name": "Nexo: Attend the next NCD hypertension review",
+  "uuid": "0fdf7e3b-38e1-31a2-8daa-159117c67a1a",
+  "version": "1",
+  "description": "Attributed new office reading for this patient at the follow-up encounter. Completing the visit opens a fresh clinical assessment; it does not prove control or renew medicine. Nexo rwanda.htn_screening_assessment_2024 1.0 (sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca).",
+  "encounterType": "2a10108f-994d-5362-bf22-d120a4d889da",
+  "encounter": "Nexo HTN next review",
+  "processor": "EncounterFormProcessor",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Attend the next NCD hypertension review",
+      "sections": [
+        {
+          "label": "About this step",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "nexo_context",
+              "label": "About this step",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Attend the next NCD hypertension review**",
+                "Done by: Assessing clinician.",
+                "What the protocol needs: Attributed new office reading for this patient at the follow-up encounter. Completing the visit opens a fresh clinical assessment; it does not prove control or renew medicine.",
+                "Generated from Nexo. Draft for clinical review, not for care."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Blood-pressure reading",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "reading__systolic",
+              "label": "Systolic BP (mmHg)",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "CIEL:5085",
+                "min": "0"
+              },
+              "hideSteppers": true
+            },
+            {
+              "id": "reading__diastolic",
+              "label": "Diastolic BP (mmHg)",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "CIEL:5086",
+                "min": "0"
+              },
+              "hideSteppers": true
+            },
+            {
+              "id": "reading__setting",
+              "label": "Where was BP measured",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "dbade085-4113-5dac-bc64-fd3bdd5ed476",
+                "answers": [
+                  {
+                    "concept": "bc59db88-d16e-5fc5-9905-d9b8c3a2afca",
+                    "label": "Office or clinic"
+                  },
+                  {
+                    "concept": "c0770136-933c-592a-9c4d-eb8818bc2e50",
+                    "label": "Home"
+                  },
+                  {
+                    "concept": "77d83b25-e9ce-5bb3-bd9f-ee7e25d700db",
+                    "label": "Ambulatory (24 h)"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Visit findings",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "reading__encounter__hypertension_symptoms",
+              "label": "Symptoms of hypertension",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "eea11f79-217d-59ec-be69-c25adb1f404b",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "reading__encounter__organ_damage_evidence",
+              "label": "Evidence of organ damage",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "e73ea83c-4010-5db3-b8d3-4b1069aa2c5f",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "reading__encounter__care_level",
+              "label": "Care level of this facility",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "36b1edb3-f3ae-5595-b067-72b6a606cdb3",
+                "answers": [
+                  {
+                    "concept": "2a26c527-b70f-538c-8819-759f2d2b41f7",
+                    "label": "Health centre"
+                  },
+                  {
+                    "concept": "80ab44c1-7f81-58a3-a143-5420d9482981",
+                    "label": "Medicalized health centre"
+                  },
+                  {
+                    "concept": "0f316b75-66b6-5abc-bcc0-96f291e40877",
+                    "label": "District hospital"
+                  },
+                  {
+                    "concept": "3d83353a-7cd0-5151-aacc-9c904d08761b",
+                    "label": "Provincial hospital"
+                  },
+                  {
+                    "concept": "5bf45767-4563-52cb-914d-91904b6b057f",
+                    "label": "Level 2 teaching hospital"
+                  },
+                  {
+                    "concept": "5fb5891e-48dc-5b00-8493-932d702cee64",
+                    "label": "Referral hospital"
+                  },
+                  {
+                    "concept": "064b36ae-889f-5bee-8116-1c09aa665a27",
+                    "label": "University teaching hospital"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "reading__encounter__pregnant",
+              "label": "Currently pregnant",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "CIEL:5272",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "reading__encounter__diabetes",
+              "label": "Diabetes",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "8cb5fcdd-fc75-5d47-aef5-1ca60d76a0c1",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "reading__encounter__coronary_artery_disease",
+              "label": "Coronary artery disease",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "5084c169-4345-5d4b-88d9-9ff030b94389",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "reading__encounter__chronic_kidney_disease",
+              "label": "Chronic kidney disease",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "a4b7087f-2644-51a2-a27a-6594823e9e34",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

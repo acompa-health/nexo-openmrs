@@ -1,0 +1,182 @@
+{
+  "name": "Nexo: Update dispensing",
+  "uuid": "b1e4aaf8-4fda-38f8-9bca-45c7b92c2695",
+  "version": "1",
+  "description": "A new revision of this dispensing. The protocol reads the fields it named as missing. Nexo rwanda.htn_screening_assessment_2024 1.0 (sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca).",
+  "encounterType": "add87053-1aa2-58d9-a27c-5fb0bed82c54",
+  "encounter": "Nexo Update dispensing",
+  "processor": "EncounterFormProcessor",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Update dispensing",
+      "sections": [
+        {
+          "label": "About this step",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "nexo_context",
+              "label": "About this step",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Update dispensing**",
+                "What the protocol needs: A new revision of this dispensing. The protocol reads the fields it named as missing.",
+                "Generated from Nexo. Draft for clinical review, not for care."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Dispensing",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "htn_supply__medicine",
+              "label": "Medicine",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "b1a469c6-4e8e-5d5d-a680-709acebb8fc0",
+                "answers": [
+                  {
+                    "concept": "CIEL:71137",
+                    "label": "Amlodipine"
+                  },
+                  {
+                    "concept": "CIEL:77696",
+                    "label": "Hydrochlorothiazide"
+                  },
+                  {
+                    "concept": "CIEL:77985",
+                    "label": "Indapamide SR"
+                  },
+                  {
+                    "concept": "CIEL:75633",
+                    "label": "Enalapril"
+                  },
+                  {
+                    "concept": "CIEL:78945",
+                    "label": "Lisinopril"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "htn_supply__dose",
+              "label": "Dose (mg)",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c8248a33-e8a5-5011-8386-24f9c1d2daf3",
+                "min": "0"
+              },
+              "hideSteppers": true
+            },
+            {
+              "id": "htn_supply__second_medicine",
+              "label": "Second medicine",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "2b0abcbc-b575-5298-8525-4960ee0cc425",
+                "answers": [
+                  {
+                    "concept": "5f7e7e31-77da-5c92-b714-f61ece2b9ed8",
+                    "label": "None"
+                  },
+                  {
+                    "concept": "CIEL:71137",
+                    "label": "Amlodipine"
+                  },
+                  {
+                    "concept": "CIEL:77696",
+                    "label": "Hydrochlorothiazide"
+                  },
+                  {
+                    "concept": "CIEL:77985",
+                    "label": "Indapamide SR"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "htn_supply__second_dose",
+              "label": "Second medicine dose (mg) (optional)",
+              "type": "obs",
+              "required": false,
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "6f88ad22-712b-5e5f-a3c4-d0b8bec5daa6",
+                "min": "0"
+              },
+              "hideSteppers": true
+            },
+            {
+              "id": "htn_supply__stock_available",
+              "label": "Medicine in stock (optional)",
+              "type": "obs",
+              "required": false,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "b316d3b0-5b55-512e-9ba3-f4255b74fa0b",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "htn_supply__packed",
+              "label": "Supply packed for the patient (optional)",
+              "type": "obs",
+              "required": false,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "5aecf5f2-c80d-5d82-936d-41ba22433f06",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "htn_supply__coverage_until",
+              "label": "Supply lasts until (optional)",
+              "type": "obs",
+              "required": false,
+              "questionOptions": {
+                "rendering": "datetime",
+                "concept": "5ec48ad1-69b7-5c72-9cee-d12c736951cc"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

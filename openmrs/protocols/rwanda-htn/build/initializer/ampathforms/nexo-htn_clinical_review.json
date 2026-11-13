@@ -1,0 +1,471 @@
+{
+  "name": "Nexo: Assess hypertension and reconcile current medicines",
+  "uuid": "5fe29477-5569-3eca-8041-8022f64d9174",
+  "version": "1",
+  "description": "Attributed clinician assessment for this patient and the task reading, with time, confirmed diagnosis, pregnancy, symptoms, organ damage, comorbidities, renal and contraindication review, medicines, adherence, adverse effects and target tolerance. The host supplies the assessment object; a task request alone proves none of these. Nexo rwanda.htn_screening_assessment_2024 1.0 (sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca).",
+  "encounterType": "1f844276-fb1f-5326-b836-47c5b060eab0",
+  "encounter": "Nexo HTN assessment",
+  "processor": "EncounterFormProcessor",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Assess hypertension and reconcile current medicines",
+      "sections": [
+        {
+          "label": "About this step",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "nexo_context",
+              "label": "About this step",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Assess hypertension and reconcile current medicines**",
+                "Done by: Assessing clinician.",
+                "What the protocol needs: Attributed clinician assessment for this patient and the task reading, with time, confirmed diagnosis, pregnancy, symptoms, organ damage, comorbidities, renal and contraindication review, medicines, adherence, adverse effects and target tolerance. The host supplies the assessment object; a task request alone proves none of these.",
+                "Generated from Nexo. Draft for clinical review, not for care."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Danger signs",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "assessment__symptoms",
+              "label": "Symptoms of hypertension",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "bdc986eb-99ea-5c00-9510-0a7babbf6d6f",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "assessment__organ_damage",
+              "label": "Evidence of organ damage",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "3ef1fac4-b486-5420-8549-d286132f0239",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Reasons for other care",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "assessment__pregnant",
+              "label": "Currently pregnant",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "CIEL:5272",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "assessment__new_concern",
+              "label": "New clinical concern",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "0a248287-6efd-5ea0-ba3a-867711e82c16",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "assessment__adverse_effects",
+              "label": "Adverse effects of medicines",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "35c64bc2-679c-5022-9b98-5fef67bf6735",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "assessment__specialist_required",
+              "label": "Specialist care required",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "94faed82-a865-59ec-9397-ca6ae4723c53",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Conditions that change the medicines",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "assessment__diabetes",
+              "label": "Diabetes",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "25fb5acd-b0c4-555f-9c21-7641fa6215d4",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "assessment__ckd",
+              "label": "Chronic kidney disease",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "fe7c4653-7124-51fe-a457-a340af6a7c1d",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Diagnosis",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "assessment__confirmed_htn",
+              "label": "Hypertension confirmed",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "f1326165-4f1d-5a9b-a291-610f53d519db",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Review checklist",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "assessment__renal_reviewed",
+              "label": "Renal function reviewed",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "9679ddd9-a72c-5170-864f-1c8f3d27835a",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "assessment__contraindications_reviewed",
+              "label": "Contraindications reviewed",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "850ae865-8189-5b14-baad-c836b71383b1",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "assessment__medication_reviewed",
+              "label": "Current medicines reviewed",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "eff17080-fe09-55b6-bfa6-d4cfb62e1888",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "assessment__adherence_reviewed",
+              "label": "Adherence reviewed",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "bfbca7d2-9a06-56ab-b6ce-5be179fa1cca",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "assessment__target_tolerated",
+              "label": "Patient tolerates the BP target",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "2b7f9834-f258-5257-a7c7-311641d1315b",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              },
+              "questionInfo": "Asked here because the prescription step uses it. A dose above the usual range is allowed only when this is yes (RBCNCD24 PDF p.27)."
+            },
+            {
+              "id": "assessment__current_regimen",
+              "label": "Current antihypertensive regimen",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "964c606d-ffc9-53f1-abb6-a6d59cdbd5ad",
+                "answers": [
+                  {
+                    "concept": "e8832494-4adf-5be0-bc26-50e407af4356",
+                    "label": "Use the current prescription shown above"
+                  },
+                  {
+                    "concept": "120faafb-a3b1-5397-b9a6-c20cda558e0b",
+                    "label": "I confirm that this patient takes no antihypertensive medicine"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              },
+              "questionInfo": "Choose the current prescription shown above, or confirm that this patient takes no antihypertensive medicine. Your confirmation records you and this encounter date as the evidence for the first prescription."
+            },
+            {
+              "id": "assessment__cad",
+              "label": "Coronary artery disease",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "42219279-330a-5c1b-9fa1-05e9130a0dc8",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

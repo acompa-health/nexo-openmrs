@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- The event log store. It uses the core Hibernate session and transaction manager. -->
+	<bean id="nexo.eventLog" class="org.openmrs.module.nexo.api.NexoEventLog">
+		<constructor-arg ref="dbSessionFactory"/>
+		<constructor-arg ref="transactionManager"/>
+	</bean>
+</beans>

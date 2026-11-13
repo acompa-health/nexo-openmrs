@@ -1,0 +1,210 @@
+{
+  "name": "Nexo: Update visit findings",
+  "uuid": "c5e52784-c3b4-3921-83b5-2d4838edbfc3",
+  "version": "1",
+  "description": "A new revision of this visit findings. The protocol reads the fields it named as missing. Nexo rwanda.htn_screening_assessment_2024 1.0 (sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca).",
+  "encounterType": "1865fcb4-8dd8-599f-8cce-fa2e4f8aea1f",
+  "encounter": "Nexo Update visit findings",
+  "processor": "EncounterFormProcessor",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Update visit findings",
+      "sections": [
+        {
+          "label": "About this step",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "nexo_context",
+              "label": "About this step",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Update visit findings**",
+                "What the protocol needs: A new revision of this visit findings. The protocol reads the fields it named as missing.",
+                "Generated from Nexo. Draft for clinical review, not for care."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Visit findings",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "encounter__hypertension_symptoms",
+              "label": "Symptoms of hypertension (optional)",
+              "type": "obs",
+              "required": false,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "eea11f79-217d-59ec-be69-c25adb1f404b",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "encounter__organ_damage_evidence",
+              "label": "Evidence of organ damage (optional)",
+              "type": "obs",
+              "required": false,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "e73ea83c-4010-5db3-b8d3-4b1069aa2c5f",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "encounter__care_level",
+              "label": "Care level of this facility (optional)",
+              "type": "obs",
+              "required": false,
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "36b1edb3-f3ae-5595-b067-72b6a606cdb3",
+                "answers": [
+                  {
+                    "concept": "2a26c527-b70f-538c-8819-759f2d2b41f7",
+                    "label": "Health centre"
+                  },
+                  {
+                    "concept": "80ab44c1-7f81-58a3-a143-5420d9482981",
+                    "label": "Medicalized health centre"
+                  },
+                  {
+                    "concept": "0f316b75-66b6-5abc-bcc0-96f291e40877",
+                    "label": "District hospital"
+                  },
+                  {
+                    "concept": "3d83353a-7cd0-5151-aacc-9c904d08761b",
+                    "label": "Provincial hospital"
+                  },
+                  {
+                    "concept": "5bf45767-4563-52cb-914d-91904b6b057f",
+                    "label": "Level 2 teaching hospital"
+                  },
+                  {
+                    "concept": "5fb5891e-48dc-5b00-8493-932d702cee64",
+                    "label": "Referral hospital"
+                  },
+                  {
+                    "concept": "064b36ae-889f-5bee-8116-1c09aa665a27",
+                    "label": "University teaching hospital"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "encounter__pregnant",
+              "label": "Currently pregnant (optional)",
+              "type": "obs",
+              "required": false,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "CIEL:5272",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "encounter__diabetes",
+              "label": "Diabetes (optional)",
+              "type": "obs",
+              "required": false,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "8cb5fcdd-fc75-5d47-aef5-1ca60d76a0c1",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "encounter__coronary_artery_disease",
+              "label": "Coronary artery disease (optional)",
+              "type": "obs",
+              "required": false,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "5084c169-4345-5d4b-88d9-9ff030b94389",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "encounter__chronic_kidney_disease",
+              "label": "Chronic kidney disease (optional)",
+              "type": "obs",
+              "required": false,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "a4b7087f-2644-51a2-a27a-6594823e9e34",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

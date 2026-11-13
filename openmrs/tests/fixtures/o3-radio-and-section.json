@@ -1,0 +1,70 @@
+{
+  "encounterType": "3de40289-73a0-5893-988d-bb4ea8f1052b",
+  "encounter": "Nexo HTN first prescription decision",
+  "processor": "EncounterFormProcessor",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "name": "O3 required radio and closed section reproduction",
+  "uuid": "f7c2aa00-3425-4c0d-a6cc-361000000001",
+  "version": "1.0",
+  "pages": [
+    {
+      "label": "Reproduction",
+      "sections": [
+        {
+          "label": "Required answer",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "action",
+              "label": "Prescription decision",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "d5c652ee-b0f8-52a2-a448-dcbd0bb7d54a",
+                "answers": [
+                  {
+                    "concept": "61cc1d99-9328-5ca8-9275-9b3a17029353",
+                    "label": "Start treatment"
+                  },
+                  {
+                    "concept": "5ec5613f-16c9-5570-928b-3e171e8390ea",
+                    "label": "Renew current treatment"
+                  },
+                  {
+                    "concept": "afeacb99-7684-53a4-a109-2b17f4a0945d",
+                    "label": "Change treatment"
+                  },
+                  {
+                    "concept": "e6beb88c-a35f-5a3e-9386-a9bfd392e08c",
+                    "label": "Refer for an individual plan"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Also relevant",
+          "isExpanded": "false",
+          "questions": [
+            {
+              "id": "repro_note",
+              "type": "markdown",
+              "label": "Section state",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "This section must start closed."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

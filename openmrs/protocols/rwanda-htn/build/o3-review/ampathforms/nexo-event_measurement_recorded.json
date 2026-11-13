@@ -1,0 +1,553 @@
+{
+  "name": "Nexo: Record a blood-pressure reading",
+  "uuid": "987d256a-5b6d-3f68-a4e7-a5f960308f90",
+  "version": "1",
+  "description": "Review build: shows why each question is asked. Record a blood-pressure reading Nexo rwanda.htn_screening_assessment_2024 1.0 (sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca).",
+  "encounterType": "e08b4aca-c66b-5e33-84e9-5e77049447b6",
+  "encounter": "Nexo BP reading",
+  "processor": "EncounterFormProcessor",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Record a blood-pressure reading",
+      "sections": [
+        {
+          "label": "About this step",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "nexo_context",
+              "label": "About this step",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Record a blood-pressure reading**",
+                "Generated from Nexo. Draft for clinical review, not for care.",
+                "**Review build.** Each section and question shows why it is there. Production shows only the ⓘ."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Blood-pressure reading",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "review__section__1",
+              "label": "Why these questions",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Why these questions are together.** The other answers of this step. They keep the order of the protocol, except that a question that shows after an answer follows that answer, and questions whose answer changes nothing, and free text, go last.",
+                "**Heading** \"Blood-pressure reading\": the name of the record or task. No person chose it."
+              ]
+            },
+            {
+              "id": "reading__systolic",
+              "label": "Systolic BP (mmHg)",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "CIEL:5085",
+                "min": "0"
+              },
+              "hideSteppers": true
+            },
+            {
+              "id": "review__reading__systolic",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** a later step: `categorize_screening`, `route_first_visit`, \"Collect the named missing information\" (`resume_screening_reading`), `select_fig9_band`, \"Assess hypertension and reconcile current medicines\" (`review_htn_assessment`), \"Make the hypertension prescription decision\" (`authorize_htn_prescription`), \"Make the first hypertension prescription decision\" (`authorize_htn_first_prescription`)",
+                "**Required:** yes. The event declares it required, so the pathway refuses the step without it.",
+                "**Shows:** always.",
+                "**ⓘ in production:** none. Candidate, because a later step uses the answer. Decide in forms.layout.json."
+              ]
+            },
+            {
+              "id": "reading__diastolic",
+              "label": "Diastolic BP (mmHg)",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "CIEL:5086",
+                "min": "0"
+              },
+              "hideSteppers": true
+            },
+            {
+              "id": "review__reading__diastolic",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** a later step: `categorize_screening`, `route_first_visit`, \"Collect the named missing information\" (`resume_screening_reading`), `select_fig9_band`, \"Assess hypertension and reconcile current medicines\" (`review_htn_assessment`), \"Make the hypertension prescription decision\" (`authorize_htn_prescription`), \"Make the first hypertension prescription decision\" (`authorize_htn_first_prescription`)",
+                "**Required:** yes. The event declares it required, so the pathway refuses the step without it.",
+                "**Shows:** always.",
+                "**ⓘ in production:** none. Candidate, because a later step uses the answer. Decide in forms.layout.json."
+              ]
+            },
+            {
+              "id": "reading__setting",
+              "label": "Where was BP measured",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "dbade085-4113-5dac-bc64-fd3bdd5ed476",
+                "answers": [
+                  {
+                    "concept": "bc59db88-d16e-5fc5-9905-d9b8c3a2afca",
+                    "label": "Office or clinic"
+                  },
+                  {
+                    "concept": "c0770136-933c-592a-9c4d-eb8818bc2e50",
+                    "label": "Home"
+                  },
+                  {
+                    "concept": "77d83b25-e9ce-5bb3-bd9f-ee7e25d700db",
+                    "label": "Ambulatory (24 h)"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__reading__setting",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** a later step: `categorize_screening`, \"Collect the named missing information\" (`resume_screening_reading`), \"Assess hypertension and reconcile current medicines\" (`review_htn_assessment`)",
+                "**Required:** yes. The event declares it required, so the pathway refuses the step without it.",
+                "**Shows:** always.",
+                "**ⓘ in production:** none. Candidate, because a later step uses the answer. Decide in forms.layout.json."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Visit findings",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "review__section__2",
+              "label": "Why these questions",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Why these questions are together.** The other answers of this step. They keep the order of the protocol, except that a question that shows after an answer follows that answer, and questions whose answer changes nothing, and free text, go last.",
+                "**Heading** \"Visit findings\": the name of the record or task. No person chose it."
+              ]
+            },
+            {
+              "id": "reading__encounter__hypertension_symptoms",
+              "label": "Symptoms of hypertension",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "eea11f79-217d-59ec-be69-c25adb1f404b",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__reading__encounter__hypertension_symptoms",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** a later step: `categorize_screening`, `route_first_visit`, \"Collect the named missing information\" (`resume_screening_reading`)",
+                "**Required:** yes. A rule needs the answer to decide. \"Not known\" is allowed: the protocol then asks for it later.",
+                "**Shows:** always.",
+                "**ⓘ in production:** none. Candidate, because a later step uses the answer. Decide in forms.layout.json."
+              ]
+            },
+            {
+              "id": "reading__encounter__organ_damage_evidence",
+              "label": "Evidence of organ damage",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "e73ea83c-4010-5db3-b8d3-4b1069aa2c5f",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__reading__encounter__organ_damage_evidence",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** a later step: `categorize_screening`, `route_first_visit`, \"Collect the named missing information\" (`resume_screening_reading`)",
+                "**Required:** yes. A rule needs the answer to decide. \"Not known\" is allowed: the protocol then asks for it later.",
+                "**Shows:** always.",
+                "**ⓘ in production:** none. Candidate, because a later step uses the answer. Decide in forms.layout.json."
+              ]
+            },
+            {
+              "id": "reading__encounter__care_level",
+              "label": "Care level of this facility",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "36b1edb3-f3ae-5595-b067-72b6a606cdb3",
+                "answers": [
+                  {
+                    "concept": "2a26c527-b70f-538c-8819-759f2d2b41f7",
+                    "label": "Health centre"
+                  },
+                  {
+                    "concept": "80ab44c1-7f81-58a3-a143-5420d9482981",
+                    "label": "Medicalized health centre"
+                  },
+                  {
+                    "concept": "0f316b75-66b6-5abc-bcc0-96f291e40877",
+                    "label": "District hospital"
+                  },
+                  {
+                    "concept": "3d83353a-7cd0-5151-aacc-9c904d08761b",
+                    "label": "Provincial hospital"
+                  },
+                  {
+                    "concept": "5bf45767-4563-52cb-914d-91904b6b057f",
+                    "label": "Level 2 teaching hospital"
+                  },
+                  {
+                    "concept": "5fb5891e-48dc-5b00-8493-932d702cee64",
+                    "label": "Referral hospital"
+                  },
+                  {
+                    "concept": "064b36ae-889f-5bee-8116-1c09aa665a27",
+                    "label": "University teaching hospital"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "review__reading__encounter__care_level",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** a later step: `start_hc_workup`",
+                "**Required:** yes. A rule needs the answer to decide. \"Not known\" is allowed: the protocol then asks for it later.",
+                "**Shows:** always.",
+                "**ⓘ in production:** none. Candidate, because a later step uses the answer. Decide in forms.layout.json."
+              ]
+            },
+            {
+              "id": "reading__encounter__pregnant",
+              "label": "Currently pregnant",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "CIEL:5272",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__reading__encounter__pregnant",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** a later step: `categorize_screening`, `route_first_visit`, \"Collect the named missing information\" (`resume_screening_reading`), `select_fig9_band`",
+                "**Required:** yes. A rule needs the answer to decide. \"Not known\" is allowed: the protocol then asks for it later.",
+                "**Shows:** always.",
+                "**ⓘ in production:** none. Candidate, because a later step uses the answer. Decide in forms.layout.json."
+              ]
+            },
+            {
+              "id": "reading__encounter__diabetes",
+              "label": "Diabetes",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "8cb5fcdd-fc75-5d47-aef5-1ca60d76a0c1",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__reading__encounter__diabetes",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** a later step: `select_fig9_band`",
+                "**Required:** yes. A rule needs the answer to decide. \"Not known\" is allowed: the protocol then asks for it later.",
+                "**Shows:** always.",
+                "**ⓘ in production:** none. Candidate, because a later step uses the answer. Decide in forms.layout.json."
+              ]
+            },
+            {
+              "id": "reading__encounter__coronary_artery_disease",
+              "label": "Coronary artery disease",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "5084c169-4345-5d4b-88d9-9ff030b94389",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__reading__encounter__coronary_artery_disease",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** a later step: `select_fig9_band`",
+                "**Required:** yes. A rule needs the answer to decide. \"Not known\" is allowed: the protocol then asks for it later.",
+                "**Shows:** always.",
+                "**ⓘ in production:** none. Candidate, because a later step uses the answer. Decide in forms.layout.json."
+              ]
+            },
+            {
+              "id": "reading__encounter__chronic_kidney_disease",
+              "label": "Chronic kidney disease",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "a4b7087f-2644-51a2-a27a-6594823e9e34",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__reading__encounter__chronic_kidney_disease",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** a later step: `select_fig9_band`",
+                "**Required:** yes. A rule needs the answer to decide. \"Not known\" is allowed: the protocol then asks for it later.",
+                "**Shows:** always.",
+                "**ⓘ in production:** none. Candidate, because a later step uses the answer. Decide in forms.layout.json."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Also relevant",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "review__section__3",
+              "label": "Why these questions",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Why these questions are together.** Fields that the hints file adds, each with a cited reason. No rule reads them, so they are optional and the section starts closed.",
+                "**Heading** \"Also relevant\": the name of the record or task. No person chose it."
+              ]
+            },
+            {
+              "id": "extra__weight",
+              "label": "Weight (kg) (optional)",
+              "type": "obs",
+              "required": false,
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "CIEL:5089",
+                "min": "0"
+              },
+              "hideSteppers": true
+            },
+            {
+              "id": "review__extra__weight",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** no rule. Added by the hints file: RBCNCD24 PDF p.12, section I.B and Table 1: screen adults for obesity with BMI and waist circumference. No hypertension rule reads it. Decided by an agent, sign-off pending.",
+                "**Required:** no.",
+                "**Shows:** always.",
+                "**ⓘ in production:** none."
+              ]
+            },
+            {
+              "id": "extra__height",
+              "label": "Height (cm) (optional)",
+              "type": "obs",
+              "required": false,
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "CIEL:5090",
+                "min": "0"
+              },
+              "hideSteppers": true
+            },
+            {
+              "id": "review__extra__height",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** no rule. Added by the hints file: RBCNCD24 PDF p.12, Table 1: BMI needs height. No hypertension rule reads it. Decided by an agent, sign-off pending.",
+                "**Required:** no.",
+                "**Shows:** always.",
+                "**ⓘ in production:** none."
+              ]
+            },
+            {
+              "id": "extra__waist",
+              "label": "Waist circumference (cm) (optional)",
+              "type": "obs",
+              "required": false,
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "CIEL:163080",
+                "min": "0"
+              },
+              "hideSteppers": true
+            },
+            {
+              "id": "review__extra__waist",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** no rule. Added by the hints file: RBCNCD24 PDF p.12, Table 1: waist circumference marks risk even at normal weight. No hypertension rule reads it. Decided by an agent, sign-off pending.",
+                "**Required:** no.",
+                "**Shows:** always.",
+                "**ⓘ in production:** none."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

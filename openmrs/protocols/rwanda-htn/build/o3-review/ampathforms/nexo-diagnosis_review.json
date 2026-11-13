@@ -1,0 +1,94 @@
+{
+  "name": "Nexo: Decide whether to diagnose hypertension after two office visits",
+  "uuid": "fe684362-ce55-3707-8bfe-c88f4be6a0d3",
+  "version": "1",
+  "description": "Review build: shows why each question is asked. The clinician records the diagnosis decision for this patient Nexo rwanda.htn_screening_assessment_2024 1.0 (sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca).",
+  "encounterType": "0ed8b575-7973-54c2-9ad0-423f8c5fb9ce",
+  "encounter": "Nexo HTN diagnosis decision",
+  "processor": "EncounterFormProcessor",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Decide whether to diagnose hypertension after two office visits",
+      "sections": [
+        {
+          "label": "About this step",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "nexo_context",
+              "label": "About this step",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Decide whether to diagnose hypertension after two office visits**",
+                "Done by: Assessing clinician.",
+                "What the protocol needs: The clinician records the diagnosis decision for this patient",
+                "Generated from Nexo. Draft for clinical review, not for care.",
+                "**Review build.** Each section and question shows why it is there. Production shows only the ⓘ."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Decision",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "review__section__1",
+              "label": "Why these questions",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Why these questions are together.** The other answers of this step. They keep the order of the protocol, except that a question that shows after an answer follows that answer, and questions whose answer changes nothing, and free text, go last.",
+                "**Heading** \"Decision\": the name of the record or task. No person chose it."
+              ]
+            },
+            {
+              "id": "diagnosis",
+              "label": "Diagnosis",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "085cc6f2-c62d-5812-8039-771f81aa0f1b",
+                "answers": [
+                  {
+                    "concept": "CIEL:117399",
+                    "label": "Hypertension"
+                  },
+                  {
+                    "concept": "9508e5ad-fd68-556a-a9fd-abd06d280259",
+                    "label": "Not hypertension"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__diagnosis",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`record_diagnosis`)",
+                "**Required:** yes. The task declares it required, so the pathway refuses the step without it.",
+                "**Shows:** always.",
+                "**How the rules use it:** one answer alone can end this step: the rule ends this pathway (\"Diagnosed\") and opens \"First treatment at the health centre\".",
+                "**ⓘ in production:** none."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

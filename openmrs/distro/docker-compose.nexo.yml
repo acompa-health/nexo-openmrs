@@ -1,0 +1,20 @@
+# Adds the nexo backend module and the rwanda-htn build output to the O3 3.8.0 backend.
+# Use it on top of docker-compose.yml, with the database passwords in distro/.env (see distro/.env.example):
+#   docker-compose -p nexo-o3 -f distro/docker-compose.yml -f distro/docker-compose.nexo.yml up -d
+# Build the module first (see docs/omod.md): if the .omod file is missing, Docker makes an empty folder there.
+# Change the version in the omod line when omod/pom.xml changes. Paths are relative to this distro/ folder.
+#
+# At each start the backend copies /openmrs/distribution/openmrs_modules into /openmrs/data/modules and
+# /openmrs/distribution/openmrs_config into /openmrs/data/configuration (startup-init.sh, `cp -R`). The copy does
+# not remove old files, so a file you delete here stays in the openmrs-data volume until you remove it there.
+services:
+  backend:
+    volumes:
+      - ../omod/omod/target/nexo-0.1.0-SNAPSHOT.omod:/openmrs/distribution/openmrs_modules/nexo-0.1.0-SNAPSHOT.omod:ro
+      # Initializer metadata. Initializer reads each domain folder recursively.
+      - ../protocols/rwanda-htn/build/initializer/concepts:/openmrs/distribution/openmrs_config/concepts/nexo:ro
+      - ../protocols/rwanda-htn/build/initializer/encountertypes:/openmrs/distribution/openmrs_config/encountertypes/nexo:ro
+      - ../protocols/rwanda-htn/build/initializer/ampathforms:/openmrs/distribution/openmrs_config/ampathforms/nexo:ro
+      # protocol.json and binding.json, served by GET /ws/rest/v1/nexo/protocols/rwanda-htn/{bundle,binding}.
+      # The folder also holds initializer/, o3/ and report.md; the module reads only the two JSON files.
+      - ../protocols/rwanda-htn/build:/openmrs/distribution/openmrs_config/nexo/rwanda-htn:ro

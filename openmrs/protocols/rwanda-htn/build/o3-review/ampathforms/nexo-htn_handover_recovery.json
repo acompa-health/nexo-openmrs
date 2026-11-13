@@ -1,0 +1,119 @@
+{
+  "name": "Nexo: Resolve the unaccepted handover",
+  "uuid": "d9d131a8-5b6c-3545-83f3-04d6d40d26cc",
+  "version": "1",
+  "description": "Review build: shows why each question is asked. The coordinator contacts the named receiving service and records the next arrangement. A failed handover remains open until a clinician accepts it. Nexo rwanda.htn_screening_assessment_2024 1.0 (sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca).",
+  "encounterType": "022ef4ae-db0b-5d41-83a4-b6e8341138e6",
+  "encounter": "Nexo Resolve the unaccepted handover",
+  "processor": "EncounterFormProcessor",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Resolve the unaccepted handover",
+      "sections": [
+        {
+          "label": "About this step",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "nexo_context",
+              "label": "About this step",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Resolve the unaccepted handover**",
+                "Done by: Care coordinator.",
+                "What the protocol needs: The coordinator contacts the named receiving service and records the next arrangement. A failed handover remains open until a clinician accepts it.",
+                "Generated from Nexo. Draft for clinical review, not for care.",
+                "**Review build.** Each section and question shows why it is there. Production shows only the ⓘ."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Decision",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "review__section__1",
+              "label": "Why these questions",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Why these questions are together.** The other answers of this step. They keep the order of the protocol, except that a question that shows after an answer follows that answer, and questions whose answer changes nothing, and free text, go last.",
+                "**Heading** \"Decision\": the name of the record or task. No person chose it."
+              ]
+            },
+            {
+              "id": "retry",
+              "label": "Try the handover again",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "1d04f4b4-e25a-5d0f-83e5-e88df1c70c09",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__retry",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`retry_owned_handover`)",
+                "**Required:** yes. The task declares it required, so the pathway refuses the step without it.",
+                "**Shows:** always.",
+                "**How the rules use it:** one answer alone can end this step: the rule moves the case to \"Handover\" and opens \"Arrange and acknowledge the receiving service handover\".",
+                "**ⓘ in production:** none."
+              ]
+            },
+            {
+              "id": "note",
+              "label": "What was arranged",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "6bc97338-a760-54a0-8522-c5d071e40933",
+                "rows": 3
+              }
+            },
+            {
+              "id": "review__note",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`retry_owned_handover`)",
+                "**Required:** yes. The task declares it required, so the pathway refuses the step without it.",
+                "**Shows:** always.",
+                "**ⓘ in production:** none."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

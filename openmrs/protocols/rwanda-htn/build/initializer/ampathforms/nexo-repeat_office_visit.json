@@ -1,0 +1,39 @@
+{
+  "name": "Nexo: Repeat office BP visit within four weeks (RBCNCD24 PDF p.12 Fig. 2 and PDF p.24)",
+  "uuid": "2bde28b9-e797-3d91-b44b-379d25543e51",
+  "version": "1",
+  "description": "An office BP reading for this patient at a separate encounter, within four weeks of the first office reading Nexo rwanda.htn_screening_assessment_2024 1.0 (sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca).",
+  "encounterType": "6b034d89-f511-5c83-9955-e739c0afcae4",
+  "encounter": "Nexo HTN repeat office visit",
+  "processor": "EncounterFormProcessor",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Repeat office BP visit within four weeks (RBCNCD24 PDF p.12 Fig. 2 and PDF p.24)",
+      "sections": [
+        {
+          "label": "About this step",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "nexo_context",
+              "label": "About this step",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Repeat office BP visit within four weeks (RBCNCD24 PDF p.12 Fig. 2 and PDF p.24)**",
+                "Done by: Assessing clinician.",
+                "What the protocol needs: An office BP reading for this patient at a separate encounter, within four weeks of the first office reading",
+                "Generated from Nexo. Draft for clinical review, not for care."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

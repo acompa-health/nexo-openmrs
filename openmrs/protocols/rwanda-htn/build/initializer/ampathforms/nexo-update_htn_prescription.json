@@ -1,0 +1,161 @@
+{
+  "name": "Nexo: Update hypertension prescription",
+  "uuid": "3899947c-daab-3675-9c81-bf82f59b9003",
+  "version": "1",
+  "description": "A new revision of this hypertension prescription. The protocol reads the fields it named as missing. Nexo rwanda.htn_screening_assessment_2024 1.0 (sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca).",
+  "encounterType": "ff8f9cad-4b5b-5e6a-bb19-0b1a2a117a7c",
+  "encounter": "Nexo Update hypertension prescription",
+  "processor": "EncounterFormProcessor",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Update hypertension prescription",
+      "sections": [
+        {
+          "label": "About this step",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "nexo_context",
+              "label": "About this step",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Update hypertension prescription**",
+                "What the protocol needs: A new revision of this hypertension prescription. The protocol reads the fields it named as missing.",
+                "Generated from Nexo. Draft for clinical review, not for care."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Hypertension prescription",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "htn_prescription__medicine",
+              "label": "Medicine",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "5fb42ddc-3d69-5abe-9717-ddac916915a8",
+                "answers": [
+                  {
+                    "concept": "CIEL:71137",
+                    "label": "Amlodipine"
+                  },
+                  {
+                    "concept": "CIEL:77696",
+                    "label": "Hydrochlorothiazide"
+                  },
+                  {
+                    "concept": "CIEL:77985",
+                    "label": "Indapamide SR"
+                  },
+                  {
+                    "concept": "CIEL:75633",
+                    "label": "Enalapril"
+                  },
+                  {
+                    "concept": "CIEL:78945",
+                    "label": "Lisinopril"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "htn_prescription__dose",
+              "label": "Dose (mg)",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "25112126-5d67-54bf-b2d7-e2f1612d0aaf",
+                "min": "0"
+              },
+              "hideSteppers": true
+            },
+            {
+              "id": "htn_prescription__second_medicine",
+              "label": "Second medicine",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "63f1c551-e59f-59c6-9f8d-d0bf6193b6d9",
+                "answers": [
+                  {
+                    "concept": "5f7e7e31-77da-5c92-b714-f61ece2b9ed8",
+                    "label": "None"
+                  },
+                  {
+                    "concept": "CIEL:71137",
+                    "label": "Amlodipine"
+                  },
+                  {
+                    "concept": "CIEL:77696",
+                    "label": "Hydrochlorothiazide"
+                  },
+                  {
+                    "concept": "CIEL:77985",
+                    "label": "Indapamide SR"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "htn_prescription__second_dose",
+              "label": "Second medicine dose (mg) (optional)",
+              "type": "obs",
+              "required": false,
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "fce9f059-d2e7-5486-8418-6b673aef5794",
+                "min": "0"
+              },
+              "hideSteppers": true
+            },
+            {
+              "id": "htn_prescription__valid_until",
+              "label": "Prescription valid until",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "datetime",
+                "concept": "511eb936-2f9b-520a-85c1-5c9508ebc5ed"
+              }
+            },
+            {
+              "id": "htn_prescription__status",
+              "label": "Prescription status",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "629fd6e5-e1bb-5145-9cd8-f362ffae7ade",
+                "answers": [
+                  {
+                    "concept": "6fe824e3-d7f0-5452-8b9a-7b59d1865774",
+                    "label": "Active"
+                  },
+                  {
+                    "concept": "7c7121c0-58fb-5720-9b29-dfa47d991077",
+                    "label": "Stopped"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

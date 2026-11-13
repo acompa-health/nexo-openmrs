@@ -1,0 +1,117 @@
+{
+  "name": "Nexo: Update receipt",
+  "uuid": "5c6c5ce2-cc66-3fc1-8baa-b52e5294837e",
+  "version": "1",
+  "description": "Review build: shows why each question is asked. A new revision of this receipt. The protocol reads the fields it named as missing. Nexo rwanda.htn_screening_assessment_2024 1.0 (sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca).",
+  "encounterType": "a8a43fdc-1674-5f6b-8c5d-82e20996a6f9",
+  "encounter": "Nexo Update receipt",
+  "processor": "EncounterFormProcessor",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Update receipt",
+      "sections": [
+        {
+          "label": "About this step",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "nexo_context",
+              "label": "About this step",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Update receipt**",
+                "What the protocol needs: A new revision of this receipt. The protocol reads the fields it named as missing.",
+                "Generated from Nexo. Draft for clinical review, not for care.",
+                "**Review build.** Each section and question shows why it is there. Production shows only the ⓘ."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Receipt",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "review__section__1",
+              "label": "Why these questions",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Why these questions are together.** The other answers of this step. They keep the order of the protocol, except that a question that shows after an answer follows that answer, and questions whose answer changes nothing, and free text, go last.",
+                "**Heading** \"Receipt\": the name of the record or task. No person chose it."
+              ]
+            },
+            {
+              "id": "htn_receipt__received",
+              "label": "Patient received the medicines",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "0a64d136-b194-5ea4-8eab-2228c04a0f2b",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__htn_receipt__received",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** a later step: \"Confirm that the patient received the medicines\" (`verify_htn_receipt`)",
+                "**Required:** when the protocol names it as missing.",
+                "**Shows:** always.",
+                "**ⓘ in production:** none."
+              ]
+            },
+            {
+              "id": "htn_receipt__proof",
+              "label": "How receipt was confirmed",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "100d65bd-92f8-5c1b-be36-db333e517531",
+                "rows": 3
+              }
+            },
+            {
+              "id": "review__htn_receipt__proof",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** a later step: \"Confirm that the patient received the medicines\" (`verify_htn_receipt`)",
+                "**Required:** when the protocol names it as missing.",
+                "**Shows:** always.",
+                "**ⓘ in production:** none."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5305 @@
+{
+ "protocol": {
+  "id": "rwanda.htn_screening_assessment_2024",
+  "revision": "1.0",
+  "identity": "sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca",
+  "status": "draft"
+ },
+ "labels": {
+  "assessing_clinician": "Assessing clinician",
+  "screening_worker": "Screening worker",
+  "care_coordinator": "Care coordinator",
+  "pharmacy_worker": "Pharmacy worker",
+  "receiving_clinician": "Receiving clinician",
+  "measurement.recorded": "Record a blood-pressure reading",
+  "observation": "Blood-pressure reading",
+  "encounter": "Visit findings",
+  "htn_assessment": "Assessment",
+  "htn_supply": "Dispensing",
+  "htn_receipt": "Receipt",
+  "laboratory_result": "Laboratory result",
+  "htn_external_work": "Accepted next care",
+  "systolic": "Systolic BP",
+  "diastolic": "Diastolic BP",
+  "setting": "Where was BP measured",
+  "office": "Office or clinic",
+  "home": "Home",
+  "ambulatory": "Ambulatory (24 h)",
+  "hypertension_symptoms": "Symptoms of hypertension",
+  "organ_damage_evidence": "Evidence of organ damage",
+  "organ_damage": "Evidence of organ damage",
+  "symptoms": "Symptoms of hypertension",
+  "care_level": "Care level of this facility",
+  "health_center": "Health centre",
+  "medicalized_health_center": "Medicalized health centre",
+  "district_hospital": "District hospital",
+  "provincial_hospital": "Provincial hospital",
+  "level_2_teaching_hospital": "Level 2 teaching hospital",
+  "referral_hospital": "Referral hospital",
+  "university_teaching_hospital": "University teaching hospital",
+  "pregnant": "Currently pregnant",
+  "diabetes": "Diabetes",
+  "cad": "Coronary artery disease",
+  "coronary_artery_disease": "Coronary artery disease",
+  "ckd": "Chronic kidney disease",
+  "chronic_kidney_disease": "Chronic kidney disease",
+  "ckd_stage": "CKD stage",
+  "stage_1_3": "Stage 1 to 3",
+  "stage_4_5": "Stage 4 to 5",
+  "confirmed_htn": "Hypertension confirmed",
+  "new_concern": "New clinical concern",
+  "renal_reviewed": "Renal function reviewed",
+  "contraindications_reviewed": "Contraindications reviewed",
+  "medication_reviewed": "Current medicines reviewed",
+  "adherence_reviewed": "Adherence reviewed",
+  "adverse_effects": "Adverse effects of medicines",
+  "target_tolerated": "Patient tolerates the BP target",
+  "specialist_required": "Specialist care required",
+  "action": "Prescription decision",
+  "start": "Start treatment",
+  "renew": "Renew current treatment",
+  "change": "Change treatment",
+  "refer": "Refer for an individual plan",
+  "medicine": "Medicine",
+  "dose": "Dose",
+  "second_medicine": "Second medicine",
+  "second_dose": "Second medicine dose",
+  "none": "None",
+  "indapamide_sr": "Indapamide SR",
+  "valid_until": "Prescription valid until",
+  "reason": "Reason for the decision",
+  "potassium": "Serum potassium",
+  "stock_available": "Medicine in stock",
+  "packed": "Supply packed for the patient",
+  "coverage_until": "Supply lasts until",
+  "received": "Patient received the medicines",
+  "proof": "How receipt was confirmed",
+  "diagnosis": "Diagnosis",
+  "hypertension": "Hypertension",
+  "not_hypertension": "Not hypertension",
+  "disposition": "What to do next",
+  "retry_pharmacy": "Retry the pharmacy",
+  "receiving_service": "Hand over to the receiving service",
+  "contacted": "Patient contacted",
+  "note": "What was arranged",
+  "destination": "Receiving service",
+  "accepted_work": "Accepted next care",
+  "due_at": "Next care due",
+  "clinical_assessment": "Clinical assessment",
+  "medicine_supply": "Medicine supply",
+  "diagnostic_assessment": "Diagnostic assessment",
+  "maternal_assessment": "Maternal assessment",
+  "child_assessment": "Child assessment",
+  "planned": "Planned",
+  "od": "Once daily",
+  "bid": "Twice daily",
+  "follow_up": "Follow-up",
+  "initial": "Initial",
+  "mode": "Visit type",
+  "target_met": "BP target met",
+  "initial_combination_required": "Combination therapy indicated",
+  "requested_at": "Requested at",
+  "prescription": "Prescription",
+  "dispensing": "Dispensing",
+  "dispensed_at": "Dispensed at",
+  "reading": "Reading",
+  "assessment": "Assessment",
+  "missing_inputs": "Missing information",
+  "first_reading": "First reading",
+  "second_reading": "Second reading",
+  "htn_handover.accepted": "Receiving service accepts the patient",
+  "value:accepted": "Accepted",
+  "htn_screening_assessment": "Hypertension screening",
+  "htn_hc_first_treatment": "First treatment at the health centre",
+  "htn_longitudinal_care": "Hypertension care",
+  "htn_scheduled_review": "Scheduled review",
+  "htn_overdue_contact": "Overdue contact",
+  "htn_screening_recall": "Screening recall",
+  "htn_owned_handover": "Handover to a receiving service",
+  "selected_by": "Selected by",
+  "printed_line": "Printed line",
+  "follow_up_interval": "Review interval",
+  "issued_at": "Issued at",
+  "frequency": "Frequency",
+  "second_frequency": "Second medicine frequency",
+  "tests": "Tests",
+  "advice": "Advice",
+  "value:not_known": "Not known",
+  "htn_external_work.kind": "Type of next care",
+  "htn_external_work.status": "Status of next care",
+  "retry": "Try the handover again",
+  "htn_prescription": "Hypertension prescription",
+  "htn_prescription.status": "Prescription status",
+  "active": "Active",
+  "stopped": "Stopped",
+  "amlodipine": "Amlodipine",
+  "hydrochlorothiazide": "Hydrochlorothiazide",
+  "enalapril": "Enalapril",
+  "lisinopril": "Lisinopril",
+  "current_regimen": "Current antihypertensive regimen",
+  "htn_no_regimen_attestation": "No current antihypertensive attestation",
+  "value:htn_prescription": "Use the current prescription shown above",
+  "value:htn_no_regimen_attestation": "I confirm that this patient takes no antihypertensive medicine",
+  "htn_first_prescription_review.current_regimen": "No current antihypertensive attestation",
+  "reviewed_by": "Assessment completed by",
+  "attested_by": "Attested by",
+  "second reading, exact observation chronology, and patient-correlated encounter findings": "Second blood-pressure reading, with its time and the visit findings",
+  "title:lifestyle_counselling": "Lifestyle advice",
+  "dash_diet": "DASH diet",
+  "physical_activity_150_min_week": "Moderate-to-vigorous physical activity: 150 minutes per week",
+  "glycaemia": "Blood glucose",
+  "hba1c": "HbA1c",
+  "cbc": "Full blood count"
+ },
+ "host": {
+  "existing": {
+   "htn_prescription": {
+    "fromWork": {
+     "template": "prescription",
+     "fields": {
+      "medicine": "medicine",
+      "dose": "dose",
+      "second_medicine": "second_medicine",
+      "second_dose": "second_dose",
+      "valid_until": "valid_until",
+      "prescriber": "selected_by"
+     },
+     "set": {
+      "status": "active"
+     }
+    }
+   }
+  },
+  "carryOver": [
+   "encounter.diabetes",
+   "encounter.coronary_artery_disease",
+   "encounter.chronic_kidney_disease",
+   "encounter.care_level"
+  ],
+  "roles": {
+   "event": "assessing_clinician",
+   "start": {
+    "htn_screening_assessment": "screening_worker"
+   }
+  }
+ },
+ "forms": [
+  {
+   "name": "screening_recall",
+   "kind": "task",
+   "template": "screening_recall",
+   "role": "screening_worker",
+   "title": "Repeat blood-pressure screening",
+   "evidence": "Identified new screening reading for this patient",
+   "content": {},
+   "questions": [
+    {
+     "id": "reading__systolic",
+     "path": [
+      "reading",
+      "systolic"
+     ],
+     "object": "observation",
+     "field": "systolic",
+     "type": {
+      "type": "quantity",
+      "unit": "mm[Hg]"
+     },
+     "concept": "CIEL:5085",
+     "label": "Systolic BP",
+     "required": true,
+     "why": "The task declares it required. Read by categorize_screening, route_first_visit, resume_screening_reading, select_fig9_band, review_htn_assessment, authorize_htn_prescription, authorize_htn_first_prescription.",
+     "mandatory": true
+    },
+    {
+     "id": "reading__diastolic",
+     "path": [
+      "reading",
+      "diastolic"
+     ],
+     "object": "observation",
+     "field": "diastolic",
+     "type": {
+      "type": "quantity",
+      "unit": "mm[Hg]"
+     },
+     "concept": "CIEL:5086",
+     "label": "Diastolic BP",
+     "required": true,
+     "why": "The task declares it required. Read by categorize_screening, route_first_visit, resume_screening_reading, select_fig9_band, review_htn_assessment, authorize_htn_prescription, authorize_htn_first_prescription.",
+     "mandatory": true
+    },
+    {
+     "id": "reading__setting",
+     "path": [
+      "reading",
+      "setting"
+     ],
+     "object": "observation",
+     "field": "setting",
+     "type": {
+      "type": "listed",
+      "values": [
+       "office",
+       "home",
+       "ambulatory"
+      ]
+     },
+     "concept": "dbade085-4113-5dac-bc64-fd3bdd5ed476",
+     "answers": {
+      "office": "bc59db88-d16e-5fc5-9905-d9b8c3a2afca",
+      "home": "c0770136-933c-592a-9c4d-eb8818bc2e50",
+      "ambulatory": "77d83b25-e9ce-5bb3-bd9f-ee7e25d700db"
+     },
+     "label": "Where was BP measured",
+     "required": true,
+     "why": "The task declares it required. Read by categorize_screening, resume_screening_reading, review_htn_assessment.",
+     "mandatory": true
+    },
+    {
+     "id": "reading__encounter__hypertension_symptoms",
+     "path": [
+      "reading",
+      "encounter",
+      "hypertension_symptoms"
+     ],
+     "object": "encounter",
+     "field": "hypertension_symptoms",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "eea11f79-217d-59ec-be69-c25adb1f404b",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Symptoms of hypertension",
+     "required": true,
+     "why": "Read by categorize_screening, route_first_visit, resume_screening_reading. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "reading__encounter__organ_damage_evidence",
+     "path": [
+      "reading",
+      "encounter",
+      "organ_damage_evidence"
+     ],
+     "object": "encounter",
+     "field": "organ_damage_evidence",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "e73ea83c-4010-5db3-b8d3-4b1069aa2c5f",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Evidence of organ damage",
+     "required": true,
+     "why": "Read by categorize_screening, route_first_visit, resume_screening_reading. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "reading__encounter__care_level",
+     "path": [
+      "reading",
+      "encounter",
+      "care_level"
+     ],
+     "object": "encounter",
+     "field": "care_level",
+     "type": {
+      "type": "listed",
+      "values": [
+       "health_center",
+       "medicalized_health_center",
+       "district_hospital",
+       "provincial_hospital",
+       "level_2_teaching_hospital",
+       "referral_hospital",
+       "university_teaching_hospital"
+      ]
+     },
+     "concept": "36b1edb3-f3ae-5595-b067-72b6a606cdb3",
+     "answers": {
+      "health_center": "2a26c527-b70f-538c-8819-759f2d2b41f7",
+      "medicalized_health_center": "80ab44c1-7f81-58a3-a143-5420d9482981",
+      "district_hospital": "0f316b75-66b6-5abc-bcc0-96f291e40877",
+      "provincial_hospital": "3d83353a-7cd0-5151-aacc-9c904d08761b",
+      "level_2_teaching_hospital": "5bf45767-4563-52cb-914d-91904b6b057f",
+      "referral_hospital": "5fb5891e-48dc-5b00-8493-932d702cee64",
+      "university_teaching_hospital": "064b36ae-889f-5bee-8116-1c09aa665a27"
+     },
+     "label": "Care level of this facility",
+     "required": true,
+     "why": "Read by start_hc_workup. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "reading__encounter__pregnant",
+     "path": [
+      "reading",
+      "encounter",
+      "pregnant"
+     ],
+     "object": "encounter",
+     "field": "pregnant",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "CIEL:5272",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Currently pregnant",
+     "required": true,
+     "why": "Read by categorize_screening, route_first_visit, resume_screening_reading, select_fig9_band. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "reading__encounter__diabetes",
+     "path": [
+      "reading",
+      "encounter",
+      "diabetes"
+     ],
+     "object": "encounter",
+     "field": "diabetes",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "8cb5fcdd-fc75-5d47-aef5-1ca60d76a0c1",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Diabetes",
+     "required": true,
+     "why": "Read by select_fig9_band. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "reading__encounter__coronary_artery_disease",
+     "path": [
+      "reading",
+      "encounter",
+      "coronary_artery_disease"
+     ],
+     "object": "encounter",
+     "field": "coronary_artery_disease",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "5084c169-4345-5d4b-88d9-9ff030b94389",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Coronary artery disease",
+     "required": true,
+     "why": "Read by select_fig9_band. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "reading__encounter__chronic_kidney_disease",
+     "path": [
+      "reading",
+      "encounter",
+      "chronic_kidney_disease"
+     ],
+     "object": "encounter",
+     "field": "chronic_kidney_disease",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "a4b7087f-2644-51a2-a27a-6594823e9e34",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Chronic kidney disease",
+     "required": true,
+     "why": "Read by select_fig9_band. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    }
+   ],
+   "objects": [
+    {
+     "path": [
+      "reading"
+     ],
+     "object": "observation",
+     "host": {
+      "patient": {
+       "from": "patient"
+      },
+      "encounter": {
+       "from": "object",
+       "path": [
+        "reading",
+        "encounter"
+       ]
+      },
+      "time": {
+       "from": "now"
+      }
+     },
+     "asked": [
+      "systolic",
+      "diastolic",
+      "setting"
+     ]
+    },
+    {
+     "path": [
+      "reading",
+      "encounter"
+     ],
+     "object": "encounter",
+     "host": {
+      "patient": {
+       "from": "patient"
+      }
+     },
+     "asked": [
+      "hypertension_symptoms",
+      "organ_damage_evidence",
+      "care_level",
+      "pregnant",
+      "diabetes",
+      "coronary_artery_disease",
+      "chronic_kidney_disease"
+     ]
+    }
+   ],
+   "host": {
+    "reading": {
+     "from": "object",
+     "path": [
+      "reading"
+     ]
+    },
+    "asserted_at": {
+     "from": "now"
+    }
+   },
+   "starts": [],
+   "uuid": "a27cbb23-1f6d-3a82-86cf-0336d95f6ffd",
+   "encounterType": {
+    "uuid": "c24b2a81-b5d1-543a-b30e-b0a77fbc0c5e",
+    "name": "Nexo HTN screening recall",
+    "description": "Nexo task screening_recall (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "a27cbb23-1f6d-3a82-86cf-0336d95f6ffd",
+    "name": "Nexo: Repeat blood-pressure screening"
+   }
+  },
+  {
+   "name": "offer_out_of_office_measurement",
+   "kind": "task",
+   "template": "offer_out_of_office_measurement",
+   "role": "assessing_clinician",
+   "title": "Offer out-of-office BP measurement (ABPM or HBPM)",
+   "evidence": "Recorded clinician selection: ordered, declined, or not available",
+   "content": {},
+   "questions": [],
+   "objects": [],
+   "host": {},
+   "starts": [],
+   "uuid": "4fb0852e-9e53-392c-bc53-7011f2e091d0",
+   "encounterType": {
+    "uuid": "a4c88877-f6c5-5557-b9ee-391b5d875149",
+    "name": "Nexo Offer out-of-office BP measurement",
+    "description": "Nexo task offer_out_of_office_measurement (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "4fb0852e-9e53-392c-bc53-7011f2e091d0",
+    "name": "Nexo: Offer out-of-office BP measurement (ABPM or HBPM)"
+   }
+  },
+  {
+   "name": "repeat_office_visit",
+   "kind": "task",
+   "template": "repeat_office_visit",
+   "role": "assessing_clinician",
+   "title": "Repeat office BP visit within four weeks (RBCNCD24 PDF p.12 Fig. 2 and PDF p.24)",
+   "evidence": "An office BP reading for this patient at a separate encounter, within four weeks of the first office reading",
+   "content": {},
+   "questions": [],
+   "objects": [],
+   "host": {},
+   "starts": [],
+   "uuid": "2bde28b9-e797-3d91-b44b-379d25543e51",
+   "encounterType": {
+    "uuid": "6b034d89-f511-5c83-9955-e739c0afcae4",
+    "name": "Nexo HTN repeat office visit",
+    "description": "Nexo task repeat_office_visit (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "2bde28b9-e797-3d91-b44b-379d25543e51",
+    "name": "Nexo: Repeat office BP visit within four weeks (RBCNCD24 PDF p.12 Fig. 2 and PDF p.24)"
+   }
+  },
+  {
+   "name": "diagnosis_review",
+   "kind": "task",
+   "template": "diagnosis_review",
+   "role": "assessing_clinician",
+   "title": "Decide whether to diagnose hypertension after two office visits",
+   "evidence": "The clinician records the diagnosis decision for this patient",
+   "content": {
+    "first_reading": {
+     "type": {
+      "type": "reference",
+      "target": "object:observation"
+     }
+    },
+    "second_reading": {
+     "type": {
+      "type": "reference",
+      "target": "object:observation"
+     }
+    },
+    "retained_report": {
+     "type": {
+      "type": "reference",
+      "target": "object"
+     },
+     "optional": true
+    },
+    "unresolved_answer": {
+     "type": {
+      "type": "reference",
+      "target": "object"
+     },
+     "optional": true
+    }
+   },
+   "questions": [
+    {
+     "id": "diagnosis",
+     "path": [
+      "diagnosis"
+     ],
+     "field": "diagnosis",
+     "type": {
+      "type": "listed",
+      "values": [
+       "hypertension",
+       "not_hypertension"
+      ]
+     },
+     "concept": "085cc6f2-c62d-5812-8039-771f81aa0f1b",
+     "answers": {
+      "hypertension": "CIEL:117399",
+      "not_hypertension": "9508e5ad-fd68-556a-a9fd-abd06d280259"
+     },
+     "label": "Diagnosis",
+     "required": true,
+     "why": "The task declares it required. Read by record_diagnosis.",
+     "mandatory": true
+    }
+   ],
+   "objects": [],
+   "host": {},
+   "starts": [],
+   "uuid": "fe684362-ce55-3707-8bfe-c88f4be6a0d3",
+   "encounterType": {
+    "uuid": "0ed8b575-7973-54c2-9ad0-423f8c5fb9ce",
+    "name": "Nexo HTN diagnosis decision",
+    "description": "Nexo task diagnosis_review (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "fe684362-ce55-3707-8bfe-c88f4be6a0d3",
+    "name": "Nexo: Decide whether to diagnose hypertension after two office visits"
+   }
+  },
+  {
+   "name": "clinical_review",
+   "kind": "task",
+   "template": "clinical_review",
+   "role": "assessing_clinician",
+   "title": "Clinical review of an undetermined decision",
+   "evidence": "Reviewer's recorded decision and rationale For unassessed danger, record immediate assessment or escalation, its urgency, the accepting clinician or service and preserved treatment. Collection alone does not complete this duty.",
+   "content": {
+    "reason": {
+     "type": {
+      "type": "listed",
+      "values": [
+       "unresolved",
+       "unmatched",
+       "ambiguous",
+       "not_authorized",
+       "invalid_transition"
+      ]
+     }
+    },
+    "candidates": {
+     "type": {
+      "type": "list",
+      "items": {
+       "type": "identifier"
+      }
+     },
+     "optional": true
+    },
+    "retained_report": {
+     "type": {
+      "type": "reference",
+      "target": "object"
+     },
+     "optional": true
+    },
+    "instructions": {
+     "type": {
+      "type": "text"
+     },
+     "optional": true
+    }
+   },
+   "questions": [],
+   "objects": [],
+   "host": {},
+   "starts": [],
+   "uuid": "1a80805a-0fc4-36c3-bc4b-8fa363e11667",
+   "encounterType": {
+    "uuid": "58b36be2-8af2-518d-89e3-8e8781d60aa2",
+    "name": "Nexo Clinical review of an undetermined decision",
+    "description": "Nexo task clinical_review (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "1a80805a-0fc4-36c3-bc4b-8fa363e11667",
+    "name": "Nexo: Clinical review of an undetermined decision"
+   }
+  },
+  {
+   "name": "collect_information",
+   "kind": "task",
+   "template": "collect_information",
+   "role": "assessing_clinician",
+   "title": "Collect the named missing information",
+   "evidence": "The named inputs recorded with provenance, or recorded as refused/unobtainable Assess missing danger signs immediately. If they remain unavailable, retain the owned clinical escalation and other indicated care.",
+   "content": {
+    "missing_inputs": {
+     "type": {
+      "type": "list",
+      "items": {
+       "type": "identifier"
+      }
+     }
+    },
+    "request": {
+     "type": {
+      "type": "identifier"
+     },
+     "optional": true
+    },
+    "reading": {
+     "type": {
+      "type": "reference",
+      "target": "object:observation"
+     },
+     "optional": true
+    },
+    "actor": {
+     "type": {
+      "type": "reference",
+      "target": "actor"
+     },
+     "optional": true
+    },
+    "candidate_reading": {
+     "type": {
+      "type": "reference",
+      "target": "object:observation"
+     },
+     "optional": true
+    },
+    "candidate_asserted_instant": {
+     "type": {
+      "type": "instant"
+     },
+     "optional": true
+    },
+    "candidate_asserted_at": {
+     "type": {
+      "type": "time"
+     },
+     "optional": true
+    },
+    "candidate_received_at": {
+     "type": {
+      "type": "instant"
+     },
+     "optional": true
+    },
+    "candidate_assertion": {
+     "type": {
+      "type": "identifier"
+     },
+     "optional": true
+    },
+    "candidate_occurrence": {
+     "type": {
+      "type": "identifier"
+     },
+     "optional": true
+    },
+    "urgent_requested": {
+     "type": {
+      "type": "yes_no"
+     },
+     "optional": true
+    },
+    "urgent_reading": {
+     "type": {
+      "type": "reference",
+      "target": "object:observation"
+     },
+     "optional": true
+    },
+    "urgent_occurrence": {
+     "type": {
+      "type": "identifier"
+     },
+     "optional": true
+    }
+   },
+   "questions": [
+    {
+     "id": "reading__systolic",
+     "path": [
+      "reading",
+      "systolic"
+     ],
+     "object": "observation",
+     "field": "systolic",
+     "type": {
+      "type": "quantity",
+      "unit": "mm[Hg]"
+     },
+     "concept": "CIEL:5085",
+     "label": "Systolic BP",
+     "required": true,
+     "why": "Read by categorize_screening, route_first_visit, select_fig9_band, review_htn_assessment, authorize_htn_prescription, authorize_htn_first_prescription.",
+     "mandatory": false
+    },
+    {
+     "id": "reading__diastolic",
+     "path": [
+      "reading",
+      "diastolic"
+     ],
+     "object": "observation",
+     "field": "diastolic",
+     "type": {
+      "type": "quantity",
+      "unit": "mm[Hg]"
+     },
+     "concept": "CIEL:5086",
+     "label": "Diastolic BP",
+     "required": true,
+     "why": "Read by categorize_screening, route_first_visit, select_fig9_band, review_htn_assessment, authorize_htn_prescription, authorize_htn_first_prescription.",
+     "mandatory": false
+    },
+    {
+     "id": "reading__setting",
+     "path": [
+      "reading",
+      "setting"
+     ],
+     "object": "observation",
+     "field": "setting",
+     "type": {
+      "type": "listed",
+      "values": [
+       "office",
+       "home",
+       "ambulatory"
+      ]
+     },
+     "concept": "dbade085-4113-5dac-bc64-fd3bdd5ed476",
+     "answers": {
+      "office": "bc59db88-d16e-5fc5-9905-d9b8c3a2afca",
+      "home": "c0770136-933c-592a-9c4d-eb8818bc2e50",
+      "ambulatory": "77d83b25-e9ce-5bb3-bd9f-ee7e25d700db"
+     },
+     "label": "Where was BP measured",
+     "required": true,
+     "why": "Read by categorize_screening, review_htn_assessment. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "reading__encounter__hypertension_symptoms",
+     "path": [
+      "reading",
+      "encounter",
+      "hypertension_symptoms"
+     ],
+     "object": "encounter",
+     "field": "hypertension_symptoms",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "eea11f79-217d-59ec-be69-c25adb1f404b",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Symptoms of hypertension",
+     "required": true,
+     "why": "Read by categorize_screening, route_first_visit. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "reading__encounter__organ_damage_evidence",
+     "path": [
+      "reading",
+      "encounter",
+      "organ_damage_evidence"
+     ],
+     "object": "encounter",
+     "field": "organ_damage_evidence",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "e73ea83c-4010-5db3-b8d3-4b1069aa2c5f",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Evidence of organ damage",
+     "required": true,
+     "why": "Read by categorize_screening, route_first_visit. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "reading__encounter__care_level",
+     "path": [
+      "reading",
+      "encounter",
+      "care_level"
+     ],
+     "object": "encounter",
+     "field": "care_level",
+     "type": {
+      "type": "listed",
+      "values": [
+       "health_center",
+       "medicalized_health_center",
+       "district_hospital",
+       "provincial_hospital",
+       "level_2_teaching_hospital",
+       "referral_hospital",
+       "university_teaching_hospital"
+      ]
+     },
+     "concept": "36b1edb3-f3ae-5595-b067-72b6a606cdb3",
+     "answers": {
+      "health_center": "2a26c527-b70f-538c-8819-759f2d2b41f7",
+      "medicalized_health_center": "80ab44c1-7f81-58a3-a143-5420d9482981",
+      "district_hospital": "0f316b75-66b6-5abc-bcc0-96f291e40877",
+      "provincial_hospital": "3d83353a-7cd0-5151-aacc-9c904d08761b",
+      "level_2_teaching_hospital": "5bf45767-4563-52cb-914d-91904b6b057f",
+      "referral_hospital": "5fb5891e-48dc-5b00-8493-932d702cee64",
+      "university_teaching_hospital": "064b36ae-889f-5bee-8116-1c09aa665a27"
+     },
+     "label": "Care level of this facility",
+     "required": true,
+     "why": "Read by start_hc_workup. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "reading__encounter__pregnant",
+     "path": [
+      "reading",
+      "encounter",
+      "pregnant"
+     ],
+     "object": "encounter",
+     "field": "pregnant",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "CIEL:5272",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Currently pregnant",
+     "required": true,
+     "why": "Read by categorize_screening, route_first_visit, select_fig9_band. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "reading__encounter__diabetes",
+     "path": [
+      "reading",
+      "encounter",
+      "diabetes"
+     ],
+     "object": "encounter",
+     "field": "diabetes",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "8cb5fcdd-fc75-5d47-aef5-1ca60d76a0c1",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Diabetes",
+     "required": true,
+     "why": "Read by select_fig9_band. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "reading__encounter__coronary_artery_disease",
+     "path": [
+      "reading",
+      "encounter",
+      "coronary_artery_disease"
+     ],
+     "object": "encounter",
+     "field": "coronary_artery_disease",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "5084c169-4345-5d4b-88d9-9ff030b94389",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Coronary artery disease",
+     "required": true,
+     "why": "Read by select_fig9_band. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "reading__encounter__chronic_kidney_disease",
+     "path": [
+      "reading",
+      "encounter",
+      "chronic_kidney_disease"
+     ],
+     "object": "encounter",
+     "field": "chronic_kidney_disease",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "a4b7087f-2644-51a2-a27a-6594823e9e34",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Chronic kidney disease",
+     "required": true,
+     "why": "Read by select_fig9_band. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    }
+   ],
+   "objects": [
+    {
+     "path": [
+      "reading"
+     ],
+     "object": "observation",
+     "host": {
+      "patient": {
+       "from": "patient"
+      },
+      "encounter": {
+       "from": "object",
+       "path": [
+        "reading",
+        "encounter"
+       ]
+      },
+      "time": {
+       "from": "now"
+      }
+     },
+     "asked": [
+      "systolic",
+      "diastolic",
+      "setting"
+     ],
+     "optional": true
+    },
+    {
+     "path": [
+      "reading",
+      "encounter"
+     ],
+     "object": "encounter",
+     "host": {
+      "patient": {
+       "from": "patient"
+      }
+     },
+     "asked": [
+      "hypertension_symptoms",
+      "organ_damage_evidence",
+      "care_level",
+      "pregnant",
+      "diabetes",
+      "coronary_artery_disease",
+      "chronic_kidney_disease"
+     ],
+     "optional": true
+    }
+   ],
+   "host": {
+    "reading": {
+     "from": "object",
+     "path": [
+      "reading"
+     ]
+    },
+    "asserted_at": {
+     "from": "now"
+    }
+   },
+   "starts": [],
+   "uuid": "4108d6d7-0b63-363e-9315-674244f54d77",
+   "encounterType": {
+    "uuid": "d5c2f46e-cd39-57c5-9c48-2bb9f20569f1",
+    "name": "Nexo missing information",
+    "description": "Nexo task collect_information (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "4108d6d7-0b63-363e-9315-674244f54d77",
+    "name": "Nexo: Collect the named missing information"
+   }
+  },
+  {
+   "name": "lifestyle_counselling",
+   "kind": "task",
+   "template": "lifestyle_counselling",
+   "role": "assessing_clinician",
+   "title": "Lifestyle advice",
+   "evidence": "Recorded advice given for each listed item",
+   "content": {
+    "advice": {
+     "type": {
+      "type": "list",
+      "items": {
+       "type": "identifier"
+      }
+     }
+    }
+   },
+   "questions": [],
+   "objects": [],
+   "host": {},
+   "starts": [],
+   "uuid": "ae96fb76-a03c-32c9-9f9f-a24b2d431a0a",
+   "encounterType": {
+    "uuid": "508e3a9c-e6e6-5983-bf37-a3688f9e5a68",
+    "name": "Nexo Lifestyle advice",
+    "description": "Nexo task lifestyle_counselling (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "ae96fb76-a03c-32c9-9f9f-a24b2d431a0a",
+    "name": "Nexo: Lifestyle advice"
+   }
+  },
+  {
+   "name": "htn_clinical_review",
+   "kind": "task",
+   "template": "htn_clinical_review",
+   "role": "assessing_clinician",
+   "title": "Assess hypertension and reconcile current medicines",
+   "evidence": "Attributed clinician assessment for this patient and the task reading, with time, confirmed diagnosis, pregnancy, symptoms, organ damage, comorbidities, renal and contraindication review, medicines, adherence, adverse effects and target tolerance. The host supplies the assessment object; a task request alone proves none of these.",
+   "content": {
+    "reading": {
+     "type": {
+      "type": "reference",
+      "target": "object:observation"
+     }
+    },
+    "mode": {
+     "type": {
+      "type": "listed",
+      "values": [
+       "initial",
+       "follow_up"
+      ]
+     }
+    },
+    "requested_at": {
+     "type": {
+      "type": "instant"
+     }
+    }
+   },
+   "questions": [
+    {
+     "id": "assessment__confirmed_htn",
+     "path": [
+      "assessment",
+      "confirmed_htn"
+     ],
+     "object": "htn_assessment",
+     "field": "confirmed_htn",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "f1326165-4f1d-5a9b-a291-610f53d519db",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Hypertension confirmed",
+     "required": true,
+     "why": "Read by review_htn_assessment. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "assessment__pregnant",
+     "path": [
+      "assessment",
+      "pregnant"
+     ],
+     "object": "htn_assessment",
+     "field": "pregnant",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "CIEL:5272",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Currently pregnant",
+     "required": true,
+     "why": "Read by review_htn_assessment. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "assessment__symptoms",
+     "path": [
+      "assessment",
+      "symptoms"
+     ],
+     "object": "htn_assessment",
+     "field": "symptoms",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "bdc986eb-99ea-5c00-9510-0a7babbf6d6f",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Symptoms of hypertension",
+     "required": true,
+     "why": "Read by review_htn_assessment. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "assessment__organ_damage",
+     "path": [
+      "assessment",
+      "organ_damage"
+     ],
+     "object": "htn_assessment",
+     "field": "organ_damage",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "3ef1fac4-b486-5420-8549-d286132f0239",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Evidence of organ damage",
+     "required": true,
+     "why": "Read by review_htn_assessment. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "assessment__new_concern",
+     "path": [
+      "assessment",
+      "new_concern"
+     ],
+     "object": "htn_assessment",
+     "field": "new_concern",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "0a248287-6efd-5ea0-ba3a-867711e82c16",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "New clinical concern",
+     "required": true,
+     "why": "Read by review_htn_assessment. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "assessment__diabetes",
+     "path": [
+      "assessment",
+      "diabetes"
+     ],
+     "object": "htn_assessment",
+     "field": "diabetes",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "25fb5acd-b0c4-555f-9c21-7641fa6215d4",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Diabetes",
+     "required": true,
+     "why": "Read by review_htn_assessment. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "assessment__cad",
+     "path": [
+      "assessment",
+      "cad"
+     ],
+     "object": "htn_assessment",
+     "field": "cad",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "42219279-330a-5c1b-9fa1-05e9130a0dc8",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Coronary artery disease",
+     "required": true,
+     "why": "Read on the main path, when Chronic kidney disease is No and Diabetes is No and Hypertension confirmed is Yes and Currently pregnant is No and Symptoms of hypertension is No and Evidence of organ damage is No and New clinical concern is No and Current medicines reviewed is Yes and Adherence reviewed is Yes and Adverse effects of medicines is No and Renal function reviewed is Yes and Contraindications reviewed is Yes and Specialist care required is No. Read by review_htn_assessment. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "assessment__ckd",
+     "path": [
+      "assessment",
+      "ckd"
+     ],
+     "object": "htn_assessment",
+     "field": "ckd",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "fe7c4653-7124-51fe-a457-a340af6a7c1d",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Chronic kidney disease",
+     "required": true,
+     "why": "Read by review_htn_assessment. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "assessment__renal_reviewed",
+     "path": [
+      "assessment",
+      "renal_reviewed"
+     ],
+     "object": "htn_assessment",
+     "field": "renal_reviewed",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "9679ddd9-a72c-5170-864f-1c8f3d27835a",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Renal function reviewed",
+     "required": true,
+     "why": "Read on the main path, when Chronic kidney disease is No and Diabetes is No and Hypertension confirmed is Yes and Currently pregnant is No and Symptoms of hypertension is No and Evidence of organ damage is No and New clinical concern is No and Current medicines reviewed is Yes and Adherence reviewed is Yes and Adverse effects of medicines is No and Contraindications reviewed is Yes and Specialist care required is No. Read by review_htn_assessment. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "assessment__contraindications_reviewed",
+     "path": [
+      "assessment",
+      "contraindications_reviewed"
+     ],
+     "object": "htn_assessment",
+     "field": "contraindications_reviewed",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "850ae865-8189-5b14-baad-c836b71383b1",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Contraindications reviewed",
+     "required": true,
+     "why": "Read on the main path, when Chronic kidney disease is No and Diabetes is No and Hypertension confirmed is Yes and Currently pregnant is No and Symptoms of hypertension is No and Evidence of organ damage is No and New clinical concern is No and Current medicines reviewed is Yes and Adherence reviewed is Yes and Adverse effects of medicines is No and Renal function reviewed is Yes and Specialist care required is No. Read by review_htn_assessment. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "assessment__medication_reviewed",
+     "path": [
+      "assessment",
+      "medication_reviewed"
+     ],
+     "object": "htn_assessment",
+     "field": "medication_reviewed",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "eff17080-fe09-55b6-bfa6-d4cfb62e1888",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Current medicines reviewed",
+     "required": true,
+     "why": "Read on the main path, when Chronic kidney disease is No and Diabetes is No and Hypertension confirmed is Yes and Currently pregnant is No and Symptoms of hypertension is No and Evidence of organ damage is No and New clinical concern is No and Adherence reviewed is Yes and Adverse effects of medicines is No and Renal function reviewed is Yes and Contraindications reviewed is Yes and Specialist care required is No. Read by review_htn_assessment. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "assessment__adherence_reviewed",
+     "path": [
+      "assessment",
+      "adherence_reviewed"
+     ],
+     "object": "htn_assessment",
+     "field": "adherence_reviewed",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "bfbca7d2-9a06-56ab-b6ce-5be179fa1cca",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Adherence reviewed",
+     "required": true,
+     "why": "Read on the main path, when Chronic kidney disease is No and Diabetes is No and Hypertension confirmed is Yes and Currently pregnant is No and Symptoms of hypertension is No and Evidence of organ damage is No and New clinical concern is No and Current medicines reviewed is Yes and Adverse effects of medicines is No and Renal function reviewed is Yes and Contraindications reviewed is Yes and Specialist care required is No. Read by review_htn_assessment. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "assessment__adverse_effects",
+     "path": [
+      "assessment",
+      "adverse_effects"
+     ],
+     "object": "htn_assessment",
+     "field": "adverse_effects",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "35c64bc2-679c-5022-9b98-5fef67bf6735",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Adverse effects of medicines",
+     "required": true,
+     "why": "Read by review_htn_assessment. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "assessment__target_tolerated",
+     "path": [
+      "assessment",
+      "target_tolerated"
+     ],
+     "object": "htn_assessment",
+     "field": "target_tolerated",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "2b7f9834-f258-5257-a7c7-311641d1315b",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Patient tolerates the BP target",
+     "required": true,
+     "why": "Read by review_htn_assessment, authorize_htn_prescription, authorize_htn_first_prescription. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "assessment__specialist_required",
+     "path": [
+      "assessment",
+      "specialist_required"
+     ],
+     "object": "htn_assessment",
+     "field": "specialist_required",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "94faed82-a865-59ec-9397-ca6ae4723c53",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Specialist care required",
+     "required": true,
+     "why": "Read by review_htn_assessment. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "assessment__current_regimen",
+     "path": [
+      "assessment",
+      "current_regimen"
+     ],
+     "object": "htn_assessment",
+     "field": "current_regimen",
+     "type": {
+      "type": "listed",
+      "values": [
+       "htn_prescription",
+       "htn_no_regimen_attestation"
+      ]
+     },
+     "concept": "964c606d-ffc9-53f1-abb6-a6d59cdbd5ad",
+     "answers": {
+      "htn_prescription": "e8832494-4adf-5be0-bc26-50e407af4356",
+      "htn_no_regimen_attestation": "120faafb-a3b1-5397-b9a6-c20cda558e0b"
+     },
+     "references": {
+      "htn_prescription": "latest",
+      "htn_no_regimen_attestation": "attest"
+     },
+     "label": "Current antihypertensive regimen",
+     "required": true,
+     "mandatory": false,
+     "why": "Read by review_htn_assessment. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "unknownAnswer": "CIEL:1067"
+    }
+   ],
+   "objects": [
+    {
+     "path": [
+      "assessment"
+     ],
+     "object": "htn_assessment",
+     "host": {
+      "patient": {
+       "from": "patient"
+      },
+      "reading": {
+       "from": "content",
+       "key": "reading"
+      },
+      "time": {
+       "from": "now"
+      }
+     },
+     "asked": [
+      "confirmed_htn",
+      "pregnant",
+      "symptoms",
+      "organ_damage",
+      "new_concern",
+      "diabetes",
+      "cad",
+      "ckd",
+      "renal_reviewed",
+      "contraindications_reviewed",
+      "medication_reviewed",
+      "adherence_reviewed",
+      "adverse_effects",
+      "target_tolerated",
+      "specialist_required",
+      "current_regimen"
+     ]
+    }
+   ],
+   "host": {
+    "assessment": {
+     "from": "object",
+     "path": [
+      "assessment"
+     ]
+    },
+    "asserted_at": {
+     "from": "now"
+    }
+   },
+   "starts": [],
+   "uuid": "5fe29477-5569-3eca-8041-8022f64d9174",
+   "encounterType": {
+    "uuid": "1f844276-fb1f-5326-b836-47c5b060eab0",
+    "name": "Nexo HTN assessment",
+    "description": "Nexo task htn_clinical_review (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "5fe29477-5569-3eca-8041-8022f64d9174",
+    "name": "Nexo: Assess hypertension and reconcile current medicines"
+   }
+  },
+  {
+   "name": "htn_prescription_review",
+   "kind": "task",
+   "template": "htn_prescription_review",
+   "role": "assessing_clinician",
+   "title": "Make the hypertension prescription decision",
+   "evidence": "Attributed clinician decision, reason, medicine and dose, optional second medicine, and validity end. A renewal names the existing active prescription in the assessment and preserves both medicines and doses. ACE inhibitors require a patient-correlated potassium result and renal/contraindication review.",
+   "content": {
+    "assessment": {
+     "type": {
+      "type": "reference",
+      "target": "object:htn_assessment"
+     }
+    },
+    "target_met": {
+     "type": {
+      "type": "yes_no"
+     }
+    },
+    "mode": {
+     "type": {
+      "type": "listed",
+      "values": [
+       "initial",
+       "follow_up"
+      ]
+     }
+    },
+    "initial_combination_required": {
+     "type": {
+      "type": "yes_no"
+     }
+    },
+    "current_regimen": {
+     "type": {
+      "type": "reference",
+      "target": "object:htn_prescription"
+     }
+    },
+    "reviewed_by": {
+     "type": {
+      "type": "reference",
+      "target": "actor"
+     }
+    }
+   },
+   "questions": [
+    {
+     "id": "action",
+     "path": [
+      "action"
+     ],
+     "field": "action",
+     "type": {
+      "type": "listed",
+      "values": [
+       "start",
+       "renew",
+       "change",
+       "refer"
+      ]
+     },
+     "concept": "1c0f5fd1-9f17-56f4-bba0-9b28d44fc28c",
+     "answers": {
+      "start": "61cc1d99-9328-5ca8-9275-9b3a17029353",
+      "renew": "5ec5613f-16c9-5570-928b-3e171e8390ea",
+      "change": "afeacb99-7684-53a4-a109-2b17f4a0945d",
+      "refer": "e6beb88c-a35f-5a3e-9386-a9bfd392e08c"
+     },
+     "label": "Prescription decision",
+     "required": true,
+     "why": "The task declares it required. Read by authorize_htn_prescription.",
+     "mandatory": true
+    },
+    {
+     "id": "medicine",
+     "path": [
+      "medicine"
+     ],
+     "field": "medicine",
+     "type": {
+      "type": "listed",
+      "values": [
+       "amlodipine",
+       "hydrochlorothiazide",
+       "indapamide_sr",
+       "enalapril",
+       "lisinopril"
+      ]
+     },
+     "concept": "97bbe16e-99fa-50ef-81f8-9b944415ed90",
+     "answers": {
+      "amlodipine": "CIEL:71137",
+      "hydrochlorothiazide": "CIEL:77696",
+      "indapamide_sr": "CIEL:77985",
+      "enalapril": "CIEL:75633",
+      "lisinopril": "CIEL:78945"
+     },
+     "label": "Medicine",
+     "required": true,
+     "why": "The task declares it required. Read by authorize_htn_prescription.",
+     "mandatory": true
+    },
+    {
+     "id": "dose",
+     "path": [
+      "dose"
+     ],
+     "field": "dose",
+     "type": {
+      "type": "quantity",
+      "unit": "mg"
+     },
+     "concept": "bcaf5124-dcc2-5b14-8735-d1bf904cba58",
+     "label": "Dose",
+     "required": true,
+     "why": "The task declares it required. Read by authorize_htn_prescription.",
+     "mandatory": true
+    },
+    {
+     "id": "second_medicine",
+     "path": [
+      "second_medicine"
+     ],
+     "field": "second_medicine",
+     "type": {
+      "type": "listed",
+      "values": [
+       "none",
+       "amlodipine",
+       "hydrochlorothiazide",
+       "indapamide_sr"
+      ]
+     },
+     "concept": "e9c9c573-7644-53bc-9f74-33794de8c94a",
+     "answers": {
+      "none": "5f7e7e31-77da-5c92-b714-f61ece2b9ed8",
+      "amlodipine": "CIEL:71137",
+      "hydrochlorothiazide": "CIEL:77696",
+      "indapamide_sr": "CIEL:77985"
+     },
+     "label": "Second medicine",
+     "required": true,
+     "why": "The task declares it required. Read by authorize_htn_prescription.",
+     "mandatory": true
+    },
+    {
+     "id": "second_dose",
+     "path": [
+      "second_dose"
+     ],
+     "field": "second_dose",
+     "type": {
+      "type": "quantity",
+      "unit": "mg"
+     },
+     "concept": "2d960af9-2f25-511e-b589-76655c0fbd59",
+     "label": "Second medicine dose",
+     "required": true,
+     "why": "Every rule that reads it first needs: Prescription decision is Renew current treatment or Change treatment or Start treatment and Second medicine is Amlodipine or Hydrochlorothiazide or Indapamide SR. Read by authorize_htn_prescription.",
+     "mandatory": false,
+     "hide": "!(action === '5ec5613f-16c9-5570-928b-3e171e8390ea' || action === 'afeacb99-7684-53a4-a109-2b17f4a0945d' || action === '61cc1d99-9328-5ca8-9275-9b3a17029353') || [1, 2, 3].indexOf(extractRepeatingGroupValues('concept', allFields[extractRepeatingGroupValues('id', allFields).indexOf('second_medicine')].questionOptions.answers).filter(Boolean).indexOf(second_medicine)) === -1",
+     "shownWhen": "Prescription decision is Renew current treatment or Change treatment or Start treatment and Second medicine is Amlodipine or Hydrochlorothiazide or Indapamide SR",
+     "gates": [
+      "action",
+      "second_medicine"
+     ],
+     "shownOn": {
+      "action": [
+       "renew",
+       "change",
+       "start"
+      ],
+      "second_medicine": [
+       "amlodipine",
+       "hydrochlorothiazide",
+       "indapamide_sr"
+      ]
+     }
+    },
+    {
+     "id": "valid_until",
+     "path": [
+      "valid_until"
+     ],
+     "field": "valid_until",
+     "type": {
+      "type": "instant"
+     },
+     "concept": "e6a68dee-1f44-5b92-85f3-f1565663a575",
+     "label": "Prescription valid until",
+     "required": true,
+     "why": "The task declares it required. Read by authorize_htn_prescription.",
+     "mandatory": true
+    },
+    {
+     "id": "reason",
+     "path": [
+      "reason"
+     ],
+     "field": "reason",
+     "type": {
+      "type": "text"
+     },
+     "concept": "6a5cbea3-dde9-566c-b837-ad94249503b6",
+     "label": "Reason for the decision",
+     "required": true,
+     "why": "The task declares it required. Read by authorize_htn_prescription.",
+     "mandatory": true
+    },
+    {
+     "id": "potassium_result__potassium",
+     "path": [
+      "potassium_result",
+      "potassium"
+     ],
+     "object": "laboratory_result",
+     "field": "potassium",
+     "type": {
+      "type": "quantity",
+      "unit": "mmol/L"
+     },
+     "concept": "CIEL:1133",
+     "label": "Serum potassium",
+     "required": true,
+     "why": "Every rule that reads it first needs: Prescription decision is Renew current treatment or Change treatment or Start treatment and Medicine is Enalapril or Lisinopril. Read by authorize_htn_prescription.",
+     "mandatory": false,
+     "hide": "!(action === '5ec5613f-16c9-5570-928b-3e171e8390ea' || action === 'afeacb99-7684-53a4-a109-2b17f4a0945d' || action === '61cc1d99-9328-5ca8-9275-9b3a17029353') || [3, 4].indexOf(extractRepeatingGroupValues('concept', allFields[extractRepeatingGroupValues('id', allFields).indexOf('medicine')].questionOptions.answers).filter(Boolean).indexOf(medicine)) === -1",
+     "shownWhen": "Prescription decision is Renew current treatment or Change treatment or Start treatment and Medicine is Enalapril or Lisinopril",
+     "gates": [
+      "action",
+      "medicine"
+     ],
+     "shownOn": {
+      "action": [
+       "renew",
+       "change",
+       "start"
+      ],
+      "medicine": [
+       "enalapril",
+       "lisinopril"
+      ]
+     }
+    }
+   ],
+   "objects": [
+    {
+     "path": [
+      "potassium_result"
+     ],
+     "object": "laboratory_result",
+     "host": {
+      "patient": {
+       "from": "patient"
+      }
+     },
+     "asked": [
+      "potassium"
+     ],
+     "optional": true
+    }
+   ],
+   "host": {
+    "potassium_result": {
+     "from": "object",
+     "path": [
+      "potassium_result"
+     ]
+    }
+   },
+   "starts": [],
+   "uuid": "05ecba10-d8d6-3479-843a-c40fd442c0ed",
+   "encounterType": {
+    "uuid": "b7643789-f723-5bb5-b47c-cc54769f0556",
+    "name": "Nexo HTN prescription decision",
+    "description": "Nexo task htn_prescription_review (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "05ecba10-d8d6-3479-843a-c40fd442c0ed",
+    "name": "Nexo: Make the hypertension prescription decision"
+   }
+  },
+  {
+   "name": "htn_dispense",
+   "kind": "task",
+   "template": "htn_dispense",
+   "role": "pharmacy_worker",
+   "title": "Dispense the authorized hypertension prescription",
+   "evidence": "Attributed pharmacy report tied to this patient, prescription ID and occurrence, both medicine names and doses, stock, packing, and coverage end. Stock availability alone is not dispensing.",
+   "content": {
+    "prescription": {
+     "type": {
+      "type": "reference",
+      "target": "work"
+     }
+    }
+   },
+   "questions": [
+    {
+     "id": "supply__medicine",
+     "path": [
+      "supply",
+      "medicine"
+     ],
+     "object": "htn_supply",
+     "field": "medicine",
+     "type": {
+      "type": "listed",
+      "values": [
+       "amlodipine",
+       "hydrochlorothiazide",
+       "indapamide_sr",
+       "enalapril",
+       "lisinopril"
+      ]
+     },
+     "concept": "b1a469c6-4e8e-5d5d-a680-709acebb8fc0",
+     "answers": {
+      "amlodipine": "CIEL:71137",
+      "hydrochlorothiazide": "CIEL:77696",
+      "indapamide_sr": "CIEL:77985",
+      "enalapril": "CIEL:75633",
+      "lisinopril": "CIEL:78945"
+     },
+     "label": "Medicine",
+     "required": true,
+     "why": "The task declares it required. Read by verify_htn_dispensing.",
+     "mandatory": true
+    },
+    {
+     "id": "supply__dose",
+     "path": [
+      "supply",
+      "dose"
+     ],
+     "object": "htn_supply",
+     "field": "dose",
+     "type": {
+      "type": "quantity",
+      "unit": "mg"
+     },
+     "concept": "c8248a33-e8a5-5011-8386-24f9c1d2daf3",
+     "label": "Dose",
+     "required": true,
+     "why": "The task declares it required. Read by verify_htn_dispensing.",
+     "mandatory": true
+    },
+    {
+     "id": "supply__second_medicine",
+     "path": [
+      "supply",
+      "second_medicine"
+     ],
+     "object": "htn_supply",
+     "field": "second_medicine",
+     "type": {
+      "type": "listed",
+      "values": [
+       "none",
+       "amlodipine",
+       "hydrochlorothiazide",
+       "indapamide_sr"
+      ]
+     },
+     "concept": "2b0abcbc-b575-5298-8525-4960ee0cc425",
+     "answers": {
+      "none": "5f7e7e31-77da-5c92-b714-f61ece2b9ed8",
+      "amlodipine": "CIEL:71137",
+      "hydrochlorothiazide": "CIEL:77696",
+      "indapamide_sr": "CIEL:77985"
+     },
+     "label": "Second medicine",
+     "required": true,
+     "why": "The task declares it required. Read by verify_htn_dispensing.",
+     "mandatory": true
+    },
+    {
+     "id": "supply__second_dose",
+     "path": [
+      "supply",
+      "second_dose"
+     ],
+     "object": "htn_supply",
+     "field": "second_dose",
+     "type": {
+      "type": "quantity",
+      "unit": "mg"
+     },
+     "concept": "6f88ad22-712b-5e5f-a3c4-d0b8bec5daa6",
+     "label": "Second medicine dose",
+     "required": true,
+     "why": "Every rule that reads it first needs: Medicine in stock is Yes and Supply packed for the patient is Yes and Second medicine is Amlodipine or Hydrochlorothiazide or Indapamide SR. Read by verify_htn_dispensing.",
+     "mandatory": false,
+     "hide": "[0].indexOf(extractRepeatingGroupValues('concept', allFields[extractRepeatingGroupValues('id', allFields).indexOf('supply__stock_available')].questionOptions.answers).filter(Boolean).indexOf(supply__stock_available)) === -1 || [0].indexOf(extractRepeatingGroupValues('concept', allFields[extractRepeatingGroupValues('id', allFields).indexOf('supply__packed')].questionOptions.answers).filter(Boolean).indexOf(supply__packed)) === -1 || [1, 2, 3].indexOf(extractRepeatingGroupValues('concept', allFields[extractRepeatingGroupValues('id', allFields).indexOf('supply__second_medicine')].questionOptions.answers).filter(Boolean).indexOf(supply__second_medicine)) === -1",
+     "shownWhen": "Medicine in stock is Yes and Supply packed for the patient is Yes and Second medicine is Amlodipine or Hydrochlorothiazide or Indapamide SR",
+     "gates": [
+      "supply__stock_available",
+      "supply__packed",
+      "supply__second_medicine"
+     ],
+     "shownOn": {
+      "supply__stock_available": [
+       "yes"
+      ],
+      "supply__packed": [
+       "yes"
+      ],
+      "supply__second_medicine": [
+       "amlodipine",
+       "hydrochlorothiazide",
+       "indapamide_sr"
+      ]
+     }
+    },
+    {
+     "id": "supply__stock_available",
+     "path": [
+      "supply",
+      "stock_available"
+     ],
+     "object": "htn_supply",
+     "field": "stock_available",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "b316d3b0-5b55-512e-9ba3-f4255b74fa0b",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Medicine in stock",
+     "required": true,
+     "why": "Read by verify_htn_dispensing. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "supply__packed",
+     "path": [
+      "supply",
+      "packed"
+     ],
+     "object": "htn_supply",
+     "field": "packed",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "5aecf5f2-c80d-5d82-936d-41ba22433f06",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Supply packed for the patient",
+     "required": true,
+     "why": "Read by verify_htn_dispensing. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "supply__coverage_until",
+     "path": [
+      "supply",
+      "coverage_until"
+     ],
+     "object": "htn_supply",
+     "field": "coverage_until",
+     "type": {
+      "type": "instant"
+     },
+     "concept": "5ec48ad1-69b7-5c72-9cee-d12c736951cc",
+     "label": "Supply lasts until",
+     "required": true,
+     "why": "Every rule that reads it first needs: Medicine in stock is Yes and Supply packed for the patient is Yes. Read by verify_htn_dispensing.",
+     "mandatory": false,
+     "hide": "[0].indexOf(extractRepeatingGroupValues('concept', allFields[extractRepeatingGroupValues('id', allFields).indexOf('supply__stock_available')].questionOptions.answers).filter(Boolean).indexOf(supply__stock_available)) === -1 || [0].indexOf(extractRepeatingGroupValues('concept', allFields[extractRepeatingGroupValues('id', allFields).indexOf('supply__packed')].questionOptions.answers).filter(Boolean).indexOf(supply__packed)) === -1",
+     "shownWhen": "Medicine in stock is Yes and Supply packed for the patient is Yes",
+     "gates": [
+      "supply__stock_available",
+      "supply__packed"
+     ],
+     "shownOn": {
+      "supply__stock_available": [
+       "yes"
+      ],
+      "supply__packed": [
+       "yes"
+      ]
+     }
+    }
+   ],
+   "objects": [
+    {
+     "path": [
+      "supply"
+     ],
+     "object": "htn_supply",
+     "host": {
+      "patient": {
+       "from": "patient"
+      },
+      "prescription": {
+       "from": "content",
+       "key": "prescription"
+      },
+      "time": {
+       "from": "now"
+      }
+     },
+     "asked": [
+      "medicine",
+      "dose",
+      "second_medicine",
+      "second_dose",
+      "stock_available",
+      "packed",
+      "coverage_until"
+     ]
+    }
+   ],
+   "host": {
+    "supply": {
+     "from": "object",
+     "path": [
+      "supply"
+     ]
+    },
+    "asserted_at": {
+     "from": "now"
+    }
+   },
+   "starts": [],
+   "uuid": "fe5f701c-1c95-3a58-9da0-60c146b7c6e0",
+   "encounterType": {
+    "uuid": "bb376f27-86ec-5a84-8f8b-b70629413dce",
+    "name": "Nexo HTN dispensing",
+    "description": "Nexo task htn_dispense (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "fe5f701c-1c95-3a58-9da0-60c146b7c6e0",
+    "name": "Nexo: Dispense the authorized hypertension prescription"
+   }
+  },
+  {
+   "name": "htn_receipt",
+   "kind": "task",
+   "template": "htn_receipt",
+   "role": "care_coordinator",
+   "title": "Confirm that the patient received the medicines",
+   "evidence": "Patient-linked receipt for the exact prescription and dispensing task, with date and receipt proof. Pharmacy packing alone is not patient receipt or medicine use.",
+   "content": {
+    "prescription": {
+     "type": {
+      "type": "reference",
+      "target": "work"
+     }
+    },
+    "dispensing": {
+     "type": {
+      "type": "reference",
+      "target": "work"
+     }
+    },
+    "dispensed_at": {
+     "type": {
+      "type": "instant"
+     }
+    }
+   },
+   "questions": [
+    {
+     "id": "receipt__received",
+     "path": [
+      "receipt",
+      "received"
+     ],
+     "object": "htn_receipt",
+     "field": "received",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "0a64d136-b194-5ea4-8eab-2228c04a0f2b",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Patient received the medicines",
+     "required": true,
+     "why": "The task declares it required. Read by verify_htn_receipt.",
+     "mandatory": true
+    },
+    {
+     "id": "receipt__proof",
+     "path": [
+      "receipt",
+      "proof"
+     ],
+     "object": "htn_receipt",
+     "field": "proof",
+     "type": {
+      "type": "text"
+     },
+     "concept": "100d65bd-92f8-5c1b-be36-db333e517531",
+     "label": "How receipt was confirmed",
+     "required": true,
+     "why": "The task declares it required. Read by verify_htn_receipt.",
+     "mandatory": true
+    }
+   ],
+   "objects": [
+    {
+     "path": [
+      "receipt"
+     ],
+     "object": "htn_receipt",
+     "host": {
+      "patient": {
+       "from": "patient"
+      },
+      "prescription": {
+       "from": "content",
+       "key": "prescription"
+      },
+      "dispensing": {
+       "from": "content",
+       "key": "dispensing"
+      },
+      "time": {
+       "from": "now"
+      }
+     },
+     "asked": [
+      "received",
+      "proof"
+     ]
+    }
+   ],
+   "host": {
+    "receipt": {
+     "from": "object",
+     "path": [
+      "receipt"
+     ]
+    },
+    "asserted_at": {
+     "from": "now"
+    }
+   },
+   "starts": [],
+   "uuid": "52ad7e46-39da-3157-8030-76321034c993",
+   "encounterType": {
+    "uuid": "f392d0ea-c62d-57ed-9277-b8c4f64e9f54",
+    "name": "Nexo HTN medicine receipt",
+    "description": "Nexo task htn_receipt (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "52ad7e46-39da-3157-8030-76321034c993",
+    "name": "Nexo: Confirm that the patient received the medicines"
+   }
+  },
+  {
+   "name": "htn_supply_recovery",
+   "kind": "task",
+   "template": "htn_supply_recovery",
+   "role": "care_coordinator",
+   "title": "Resolve failed medicine supply",
+   "evidence": "Coordinator records the stock or receipt failure and either arranges another pharmacy attempt or requests an acknowledged NCD service handover. No medicine is silently substituted.",
+   "content": {
+    "prescription": {
+     "type": {
+      "type": "reference",
+      "target": "work"
+     }
+    },
+    "reason": {
+     "type": {
+      "type": "text"
+     }
+    }
+   },
+   "questions": [
+    {
+     "id": "disposition",
+     "path": [
+      "disposition"
+     ],
+     "field": "disposition",
+     "type": {
+      "type": "listed",
+      "values": [
+       "retry_pharmacy",
+       "receiving_service"
+      ]
+     },
+     "concept": "7974d5d3-af93-5799-b645-5ce6815ff7ff",
+     "answers": {
+      "retry_pharmacy": "c483996a-068c-5ac0-b34f-62cb99d42524",
+      "receiving_service": "7cda6b0b-2c57-5525-81af-5db193a256fe"
+     },
+     "label": "What to do next",
+     "required": true,
+     "why": "The task declares it required. Read by resolve_htn_supply.",
+     "mandatory": true
+    },
+    {
+     "id": "note",
+     "path": [
+      "note"
+     ],
+     "field": "note",
+     "type": {
+      "type": "text"
+     },
+     "concept": "875770f2-3aa2-526d-88dc-0bb535d86959",
+     "label": "What was arranged",
+     "required": true,
+     "why": "The task declares it required. Read by resolve_htn_supply.",
+     "mandatory": true
+    }
+   ],
+   "objects": [],
+   "host": {},
+   "starts": [],
+   "uuid": "e7d209ab-f5b7-33d6-82c9-a024ab4d97ce",
+   "encounterType": {
+    "uuid": "8c0b8db1-3866-5bf0-90b4-6db6473a1e11",
+    "name": "Nexo Resolve failed medicine supply",
+    "description": "Nexo task htn_supply_recovery (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "e7d209ab-f5b7-33d6-82c9-a024ab4d97ce",
+    "name": "Nexo: Resolve failed medicine supply"
+   }
+  },
+  {
+   "name": "htn_next_review",
+   "kind": "task",
+   "template": "htn_next_review",
+   "role": "assessing_clinician",
+   "title": "Attend the next NCD hypertension review",
+   "evidence": "Attributed new office reading for this patient at the follow-up encounter. Completing the visit opens a fresh clinical assessment; it does not prove control or renew medicine.",
+   "content": {
+    "prescription": {
+     "type": {
+      "type": "reference",
+      "target": "work"
+     }
+    }
+   },
+   "questions": [
+    {
+     "id": "reading__systolic",
+     "path": [
+      "reading",
+      "systolic"
+     ],
+     "object": "observation",
+     "field": "systolic",
+     "type": {
+      "type": "quantity",
+      "unit": "mm[Hg]"
+     },
+     "concept": "CIEL:5085",
+     "label": "Systolic BP",
+     "required": true,
+     "why": "The task declares it required. Read by categorize_screening, route_first_visit, resume_screening_reading, select_fig9_band, review_htn_assessment, authorize_htn_prescription, authorize_htn_first_prescription.",
+     "mandatory": true
+    },
+    {
+     "id": "reading__diastolic",
+     "path": [
+      "reading",
+      "diastolic"
+     ],
+     "object": "observation",
+     "field": "diastolic",
+     "type": {
+      "type": "quantity",
+      "unit": "mm[Hg]"
+     },
+     "concept": "CIEL:5086",
+     "label": "Diastolic BP",
+     "required": true,
+     "why": "The task declares it required. Read by categorize_screening, route_first_visit, resume_screening_reading, select_fig9_band, review_htn_assessment, authorize_htn_prescription, authorize_htn_first_prescription.",
+     "mandatory": true
+    },
+    {
+     "id": "reading__setting",
+     "path": [
+      "reading",
+      "setting"
+     ],
+     "object": "observation",
+     "field": "setting",
+     "type": {
+      "type": "listed",
+      "values": [
+       "office",
+       "home",
+       "ambulatory"
+      ]
+     },
+     "concept": "dbade085-4113-5dac-bc64-fd3bdd5ed476",
+     "answers": {
+      "office": "bc59db88-d16e-5fc5-9905-d9b8c3a2afca",
+      "home": "c0770136-933c-592a-9c4d-eb8818bc2e50",
+      "ambulatory": "77d83b25-e9ce-5bb3-bd9f-ee7e25d700db"
+     },
+     "label": "Where was BP measured",
+     "required": true,
+     "why": "The task declares it required. Read by categorize_screening, resume_screening_reading, review_htn_assessment.",
+     "mandatory": true
+    },
+    {
+     "id": "reading__encounter__hypertension_symptoms",
+     "path": [
+      "reading",
+      "encounter",
+      "hypertension_symptoms"
+     ],
+     "object": "encounter",
+     "field": "hypertension_symptoms",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "eea11f79-217d-59ec-be69-c25adb1f404b",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Symptoms of hypertension",
+     "required": true,
+     "why": "Read by categorize_screening, route_first_visit, resume_screening_reading. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "reading__encounter__organ_damage_evidence",
+     "path": [
+      "reading",
+      "encounter",
+      "organ_damage_evidence"
+     ],
+     "object": "encounter",
+     "field": "organ_damage_evidence",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "e73ea83c-4010-5db3-b8d3-4b1069aa2c5f",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Evidence of organ damage",
+     "required": true,
+     "why": "Read by categorize_screening, route_first_visit, resume_screening_reading. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "reading__encounter__care_level",
+     "path": [
+      "reading",
+      "encounter",
+      "care_level"
+     ],
+     "object": "encounter",
+     "field": "care_level",
+     "type": {
+      "type": "listed",
+      "values": [
+       "health_center",
+       "medicalized_health_center",
+       "district_hospital",
+       "provincial_hospital",
+       "level_2_teaching_hospital",
+       "referral_hospital",
+       "university_teaching_hospital"
+      ]
+     },
+     "concept": "36b1edb3-f3ae-5595-b067-72b6a606cdb3",
+     "answers": {
+      "health_center": "2a26c527-b70f-538c-8819-759f2d2b41f7",
+      "medicalized_health_center": "80ab44c1-7f81-58a3-a143-5420d9482981",
+      "district_hospital": "0f316b75-66b6-5abc-bcc0-96f291e40877",
+      "provincial_hospital": "3d83353a-7cd0-5151-aacc-9c904d08761b",
+      "level_2_teaching_hospital": "5bf45767-4563-52cb-914d-91904b6b057f",
+      "referral_hospital": "5fb5891e-48dc-5b00-8493-932d702cee64",
+      "university_teaching_hospital": "064b36ae-889f-5bee-8116-1c09aa665a27"
+     },
+     "label": "Care level of this facility",
+     "required": true,
+     "why": "Read by start_hc_workup. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "reading__encounter__pregnant",
+     "path": [
+      "reading",
+      "encounter",
+      "pregnant"
+     ],
+     "object": "encounter",
+     "field": "pregnant",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "CIEL:5272",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Currently pregnant",
+     "required": true,
+     "why": "Read by categorize_screening, route_first_visit, resume_screening_reading, select_fig9_band. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "reading__encounter__diabetes",
+     "path": [
+      "reading",
+      "encounter",
+      "diabetes"
+     ],
+     "object": "encounter",
+     "field": "diabetes",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "8cb5fcdd-fc75-5d47-aef5-1ca60d76a0c1",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Diabetes",
+     "required": true,
+     "why": "Read by select_fig9_band. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "reading__encounter__coronary_artery_disease",
+     "path": [
+      "reading",
+      "encounter",
+      "coronary_artery_disease"
+     ],
+     "object": "encounter",
+     "field": "coronary_artery_disease",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "5084c169-4345-5d4b-88d9-9ff030b94389",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Coronary artery disease",
+     "required": true,
+     "why": "Read by select_fig9_band. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "reading__encounter__chronic_kidney_disease",
+     "path": [
+      "reading",
+      "encounter",
+      "chronic_kidney_disease"
+     ],
+     "object": "encounter",
+     "field": "chronic_kidney_disease",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "a4b7087f-2644-51a2-a27a-6594823e9e34",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Chronic kidney disease",
+     "required": true,
+     "why": "Read by select_fig9_band. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    }
+   ],
+   "objects": [
+    {
+     "path": [
+      "reading"
+     ],
+     "object": "observation",
+     "host": {
+      "patient": {
+       "from": "patient"
+      },
+      "encounter": {
+       "from": "object",
+       "path": [
+        "reading",
+        "encounter"
+       ]
+      },
+      "time": {
+       "from": "now"
+      }
+     },
+     "asked": [
+      "systolic",
+      "diastolic",
+      "setting"
+     ]
+    },
+    {
+     "path": [
+      "reading",
+      "encounter"
+     ],
+     "object": "encounter",
+     "host": {
+      "patient": {
+       "from": "patient"
+      }
+     },
+     "asked": [
+      "hypertension_symptoms",
+      "organ_damage_evidence",
+      "care_level",
+      "pregnant",
+      "diabetes",
+      "coronary_artery_disease",
+      "chronic_kidney_disease"
+     ]
+    }
+   ],
+   "host": {
+    "reading": {
+     "from": "object",
+     "path": [
+      "reading"
+     ]
+    },
+    "asserted_at": {
+     "from": "now"
+    }
+   },
+   "starts": [],
+   "uuid": "0fdf7e3b-38e1-31a2-8daa-159117c67a1a",
+   "encounterType": {
+    "uuid": "2a10108f-994d-5362-bf22-d120a4d889da",
+    "name": "Nexo HTN next review",
+    "description": "Nexo task htn_next_review (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "0fdf7e3b-38e1-31a2-8daa-159117c67a1a",
+    "name": "Nexo: Attend the next NCD hypertension review"
+   }
+  },
+  {
+   "name": "htn_contact_overdue",
+   "kind": "task",
+   "template": "htn_contact_overdue",
+   "role": "care_coordinator",
+   "title": "Contact the patient and NCD service about overdue review",
+   "evidence": "Document contact and the next arrangement. Contact does not satisfy the still-open clinical review.",
+   "content": {
+    "review": {
+     "type": {
+      "type": "reference",
+      "target": "work"
+     }
+    }
+   },
+   "questions": [
+    {
+     "id": "contacted",
+     "path": [
+      "contacted"
+     ],
+     "field": "contacted",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "b14539d4-6a56-541e-8a13-a6745b6545d0",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Patient contacted",
+     "required": true,
+     "why": "The task declares it required. Read by record_overdue_contact.",
+     "mandatory": true
+    },
+    {
+     "id": "note",
+     "path": [
+      "note"
+     ],
+     "field": "note",
+     "type": {
+      "type": "text"
+     },
+     "concept": "adbcb9c9-6dc2-5444-9e1e-584be05bb464",
+     "label": "What was arranged",
+     "required": true,
+     "why": "The task declares it required. Read by record_overdue_contact.",
+     "mandatory": true
+    }
+   ],
+   "objects": [],
+   "host": {},
+   "starts": [],
+   "uuid": "b00a4ed5-bff7-3980-9b80-49faf1460db4",
+   "encounterType": {
+    "uuid": "63601918-00ea-567c-af52-a4ab3b45f4f7",
+    "name": "Nexo Contact the patient and NCD service about o…",
+    "description": "Nexo task htn_contact_overdue (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "b00a4ed5-bff7-3980-9b80-49faf1460db4",
+    "name": "Nexo: Contact the patient and NCD service about overdue review"
+   }
+  },
+  {
+   "name": "htn_handover",
+   "kind": "task",
+   "template": "htn_handover",
+   "role": "receiving_clinician",
+   "title": "Arrange and acknowledge the receiving service handover",
+   "evidence": "The receiving clinician identifies this patient and named service, accepts responsibility and supplies a resolved external next-work record with matching patient/service, that clinician as its owner, work kind, accepted status and due instant. This is attributed external evidence; it does not execute or complete the receiving service work. Sending a referral or completing a checklist does not prove acceptance.",
+   "content": {
+    "first_reading": {
+     "type": {
+      "type": "reference",
+      "target": "object:observation"
+     },
+     "optional": true
+    },
+    "second_reading": {
+     "type": {
+      "type": "reference",
+      "target": "object:observation"
+     },
+     "optional": true
+    },
+    "diagnostic_outcome": {
+     "type": {
+      "type": "listed",
+      "values": [
+       "confirmation_pending",
+       "not_confirmed_at_second_visit",
+       "not_hypertension"
+      ]
+     },
+     "optional": true
+    },
+    "destination": {
+     "type": {
+      "type": "identifier"
+     }
+    },
+    "reason": {
+     "type": {
+      "type": "text"
+     }
+    },
+    "reading": {
+     "type": {
+      "type": "reference",
+      "target": "object:observation"
+     }
+    },
+    "assessment": {
+     "type": {
+      "type": "reference",
+      "target": "object:htn_assessment"
+     },
+     "optional": true
+    },
+    "prescription": {
+     "type": {
+      "type": "reference",
+      "target": "work"
+     },
+     "optional": true
+    }
+   },
+   "questions": [
+    {
+     "id": "destination",
+     "path": [
+      "destination"
+     ],
+     "field": "destination",
+     "type": {
+      "type": "identifier"
+     },
+     "concept": "98fdb869-5893-5aed-a5cd-d75ebc90da95",
+     "label": "Receiving service",
+     "required": true,
+     "why": "The task declares it required. Read by accept_owned_handover.",
+     "mandatory": true
+    },
+    {
+     "id": "accepted",
+     "path": [
+      "accepted"
+     ],
+     "field": "accepted",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "e3f59b0e-054b-58b0-9861-4ea68abaec46",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Receiving service accepts the patient",
+     "required": true,
+     "why": "The task declares it required. Read by accept_owned_handover.",
+     "mandatory": true
+    },
+    {
+     "id": "next_work__kind",
+     "path": [
+      "next_work",
+      "kind"
+     ],
+     "object": "htn_external_work",
+     "field": "kind",
+     "type": {
+      "type": "listed",
+      "values": [
+       "clinical_assessment",
+       "medicine_supply",
+       "diagnostic_assessment",
+       "maternal_assessment",
+       "child_assessment"
+      ]
+     },
+     "concept": "2e9a1d14-dc2b-5c6f-bf80-c089dbb7efa9",
+     "answers": {
+      "clinical_assessment": "04f03bd2-d749-5dab-ba70-ac8eddb18f9f",
+      "medicine_supply": "82f0b1ba-921d-578d-8537-1cb1372e5112",
+      "diagnostic_assessment": "16f6fcbb-dac6-5384-b0ae-053859970d61",
+      "maternal_assessment": "f17c8cff-7ea4-517b-8af8-1cf41eb62ddc",
+      "child_assessment": "c014fe9c-26cd-5c62-a5d2-bc816d161820"
+     },
+     "label": "Type of next care",
+     "required": true,
+     "why": "The task declares it required. Read by accept_owned_handover.",
+     "mandatory": true
+    },
+    {
+     "id": "next_work__status",
+     "path": [
+      "next_work",
+      "status"
+     ],
+     "object": "htn_external_work",
+     "field": "status",
+     "type": {
+      "type": "listed",
+      "values": [
+       "accepted",
+       "planned"
+      ]
+     },
+     "concept": "a478fd08-a94e-5609-a636-72099e9c6dcc",
+     "answers": {
+      "accepted": "6691a58c-d5e6-59fd-b89b-dbd4f095c0a4",
+      "planned": "3e1935d9-c200-5e51-8af9-1b22203b3df8"
+     },
+     "label": "Status of next care",
+     "required": true,
+     "why": "The task declares it required. Read by accept_owned_handover.",
+     "mandatory": true
+    },
+    {
+     "id": "next_work__due_at",
+     "path": [
+      "next_work",
+      "due_at"
+     ],
+     "object": "htn_external_work",
+     "field": "due_at",
+     "type": {
+      "type": "instant"
+     },
+     "concept": "98b20e1a-00bf-537c-99c1-e9f0c264e33c",
+     "label": "Next care due",
+     "required": true,
+     "why": "The task declares it required. Read by accept_owned_handover.",
+     "mandatory": true
+    }
+   ],
+   "objects": [
+    {
+     "path": [
+      "next_work"
+     ],
+     "object": "htn_external_work",
+     "host": {
+      "patient": {
+       "from": "patient"
+      },
+      "destination": {
+       "from": "content",
+       "key": "destination"
+      },
+      "owner": {
+       "from": "actor"
+      }
+     },
+     "asked": [
+      "kind",
+      "status",
+      "due_at"
+     ]
+    }
+   ],
+   "host": {
+    "patient": {
+     "from": "patient"
+    },
+    "next_work": {
+     "from": "object",
+     "path": [
+      "next_work"
+     ]
+    },
+    "asserted_at": {
+     "from": "now"
+    }
+   },
+   "starts": [],
+   "uuid": "a69a9ea0-9ca5-3a29-97a4-e0a37dbffdc3",
+   "encounterType": {
+    "uuid": "33b859c7-2b98-5347-aa25-74df293527bd",
+    "name": "Nexo Arrange and acknowledge the receiving servi…",
+    "description": "Nexo task htn_handover (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "a69a9ea0-9ca5-3a29-97a4-e0a37dbffdc3",
+    "name": "Nexo: Arrange and acknowledge the receiving service handover"
+   }
+  },
+  {
+   "name": "htn_handover_recovery",
+   "kind": "task",
+   "template": "htn_handover_recovery",
+   "role": "care_coordinator",
+   "title": "Resolve the unaccepted handover",
+   "evidence": "The coordinator contacts the named receiving service and records the next arrangement. A failed handover remains open until a clinician accepts it.",
+   "content": {
+    "first_reading": {
+     "type": {
+      "type": "reference",
+      "target": "object:observation"
+     },
+     "optional": true
+    },
+    "second_reading": {
+     "type": {
+      "type": "reference",
+      "target": "object:observation"
+     },
+     "optional": true
+    },
+    "diagnostic_outcome": {
+     "type": {
+      "type": "listed",
+      "values": [
+       "confirmation_pending",
+       "not_confirmed_at_second_visit",
+       "not_hypertension"
+      ]
+     },
+     "optional": true
+    },
+    "destination": {
+     "type": {
+      "type": "identifier"
+     }
+    },
+    "reason": {
+     "type": {
+      "type": "text"
+     }
+    },
+    "reading": {
+     "type": {
+      "type": "reference",
+      "target": "object:observation"
+     }
+    },
+    "assessment": {
+     "type": {
+      "type": "reference",
+      "target": "object:htn_assessment"
+     },
+     "optional": true
+    },
+    "prescription": {
+     "type": {
+      "type": "reference",
+      "target": "work"
+     },
+     "optional": true
+    }
+   },
+   "questions": [
+    {
+     "id": "retry",
+     "path": [
+      "retry"
+     ],
+     "field": "retry",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "1d04f4b4-e25a-5d0f-83e5-e88df1c70c09",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Try the handover again",
+     "required": true,
+     "why": "The task declares it required. Read by retry_owned_handover.",
+     "mandatory": true
+    },
+    {
+     "id": "note",
+     "path": [
+      "note"
+     ],
+     "field": "note",
+     "type": {
+      "type": "text"
+     },
+     "concept": "6bc97338-a760-54a0-8522-c5d071e40933",
+     "label": "What was arranged",
+     "required": true,
+     "why": "The task declares it required. Read by retry_owned_handover.",
+     "mandatory": true
+    }
+   ],
+   "objects": [],
+   "host": {},
+   "starts": [],
+   "uuid": "d9d131a8-5b6c-3545-83f3-04d6d40d26cc",
+   "encounterType": {
+    "uuid": "022ef4ae-db0b-5d41-83a4-b6e8341138e6",
+    "name": "Nexo Resolve the unaccepted handover",
+    "description": "Nexo task htn_handover_recovery (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "d9d131a8-5b6c-3545-83f3-04d6d40d26cc",
+    "name": "Nexo: Resolve the unaccepted handover"
+   }
+  },
+  {
+   "name": "htn_single_visit_diagnosis",
+   "kind": "task",
+   "template": "htn_single_visit_diagnosis",
+   "role": "assessing_clinician",
+   "title": "Assess diagnosis and treatment now after the first office visit",
+   "evidence": "The clinician records the diagnosis after this one office reading and assesses treatment without routine repeat-visit delay. BP alone does not record a diagnosis.",
+   "content": {
+    "reading": {
+     "type": {
+      "type": "reference",
+      "target": "object:observation"
+     }
+    }
+   },
+   "questions": [
+    {
+     "id": "diagnosis",
+     "path": [
+      "diagnosis"
+     ],
+     "field": "diagnosis",
+     "type": {
+      "type": "listed",
+      "values": [
+       "hypertension",
+       "not_hypertension"
+      ]
+     },
+     "concept": "547676c4-295c-5ae8-8424-7e0e3ea9b39a",
+     "answers": {
+      "hypertension": "CIEL:117399",
+      "not_hypertension": "9508e5ad-fd68-556a-a9fd-abd06d280259"
+     },
+     "label": "Diagnosis",
+     "required": true,
+     "why": "The task declares it required. Read by record_single_visit_diagnosis.",
+     "mandatory": true
+    }
+   ],
+   "objects": [],
+   "host": {},
+   "starts": [],
+   "uuid": "f6b24a5c-5d54-3ccd-86c2-774344300f62",
+   "encounterType": {
+    "uuid": "8216442b-9e89-5860-8156-cd2d83195a7b",
+    "name": "Nexo Assess diagnosis and treatment now after th…",
+    "description": "Nexo task htn_single_visit_diagnosis (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "f6b24a5c-5d54-3ccd-86c2-774344300f62",
+    "name": "Nexo: Assess diagnosis and treatment now after the first office visit"
+   }
+  },
+  {
+   "name": "htn_first_prescription_review",
+   "kind": "task",
+   "template": "htn_first_prescription_review",
+   "role": "assessing_clinician",
+   "title": "Make the first hypertension prescription decision",
+   "evidence": "Attributed clinician first-prescription decision after an explicit same-patient, attributed and dated no-regimen attestation. Only supported starting doses are eligible.",
+   "content": {
+    "assessment": {
+     "type": {
+      "type": "reference",
+      "target": "object:htn_assessment"
+     }
+    },
+    "target_met": {
+     "type": {
+      "type": "yes_no"
+     }
+    },
+    "mode": {
+     "type": {
+      "type": "listed",
+      "values": [
+       "initial",
+       "follow_up"
+      ]
+     }
+    },
+    "initial_combination_required": {
+     "type": {
+      "type": "yes_no"
+     }
+    },
+    "current_regimen": {
+     "type": {
+      "type": "reference",
+      "target": "object:htn_no_regimen_attestation"
+     }
+    },
+    "reviewed_by": {
+     "type": {
+      "type": "reference",
+      "target": "actor"
+     }
+    }
+   },
+   "questions": [
+    {
+     "id": "action",
+     "path": [
+      "action"
+     ],
+     "field": "action",
+     "type": {
+      "type": "listed",
+      "values": [
+       "start",
+       "renew",
+       "change",
+       "refer"
+      ]
+     },
+     "concept": "d5c652ee-b0f8-52a2-a448-dcbd0bb7d54a",
+     "answers": {
+      "start": "61cc1d99-9328-5ca8-9275-9b3a17029353",
+      "renew": "5ec5613f-16c9-5570-928b-3e171e8390ea",
+      "change": "afeacb99-7684-53a4-a109-2b17f4a0945d",
+      "refer": "e6beb88c-a35f-5a3e-9386-a9bfd392e08c"
+     },
+     "label": "Prescription decision",
+     "required": true,
+     "why": "The task declares it required. Read by authorize_htn_first_prescription.",
+     "mandatory": true
+    },
+    {
+     "id": "medicine",
+     "path": [
+      "medicine"
+     ],
+     "field": "medicine",
+     "type": {
+      "type": "listed",
+      "values": [
+       "amlodipine",
+       "hydrochlorothiazide",
+       "indapamide_sr",
+       "enalapril",
+       "lisinopril"
+      ]
+     },
+     "concept": "b2a0e624-fe8f-5a54-aaac-5de3027262ef",
+     "answers": {
+      "amlodipine": "CIEL:71137",
+      "hydrochlorothiazide": "CIEL:77696",
+      "indapamide_sr": "CIEL:77985",
+      "enalapril": "CIEL:75633",
+      "lisinopril": "CIEL:78945"
+     },
+     "label": "Medicine",
+     "required": true,
+     "why": "The task declares it required. Read by authorize_htn_first_prescription.",
+     "mandatory": true
+    },
+    {
+     "id": "dose",
+     "path": [
+      "dose"
+     ],
+     "field": "dose",
+     "type": {
+      "type": "quantity",
+      "unit": "mg"
+     },
+     "concept": "e05d9b3f-3c2a-5195-8593-2e79a0599f5c",
+     "label": "Dose",
+     "required": true,
+     "why": "The task declares it required. Read by authorize_htn_first_prescription.",
+     "mandatory": true
+    },
+    {
+     "id": "second_medicine",
+     "path": [
+      "second_medicine"
+     ],
+     "field": "second_medicine",
+     "type": {
+      "type": "listed",
+      "values": [
+       "none",
+       "amlodipine",
+       "hydrochlorothiazide",
+       "indapamide_sr"
+      ]
+     },
+     "concept": "c4e427b7-0e08-5c14-8e59-94a405888777",
+     "answers": {
+      "none": "5f7e7e31-77da-5c92-b714-f61ece2b9ed8",
+      "amlodipine": "CIEL:71137",
+      "hydrochlorothiazide": "CIEL:77696",
+      "indapamide_sr": "CIEL:77985"
+     },
+     "label": "Second medicine",
+     "required": true,
+     "why": "The task declares it required. Read by authorize_htn_first_prescription.",
+     "mandatory": true
+    },
+    {
+     "id": "second_dose",
+     "path": [
+      "second_dose"
+     ],
+     "field": "second_dose",
+     "type": {
+      "type": "quantity",
+      "unit": "mg"
+     },
+     "concept": "d8f089b2-484f-59c0-a9e0-9a6ff08f1570",
+     "label": "Second medicine dose",
+     "required": true,
+     "why": "Every rule that reads it first needs: Prescription decision is Start treatment and Medicine is Enalapril or Lisinopril and Second medicine is Amlodipine or Hydrochlorothiazide or Indapamide SR. Read by authorize_htn_first_prescription.",
+     "mandatory": false,
+     "hide": "!(action === '61cc1d99-9328-5ca8-9275-9b3a17029353') || [3, 4].indexOf(extractRepeatingGroupValues('concept', allFields[extractRepeatingGroupValues('id', allFields).indexOf('medicine')].questionOptions.answers).filter(Boolean).indexOf(medicine)) === -1 || [1, 2, 3].indexOf(extractRepeatingGroupValues('concept', allFields[extractRepeatingGroupValues('id', allFields).indexOf('second_medicine')].questionOptions.answers).filter(Boolean).indexOf(second_medicine)) === -1",
+     "shownWhen": "Prescription decision is Start treatment and Medicine is Enalapril or Lisinopril and Second medicine is Amlodipine or Hydrochlorothiazide or Indapamide SR",
+     "gates": [
+      "action",
+      "medicine",
+      "second_medicine"
+     ],
+     "shownOn": {
+      "action": [
+       "start"
+      ],
+      "medicine": [
+       "enalapril",
+       "lisinopril"
+      ],
+      "second_medicine": [
+       "amlodipine",
+       "hydrochlorothiazide",
+       "indapamide_sr"
+      ]
+     }
+    },
+    {
+     "id": "valid_until",
+     "path": [
+      "valid_until"
+     ],
+     "field": "valid_until",
+     "type": {
+      "type": "instant"
+     },
+     "concept": "b53619c8-8aa3-59ed-8b19-8c5ef4aebb71",
+     "label": "Prescription valid until",
+     "required": true,
+     "why": "The task declares it required. Read by authorize_htn_first_prescription.",
+     "mandatory": true
+    },
+    {
+     "id": "reason",
+     "path": [
+      "reason"
+     ],
+     "field": "reason",
+     "type": {
+      "type": "text"
+     },
+     "concept": "3809b0ac-c014-57c4-82a6-710cac4ad5ff",
+     "label": "Reason for the decision",
+     "required": true,
+     "why": "The task declares it required. Read by authorize_htn_first_prescription.",
+     "mandatory": true
+    },
+    {
+     "id": "potassium_result__potassium",
+     "path": [
+      "potassium_result",
+      "potassium"
+     ],
+     "object": "laboratory_result",
+     "field": "potassium",
+     "type": {
+      "type": "quantity",
+      "unit": "mmol/L"
+     },
+     "concept": "CIEL:1133",
+     "label": "Serum potassium",
+     "required": true,
+     "why": "Every rule that reads it first needs: Prescription decision is Start treatment and Medicine is Enalapril or Lisinopril. Read by authorize_htn_first_prescription.",
+     "mandatory": false,
+     "hide": "!(action === '61cc1d99-9328-5ca8-9275-9b3a17029353') || [3, 4].indexOf(extractRepeatingGroupValues('concept', allFields[extractRepeatingGroupValues('id', allFields).indexOf('medicine')].questionOptions.answers).filter(Boolean).indexOf(medicine)) === -1",
+     "shownWhen": "Prescription decision is Start treatment and Medicine is Enalapril or Lisinopril",
+     "gates": [
+      "action",
+      "medicine"
+     ],
+     "shownOn": {
+      "action": [
+       "start"
+      ],
+      "medicine": [
+       "enalapril",
+       "lisinopril"
+      ]
+     }
+    }
+   ],
+   "objects": [
+    {
+     "path": [
+      "potassium_result"
+     ],
+     "object": "laboratory_result",
+     "host": {
+      "patient": {
+       "from": "patient"
+      }
+     },
+     "asked": [
+      "potassium"
+     ],
+     "optional": true
+    }
+   ],
+   "host": {
+    "potassium_result": {
+     "from": "object",
+     "path": [
+      "potassium_result"
+     ]
+    }
+   },
+   "starts": [],
+   "uuid": "511390b3-73e5-3e81-a28d-9df06e0778b2",
+   "encounterType": {
+    "uuid": "3de40289-73a0-5893-988d-bb4ea8f1052b",
+    "name": "Nexo HTN first prescription decision",
+    "description": "Nexo task htn_first_prescription_review (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "511390b3-73e5-3e81-a28d-9df06e0778b2",
+    "name": "Nexo: Make the first hypertension prescription decision"
+   }
+  },
+  {
+   "name": "event_measurement_recorded",
+   "kind": "event",
+   "event": "measurement.recorded",
+   "title": "Record a blood-pressure reading",
+   "content": {},
+   "questions": [
+    {
+     "id": "reading__systolic",
+     "path": [
+      "reading",
+      "systolic"
+     ],
+     "object": "observation",
+     "field": "systolic",
+     "type": {
+      "type": "quantity",
+      "unit": "mm[Hg]"
+     },
+     "concept": "CIEL:5085",
+     "label": "Systolic BP",
+     "required": true,
+     "why": "The event declares it required. Read by categorize_screening, route_first_visit, resume_screening_reading, select_fig9_band, review_htn_assessment, authorize_htn_prescription, authorize_htn_first_prescription.",
+     "mandatory": true
+    },
+    {
+     "id": "reading__diastolic",
+     "path": [
+      "reading",
+      "diastolic"
+     ],
+     "object": "observation",
+     "field": "diastolic",
+     "type": {
+      "type": "quantity",
+      "unit": "mm[Hg]"
+     },
+     "concept": "CIEL:5086",
+     "label": "Diastolic BP",
+     "required": true,
+     "why": "The event declares it required. Read by categorize_screening, route_first_visit, resume_screening_reading, select_fig9_band, review_htn_assessment, authorize_htn_prescription, authorize_htn_first_prescription.",
+     "mandatory": true
+    },
+    {
+     "id": "reading__setting",
+     "path": [
+      "reading",
+      "setting"
+     ],
+     "object": "observation",
+     "field": "setting",
+     "type": {
+      "type": "listed",
+      "values": [
+       "office",
+       "home",
+       "ambulatory"
+      ]
+     },
+     "concept": "dbade085-4113-5dac-bc64-fd3bdd5ed476",
+     "answers": {
+      "office": "bc59db88-d16e-5fc5-9905-d9b8c3a2afca",
+      "home": "c0770136-933c-592a-9c4d-eb8818bc2e50",
+      "ambulatory": "77d83b25-e9ce-5bb3-bd9f-ee7e25d700db"
+     },
+     "label": "Where was BP measured",
+     "required": true,
+     "why": "The event declares it required. Read by categorize_screening, resume_screening_reading, review_htn_assessment.",
+     "mandatory": true
+    },
+    {
+     "id": "reading__encounter__hypertension_symptoms",
+     "path": [
+      "reading",
+      "encounter",
+      "hypertension_symptoms"
+     ],
+     "object": "encounter",
+     "field": "hypertension_symptoms",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "eea11f79-217d-59ec-be69-c25adb1f404b",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Symptoms of hypertension",
+     "required": true,
+     "why": "Read by categorize_screening, route_first_visit, resume_screening_reading. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "reading__encounter__organ_damage_evidence",
+     "path": [
+      "reading",
+      "encounter",
+      "organ_damage_evidence"
+     ],
+     "object": "encounter",
+     "field": "organ_damage_evidence",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "e73ea83c-4010-5db3-b8d3-4b1069aa2c5f",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Evidence of organ damage",
+     "required": true,
+     "why": "Read by categorize_screening, route_first_visit, resume_screening_reading. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "reading__encounter__care_level",
+     "path": [
+      "reading",
+      "encounter",
+      "care_level"
+     ],
+     "object": "encounter",
+     "field": "care_level",
+     "type": {
+      "type": "listed",
+      "values": [
+       "health_center",
+       "medicalized_health_center",
+       "district_hospital",
+       "provincial_hospital",
+       "level_2_teaching_hospital",
+       "referral_hospital",
+       "university_teaching_hospital"
+      ]
+     },
+     "concept": "36b1edb3-f3ae-5595-b067-72b6a606cdb3",
+     "answers": {
+      "health_center": "2a26c527-b70f-538c-8819-759f2d2b41f7",
+      "medicalized_health_center": "80ab44c1-7f81-58a3-a143-5420d9482981",
+      "district_hospital": "0f316b75-66b6-5abc-bcc0-96f291e40877",
+      "provincial_hospital": "3d83353a-7cd0-5151-aacc-9c904d08761b",
+      "level_2_teaching_hospital": "5bf45767-4563-52cb-914d-91904b6b057f",
+      "referral_hospital": "5fb5891e-48dc-5b00-8493-932d702cee64",
+      "university_teaching_hospital": "064b36ae-889f-5bee-8116-1c09aa665a27"
+     },
+     "label": "Care level of this facility",
+     "required": true,
+     "why": "Read by start_hc_workup. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "reading__encounter__pregnant",
+     "path": [
+      "reading",
+      "encounter",
+      "pregnant"
+     ],
+     "object": "encounter",
+     "field": "pregnant",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "CIEL:5272",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Currently pregnant",
+     "required": true,
+     "why": "Read by categorize_screening, route_first_visit, resume_screening_reading, select_fig9_band. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "reading__encounter__diabetes",
+     "path": [
+      "reading",
+      "encounter",
+      "diabetes"
+     ],
+     "object": "encounter",
+     "field": "diabetes",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "8cb5fcdd-fc75-5d47-aef5-1ca60d76a0c1",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Diabetes",
+     "required": true,
+     "why": "Read by select_fig9_band. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "reading__encounter__coronary_artery_disease",
+     "path": [
+      "reading",
+      "encounter",
+      "coronary_artery_disease"
+     ],
+     "object": "encounter",
+     "field": "coronary_artery_disease",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "5084c169-4345-5d4b-88d9-9ff030b94389",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Coronary artery disease",
+     "required": true,
+     "why": "Read by select_fig9_band. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "reading__encounter__chronic_kidney_disease",
+     "path": [
+      "reading",
+      "encounter",
+      "chronic_kidney_disease"
+     ],
+     "object": "encounter",
+     "field": "chronic_kidney_disease",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "a4b7087f-2644-51a2-a27a-6594823e9e34",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Chronic kidney disease",
+     "required": true,
+     "why": "Read by select_fig9_band. \"Not known\" leaves it unknown; the protocol then asks for it.",
+     "mandatory": false,
+     "unknownAnswer": "CIEL:1067"
+    },
+    {
+     "id": "extra__weight",
+     "path": [
+      "extra",
+      "weight"
+     ],
+     "field": "weight",
+     "type": {
+      "type": "quantity",
+      "unit": "kg"
+     },
+     "concept": "CIEL:5089",
+     "label": "Weight (kg)",
+     "required": false,
+     "why": "Added by the hints file: RBCNCD24 PDF p.12, section I.B and Table 1: screen adults for obesity with BMI and waist circumference. No hypertension rule reads it. Decided by an agent, sign-off pending.",
+     "extra": true
+    },
+    {
+     "id": "extra__height",
+     "path": [
+      "extra",
+      "height"
+     ],
+     "field": "height",
+     "type": {
+      "type": "quantity",
+      "unit": "cm"
+     },
+     "concept": "CIEL:5090",
+     "label": "Height (cm)",
+     "required": false,
+     "why": "Added by the hints file: RBCNCD24 PDF p.12, Table 1: BMI needs height. No hypertension rule reads it. Decided by an agent, sign-off pending.",
+     "extra": true
+    },
+    {
+     "id": "extra__waist",
+     "path": [
+      "extra",
+      "waist"
+     ],
+     "field": "waist",
+     "type": {
+      "type": "quantity",
+      "unit": "cm"
+     },
+     "concept": "CIEL:163080",
+     "label": "Waist circumference (cm)",
+     "required": false,
+     "why": "Added by the hints file: RBCNCD24 PDF p.12, Table 1: waist circumference marks risk even at normal weight. No hypertension rule reads it. Decided by an agent, sign-off pending.",
+     "extra": true
+    }
+   ],
+   "objects": [
+    {
+     "path": [
+      "reading"
+     ],
+     "object": "observation",
+     "host": {
+      "patient": {
+       "from": "patient"
+      },
+      "encounter": {
+       "from": "object",
+       "path": [
+        "reading",
+        "encounter"
+       ]
+      },
+      "time": {
+       "from": "now"
+      }
+     },
+     "asked": [
+      "systolic",
+      "diastolic",
+      "setting"
+     ]
+    },
+    {
+     "path": [
+      "reading",
+      "encounter"
+     ],
+     "object": "encounter",
+     "host": {
+      "patient": {
+       "from": "patient"
+      }
+     },
+     "asked": [
+      "hypertension_symptoms",
+      "organ_damage_evidence",
+      "care_level",
+      "pregnant",
+      "diabetes",
+      "coronary_artery_disease",
+      "chronic_kidney_disease"
+     ]
+    }
+   ],
+   "host": {
+    "reading": {
+     "from": "object",
+     "path": [
+      "reading"
+     ]
+    },
+    "asserted_at": {
+     "from": "now"
+    }
+   },
+   "starts": [
+    {
+     "workflow": "htn_screening_assessment",
+     "entry": {
+      "patient": {
+       "from": "patient"
+      },
+      "reading": {
+       "from": "object",
+       "path": [
+        "reading"
+       ]
+      },
+      "owner": {
+       "from": "owner"
+      },
+      "unassessed_danger_review": {
+       "from": "choice",
+       "values": [
+        "empty"
+       ]
+      }
+     }
+    },
+    {
+     "workflow": "htn_longitudinal_care",
+     "entry": {
+      "patient": {
+       "from": "patient"
+      },
+      "reading": {
+       "from": "object",
+       "path": [
+        "reading"
+       ]
+      },
+      "owner": {
+       "from": "owner"
+      },
+      "mode": {
+       "from": "choice",
+       "values": [
+        "initial",
+        "follow_up"
+       ]
+      }
+     }
+    }
+   ],
+   "uuid": "987d256a-5b6d-3f68-a4e7-a5f960308f90",
+   "encounterType": {
+    "uuid": "e08b4aca-c66b-5e33-84e9-5e77049447b6",
+    "name": "Nexo BP reading",
+    "description": "Nexo event measurement.recorded (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "987d256a-5b6d-3f68-a4e7-a5f960308f90",
+    "name": "Nexo: Record a blood-pressure reading"
+   }
+  },
+  {
+   "name": "update_encounter",
+   "title": "Update visit findings",
+   "kind": "update",
+   "object": "encounter",
+   "content": {},
+   "questions": [
+    {
+     "id": "encounter__hypertension_symptoms",
+     "path": [
+      "encounter",
+      "hypertension_symptoms"
+     ],
+     "object": "encounter",
+     "field": "hypertension_symptoms",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "eea11f79-217d-59ec-be69-c25adb1f404b",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Symptoms of hypertension",
+     "required": false,
+     "why": "Read by categorize_screening, route_first_visit, resume_screening_reading. Required when the protocol names it as missing."
+    },
+    {
+     "id": "encounter__organ_damage_evidence",
+     "path": [
+      "encounter",
+      "organ_damage_evidence"
+     ],
+     "object": "encounter",
+     "field": "organ_damage_evidence",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "e73ea83c-4010-5db3-b8d3-4b1069aa2c5f",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Evidence of organ damage",
+     "required": false,
+     "why": "Read by categorize_screening, route_first_visit, resume_screening_reading. Required when the protocol names it as missing."
+    },
+    {
+     "id": "encounter__care_level",
+     "path": [
+      "encounter",
+      "care_level"
+     ],
+     "object": "encounter",
+     "field": "care_level",
+     "type": {
+      "type": "listed",
+      "values": [
+       "health_center",
+       "medicalized_health_center",
+       "district_hospital",
+       "provincial_hospital",
+       "level_2_teaching_hospital",
+       "referral_hospital",
+       "university_teaching_hospital"
+      ]
+     },
+     "concept": "36b1edb3-f3ae-5595-b067-72b6a606cdb3",
+     "answers": {
+      "health_center": "2a26c527-b70f-538c-8819-759f2d2b41f7",
+      "medicalized_health_center": "80ab44c1-7f81-58a3-a143-5420d9482981",
+      "district_hospital": "0f316b75-66b6-5abc-bcc0-96f291e40877",
+      "provincial_hospital": "3d83353a-7cd0-5151-aacc-9c904d08761b",
+      "level_2_teaching_hospital": "5bf45767-4563-52cb-914d-91904b6b057f",
+      "referral_hospital": "5fb5891e-48dc-5b00-8493-932d702cee64",
+      "university_teaching_hospital": "064b36ae-889f-5bee-8116-1c09aa665a27"
+     },
+     "label": "Care level of this facility",
+     "required": false,
+     "why": "Read by start_hc_workup. Required when the protocol names it as missing."
+    },
+    {
+     "id": "encounter__pregnant",
+     "path": [
+      "encounter",
+      "pregnant"
+     ],
+     "object": "encounter",
+     "field": "pregnant",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "CIEL:5272",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Currently pregnant",
+     "required": false,
+     "why": "Read by categorize_screening, route_first_visit, resume_screening_reading, select_fig9_band. Required when the protocol names it as missing."
+    },
+    {
+     "id": "encounter__diabetes",
+     "path": [
+      "encounter",
+      "diabetes"
+     ],
+     "object": "encounter",
+     "field": "diabetes",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "8cb5fcdd-fc75-5d47-aef5-1ca60d76a0c1",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Diabetes",
+     "required": false,
+     "why": "Read by select_fig9_band. Required when the protocol names it as missing."
+    },
+    {
+     "id": "encounter__coronary_artery_disease",
+     "path": [
+      "encounter",
+      "coronary_artery_disease"
+     ],
+     "object": "encounter",
+     "field": "coronary_artery_disease",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "5084c169-4345-5d4b-88d9-9ff030b94389",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Coronary artery disease",
+     "required": false,
+     "why": "Read by select_fig9_band. Required when the protocol names it as missing."
+    },
+    {
+     "id": "encounter__chronic_kidney_disease",
+     "path": [
+      "encounter",
+      "chronic_kidney_disease"
+     ],
+     "object": "encounter",
+     "field": "chronic_kidney_disease",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "a4b7087f-2644-51a2-a27a-6594823e9e34",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Chronic kidney disease",
+     "required": false,
+     "why": "Read by select_fig9_band. Required when the protocol names it as missing."
+    }
+   ],
+   "objects": [
+    {
+     "path": [
+      "encounter"
+     ],
+     "object": "encounter",
+     "host": {
+      "patient": {
+       "from": "object",
+       "path": [
+        "previous",
+        "patient"
+       ]
+      }
+     },
+     "asked": [
+      "hypertension_symptoms",
+      "organ_damage_evidence",
+      "care_level",
+      "pregnant",
+      "diabetes",
+      "coronary_artery_disease",
+      "chronic_kidney_disease"
+     ]
+    }
+   ],
+   "host": {},
+   "starts": [],
+   "evidence": "A new revision of this visit findings. The protocol reads the fields it named as missing.",
+   "uuid": "c5e52784-c3b4-3921-83b5-2d4838edbfc3",
+   "encounterType": {
+    "uuid": "1865fcb4-8dd8-599f-8cce-fa2e4f8aea1f",
+    "name": "Nexo Update visit findings",
+    "description": "Nexo update update_encounter (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "c5e52784-c3b4-3921-83b5-2d4838edbfc3",
+    "name": "Nexo: Update visit findings"
+   }
+  },
+  {
+   "name": "update_htn_assessment",
+   "title": "Update assessment",
+   "kind": "update",
+   "object": "htn_assessment",
+   "content": {},
+   "questions": [
+    {
+     "id": "htn_assessment__ckd_stage",
+     "path": [
+      "htn_assessment",
+      "ckd_stage"
+     ],
+     "object": "htn_assessment",
+     "field": "ckd_stage",
+     "type": {
+      "type": "listed",
+      "values": [
+       "stage_1_3",
+       "stage_4_5"
+      ]
+     },
+     "concept": "2ae3804e-90d4-5067-873f-9ec57e8cd841",
+     "answers": {
+      "stage_1_3": "cd66afe9-96d6-5018-b34a-759e685555f3",
+      "stage_4_5": "204fa7db-f2b6-56d0-9c13-e7b1c489a190"
+     },
+     "label": "CKD stage",
+     "required": false,
+     "why": "Read by review_htn_assessment. Required when the protocol names it as missing."
+    },
+    {
+     "id": "htn_assessment__confirmed_htn",
+     "path": [
+      "htn_assessment",
+      "confirmed_htn"
+     ],
+     "object": "htn_assessment",
+     "field": "confirmed_htn",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "f1326165-4f1d-5a9b-a291-610f53d519db",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Hypertension confirmed",
+     "required": false,
+     "why": "Read by review_htn_assessment. Required when the protocol names it as missing."
+    },
+    {
+     "id": "htn_assessment__pregnant",
+     "path": [
+      "htn_assessment",
+      "pregnant"
+     ],
+     "object": "htn_assessment",
+     "field": "pregnant",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "CIEL:5272",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Currently pregnant",
+     "required": false,
+     "why": "Read by review_htn_assessment. Required when the protocol names it as missing."
+    },
+    {
+     "id": "htn_assessment__symptoms",
+     "path": [
+      "htn_assessment",
+      "symptoms"
+     ],
+     "object": "htn_assessment",
+     "field": "symptoms",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "bdc986eb-99ea-5c00-9510-0a7babbf6d6f",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Symptoms of hypertension",
+     "required": false,
+     "why": "Read by review_htn_assessment. Required when the protocol names it as missing."
+    },
+    {
+     "id": "htn_assessment__organ_damage",
+     "path": [
+      "htn_assessment",
+      "organ_damage"
+     ],
+     "object": "htn_assessment",
+     "field": "organ_damage",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "3ef1fac4-b486-5420-8549-d286132f0239",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Evidence of organ damage",
+     "required": false,
+     "why": "Read by review_htn_assessment. Required when the protocol names it as missing."
+    },
+    {
+     "id": "htn_assessment__new_concern",
+     "path": [
+      "htn_assessment",
+      "new_concern"
+     ],
+     "object": "htn_assessment",
+     "field": "new_concern",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "0a248287-6efd-5ea0-ba3a-867711e82c16",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "New clinical concern",
+     "required": false,
+     "why": "Read by review_htn_assessment. Required when the protocol names it as missing."
+    },
+    {
+     "id": "htn_assessment__diabetes",
+     "path": [
+      "htn_assessment",
+      "diabetes"
+     ],
+     "object": "htn_assessment",
+     "field": "diabetes",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "25fb5acd-b0c4-555f-9c21-7641fa6215d4",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Diabetes",
+     "required": false,
+     "why": "Read by review_htn_assessment. Required when the protocol names it as missing."
+    },
+    {
+     "id": "htn_assessment__cad",
+     "path": [
+      "htn_assessment",
+      "cad"
+     ],
+     "object": "htn_assessment",
+     "field": "cad",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "42219279-330a-5c1b-9fa1-05e9130a0dc8",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Coronary artery disease",
+     "required": false,
+     "why": "Read by review_htn_assessment. Required when the protocol names it as missing."
+    },
+    {
+     "id": "htn_assessment__ckd",
+     "path": [
+      "htn_assessment",
+      "ckd"
+     ],
+     "object": "htn_assessment",
+     "field": "ckd",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "fe7c4653-7124-51fe-a457-a340af6a7c1d",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Chronic kidney disease",
+     "required": false,
+     "why": "Read by review_htn_assessment. Required when the protocol names it as missing."
+    },
+    {
+     "id": "htn_assessment__renal_reviewed",
+     "path": [
+      "htn_assessment",
+      "renal_reviewed"
+     ],
+     "object": "htn_assessment",
+     "field": "renal_reviewed",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "9679ddd9-a72c-5170-864f-1c8f3d27835a",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Renal function reviewed",
+     "required": false,
+     "why": "Read by review_htn_assessment. Required when the protocol names it as missing."
+    },
+    {
+     "id": "htn_assessment__contraindications_reviewed",
+     "path": [
+      "htn_assessment",
+      "contraindications_reviewed"
+     ],
+     "object": "htn_assessment",
+     "field": "contraindications_reviewed",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "850ae865-8189-5b14-baad-c836b71383b1",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Contraindications reviewed",
+     "required": false,
+     "why": "Read by review_htn_assessment. Required when the protocol names it as missing."
+    },
+    {
+     "id": "htn_assessment__medication_reviewed",
+     "path": [
+      "htn_assessment",
+      "medication_reviewed"
+     ],
+     "object": "htn_assessment",
+     "field": "medication_reviewed",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "eff17080-fe09-55b6-bfa6-d4cfb62e1888",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Current medicines reviewed",
+     "required": false,
+     "why": "Read by review_htn_assessment. Required when the protocol names it as missing."
+    },
+    {
+     "id": "htn_assessment__adherence_reviewed",
+     "path": [
+      "htn_assessment",
+      "adherence_reviewed"
+     ],
+     "object": "htn_assessment",
+     "field": "adherence_reviewed",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "bfbca7d2-9a06-56ab-b6ce-5be179fa1cca",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Adherence reviewed",
+     "required": false,
+     "why": "Read by review_htn_assessment. Required when the protocol names it as missing."
+    },
+    {
+     "id": "htn_assessment__adverse_effects",
+     "path": [
+      "htn_assessment",
+      "adverse_effects"
+     ],
+     "object": "htn_assessment",
+     "field": "adverse_effects",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "35c64bc2-679c-5022-9b98-5fef67bf6735",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Adverse effects of medicines",
+     "required": false,
+     "why": "Read by review_htn_assessment. Required when the protocol names it as missing."
+    },
+    {
+     "id": "htn_assessment__target_tolerated",
+     "path": [
+      "htn_assessment",
+      "target_tolerated"
+     ],
+     "object": "htn_assessment",
+     "field": "target_tolerated",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "2b7f9834-f258-5257-a7c7-311641d1315b",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Patient tolerates the BP target",
+     "required": false,
+     "why": "Read by review_htn_assessment, authorize_htn_prescription, authorize_htn_first_prescription. Required when the protocol names it as missing."
+    },
+    {
+     "id": "htn_assessment__specialist_required",
+     "path": [
+      "htn_assessment",
+      "specialist_required"
+     ],
+     "object": "htn_assessment",
+     "field": "specialist_required",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "94faed82-a865-59ec-9397-ca6ae4723c53",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Specialist care required",
+     "required": false,
+     "why": "Read by review_htn_assessment. Required when the protocol names it as missing."
+    },
+    {
+     "id": "htn_assessment__current_regimen",
+     "path": [
+      "htn_assessment",
+      "current_regimen"
+     ],
+     "object": "htn_assessment",
+     "field": "current_regimen",
+     "type": {
+      "type": "listed",
+      "values": [
+       "htn_prescription",
+       "htn_no_regimen_attestation"
+      ]
+     },
+     "concept": "964c606d-ffc9-53f1-abb6-a6d59cdbd5ad",
+     "answers": {
+      "htn_prescription": "e8832494-4adf-5be0-bc26-50e407af4356",
+      "htn_no_regimen_attestation": "120faafb-a3b1-5397-b9a6-c20cda558e0b"
+     },
+     "references": {
+      "htn_prescription": "latest",
+      "htn_no_regimen_attestation": "attest"
+     },
+     "label": "Current antihypertensive regimen",
+     "required": false,
+     "mandatory": false,
+     "why": "Select the object evidence for this field."
+    }
+   ],
+   "objects": [
+    {
+     "path": [
+      "htn_assessment"
+     ],
+     "object": "htn_assessment",
+     "host": {
+      "patient": {
+       "from": "object",
+       "path": [
+        "previous",
+        "patient"
+       ]
+      },
+      "reading": {
+       "from": "object",
+       "path": [
+        "previous",
+        "reading"
+       ]
+      },
+      "time": {
+       "from": "object",
+       "path": [
+        "previous",
+        "time"
+       ]
+      }
+     },
+     "asked": [
+      "ckd_stage",
+      "confirmed_htn",
+      "pregnant",
+      "symptoms",
+      "organ_damage",
+      "new_concern",
+      "diabetes",
+      "cad",
+      "ckd",
+      "renal_reviewed",
+      "contraindications_reviewed",
+      "medication_reviewed",
+      "adherence_reviewed",
+      "adverse_effects",
+      "target_tolerated",
+      "specialist_required",
+      "current_regimen"
+     ]
+    }
+   ],
+   "host": {},
+   "starts": [],
+   "evidence": "A new revision of this assessment. The protocol reads the fields it named as missing.",
+   "uuid": "42340d91-309c-3234-ad5f-cba312fd43b2",
+   "encounterType": {
+    "uuid": "64fa04e3-21e7-569b-818a-d3f792066bbb",
+    "name": "Nexo Update assessment",
+    "description": "Nexo update update_htn_assessment (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "42340d91-309c-3234-ad5f-cba312fd43b2",
+    "name": "Nexo: Update assessment"
+   }
+  },
+  {
+   "name": "update_htn_external_work",
+   "title": "Update accepted next care",
+   "kind": "update",
+   "object": "htn_external_work",
+   "content": {},
+   "questions": [
+    {
+     "id": "htn_external_work__destination",
+     "path": [
+      "htn_external_work",
+      "destination"
+     ],
+     "object": "htn_external_work",
+     "field": "destination",
+     "type": {
+      "type": "identifier"
+     },
+     "concept": "e9732eb6-dbc2-554a-bf18-fad787a298e3",
+     "label": "Receiving service",
+     "required": true,
+     "mandatory": true,
+     "why": "Every revision of the accepted next care has it. Read by accept_owned_handover."
+    },
+    {
+     "id": "htn_external_work__kind",
+     "path": [
+      "htn_external_work",
+      "kind"
+     ],
+     "object": "htn_external_work",
+     "field": "kind",
+     "type": {
+      "type": "listed",
+      "values": [
+       "clinical_assessment",
+       "medicine_supply",
+       "diagnostic_assessment",
+       "maternal_assessment",
+       "child_assessment"
+      ]
+     },
+     "concept": "2e9a1d14-dc2b-5c6f-bf80-c089dbb7efa9",
+     "answers": {
+      "clinical_assessment": "04f03bd2-d749-5dab-ba70-ac8eddb18f9f",
+      "medicine_supply": "82f0b1ba-921d-578d-8537-1cb1372e5112",
+      "diagnostic_assessment": "16f6fcbb-dac6-5384-b0ae-053859970d61",
+      "maternal_assessment": "f17c8cff-7ea4-517b-8af8-1cf41eb62ddc",
+      "child_assessment": "c014fe9c-26cd-5c62-a5d2-bc816d161820"
+     },
+     "label": "Type of next care",
+     "required": true,
+     "mandatory": true,
+     "why": "Every revision of the accepted next care has it. Read by accept_owned_handover."
+    },
+    {
+     "id": "htn_external_work__status",
+     "path": [
+      "htn_external_work",
+      "status"
+     ],
+     "object": "htn_external_work",
+     "field": "status",
+     "type": {
+      "type": "listed",
+      "values": [
+       "accepted",
+       "planned"
+      ]
+     },
+     "concept": "a478fd08-a94e-5609-a636-72099e9c6dcc",
+     "answers": {
+      "accepted": "6691a58c-d5e6-59fd-b89b-dbd4f095c0a4",
+      "planned": "3e1935d9-c200-5e51-8af9-1b22203b3df8"
+     },
+     "label": "Status of next care",
+     "required": true,
+     "mandatory": true,
+     "why": "Every revision of the accepted next care has it. Read by accept_owned_handover."
+    },
+    {
+     "id": "htn_external_work__due_at",
+     "path": [
+      "htn_external_work",
+      "due_at"
+     ],
+     "object": "htn_external_work",
+     "field": "due_at",
+     "type": {
+      "type": "instant"
+     },
+     "concept": "98b20e1a-00bf-537c-99c1-e9f0c264e33c",
+     "label": "Next care due",
+     "required": true,
+     "mandatory": true,
+     "why": "Every revision of the accepted next care has it. Read by accept_owned_handover."
+    }
+   ],
+   "objects": [
+    {
+     "path": [
+      "htn_external_work"
+     ],
+     "object": "htn_external_work",
+     "host": {
+      "patient": {
+       "from": "object",
+       "path": [
+        "previous",
+        "patient"
+       ]
+      },
+      "owner": {
+       "from": "object",
+       "path": [
+        "previous",
+        "owner"
+       ]
+      }
+     },
+     "asked": [
+      "destination",
+      "kind",
+      "status",
+      "due_at"
+     ]
+    }
+   ],
+   "host": {},
+   "starts": [],
+   "evidence": "A new revision of this accepted next care. The protocol reads the fields it named as missing.",
+   "uuid": "b743c1f4-c0e0-3768-99e0-d5c6ac5020e8",
+   "encounterType": {
+    "uuid": "d7248c44-76fc-5963-80c9-71e2fa1354da",
+    "name": "Nexo Update accepted next care",
+    "description": "Nexo update update_htn_external_work (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "b743c1f4-c0e0-3768-99e0-d5c6ac5020e8",
+    "name": "Nexo: Update accepted next care"
+   }
+  },
+  {
+   "name": "update_htn_no_regimen_attestation",
+   "title": "Update no current antihypertensive attestation",
+   "kind": "update",
+   "object": "htn_no_regimen_attestation",
+   "content": {},
+   "questions": [],
+   "objects": [
+    {
+     "path": [
+      "htn_no_regimen_attestation"
+     ],
+     "object": "htn_no_regimen_attestation",
+     "host": {
+      "patient": {
+       "from": "object",
+       "path": [
+        "previous",
+        "patient"
+       ]
+      },
+      "attested_by": {
+       "from": "object",
+       "path": [
+        "previous",
+        "attested_by"
+       ]
+      },
+      "time": {
+       "from": "object",
+       "path": [
+        "previous",
+        "time"
+       ]
+      }
+     },
+     "asked": []
+    }
+   ],
+   "host": {},
+   "starts": [],
+   "evidence": "A new revision of this no current antihypertensive attestation. The protocol reads the fields it named as missing.",
+   "uuid": "a6f48d7e-4b5d-3c4a-847f-48dd355ec286",
+   "encounterType": {
+    "uuid": "b66b86cf-b3dc-5c53-8fa8-8b8873471944",
+    "name": "Nexo Update no current antihypertensive attestat…",
+    "description": "Nexo update update_htn_no_regimen_attestation (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "a6f48d7e-4b5d-3c4a-847f-48dd355ec286",
+    "name": "Nexo: Update no current antihypertensive attestation"
+   }
+  },
+  {
+   "name": "update_htn_prescription",
+   "title": "Update hypertension prescription",
+   "kind": "update",
+   "object": "htn_prescription",
+   "content": {},
+   "questions": [
+    {
+     "id": "htn_prescription__medicine",
+     "path": [
+      "htn_prescription",
+      "medicine"
+     ],
+     "object": "htn_prescription",
+     "field": "medicine",
+     "type": {
+      "type": "listed",
+      "values": [
+       "amlodipine",
+       "hydrochlorothiazide",
+       "indapamide_sr",
+       "enalapril",
+       "lisinopril"
+      ]
+     },
+     "concept": "5fb42ddc-3d69-5abe-9717-ddac916915a8",
+     "answers": {
+      "amlodipine": "CIEL:71137",
+      "hydrochlorothiazide": "CIEL:77696",
+      "indapamide_sr": "CIEL:77985",
+      "enalapril": "CIEL:75633",
+      "lisinopril": "CIEL:78945"
+     },
+     "label": "Medicine",
+     "required": true,
+     "mandatory": true,
+     "why": "Every revision of the hypertension prescription has it. Read by authorize_htn_prescription."
+    },
+    {
+     "id": "htn_prescription__dose",
+     "path": [
+      "htn_prescription",
+      "dose"
+     ],
+     "object": "htn_prescription",
+     "field": "dose",
+     "type": {
+      "type": "quantity",
+      "unit": "mg"
+     },
+     "concept": "25112126-5d67-54bf-b2d7-e2f1612d0aaf",
+     "label": "Dose",
+     "required": true,
+     "mandatory": true,
+     "why": "Every revision of the hypertension prescription has it. Read by authorize_htn_prescription."
+    },
+    {
+     "id": "htn_prescription__second_medicine",
+     "path": [
+      "htn_prescription",
+      "second_medicine"
+     ],
+     "object": "htn_prescription",
+     "field": "second_medicine",
+     "type": {
+      "type": "listed",
+      "values": [
+       "none",
+       "amlodipine",
+       "hydrochlorothiazide",
+       "indapamide_sr"
+      ]
+     },
+     "concept": "63f1c551-e59f-59c6-9f8d-d0bf6193b6d9",
+     "answers": {
+      "none": "5f7e7e31-77da-5c92-b714-f61ece2b9ed8",
+      "amlodipine": "CIEL:71137",
+      "hydrochlorothiazide": "CIEL:77696",
+      "indapamide_sr": "CIEL:77985"
+     },
+     "label": "Second medicine",
+     "required": true,
+     "mandatory": true,
+     "why": "Every revision of the hypertension prescription has it. Read by authorize_htn_prescription."
+    },
+    {
+     "id": "htn_prescription__second_dose",
+     "path": [
+      "htn_prescription",
+      "second_dose"
+     ],
+     "object": "htn_prescription",
+     "field": "second_dose",
+     "type": {
+      "type": "quantity",
+      "unit": "mg"
+     },
+     "concept": "fce9f059-d2e7-5486-8418-6b673aef5794",
+     "label": "Second medicine dose",
+     "required": false,
+     "why": "Read by authorize_htn_prescription. Required when the protocol names it as missing."
+    },
+    {
+     "id": "htn_prescription__valid_until",
+     "path": [
+      "htn_prescription",
+      "valid_until"
+     ],
+     "object": "htn_prescription",
+     "field": "valid_until",
+     "type": {
+      "type": "instant"
+     },
+     "concept": "511eb936-2f9b-520a-85c1-5c9508ebc5ed",
+     "label": "Prescription valid until",
+     "required": true,
+     "mandatory": true,
+     "why": "Every revision of the hypertension prescription has it. Read by authorize_htn_prescription."
+    },
+    {
+     "id": "htn_prescription__status",
+     "path": [
+      "htn_prescription",
+      "status"
+     ],
+     "object": "htn_prescription",
+     "field": "status",
+     "type": {
+      "type": "listed",
+      "values": [
+       "active",
+       "stopped"
+      ]
+     },
+     "concept": "629fd6e5-e1bb-5145-9cd8-f362ffae7ade",
+     "answers": {
+      "active": "6fe824e3-d7f0-5452-8b9a-7b59d1865774",
+      "stopped": "7c7121c0-58fb-5720-9b29-dfa47d991077"
+     },
+     "label": "Prescription status",
+     "required": true,
+     "mandatory": true,
+     "why": "Every revision of the hypertension prescription has it. Read by authorize_htn_prescription."
+    }
+   ],
+   "objects": [
+    {
+     "path": [
+      "htn_prescription"
+     ],
+     "object": "htn_prescription",
+     "host": {
+      "patient": {
+       "from": "object",
+       "path": [
+        "previous",
+        "patient"
+       ]
+      },
+      "prescriber": {
+       "from": "object",
+       "path": [
+        "previous",
+        "prescriber"
+       ]
+      }
+     },
+     "asked": [
+      "medicine",
+      "dose",
+      "second_medicine",
+      "second_dose",
+      "valid_until",
+      "status"
+     ]
+    }
+   ],
+   "host": {},
+   "starts": [],
+   "evidence": "A new revision of this hypertension prescription. The protocol reads the fields it named as missing.",
+   "uuid": "3899947c-daab-3675-9c81-bf82f59b9003",
+   "encounterType": {
+    "uuid": "ff8f9cad-4b5b-5e6a-bb19-0b1a2a117a7c",
+    "name": "Nexo Update hypertension prescription",
+    "description": "Nexo update update_htn_prescription (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "3899947c-daab-3675-9c81-bf82f59b9003",
+    "name": "Nexo: Update hypertension prescription"
+   }
+  },
+  {
+   "name": "update_htn_receipt",
+   "title": "Update receipt",
+   "kind": "update",
+   "object": "htn_receipt",
+   "content": {},
+   "questions": [
+    {
+     "id": "htn_receipt__received",
+     "path": [
+      "htn_receipt",
+      "received"
+     ],
+     "object": "htn_receipt",
+     "field": "received",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "0a64d136-b194-5ea4-8eab-2228c04a0f2b",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Patient received the medicines",
+     "required": true,
+     "mandatory": true,
+     "why": "Every revision of the receipt has it. Read by verify_htn_receipt."
+    },
+    {
+     "id": "htn_receipt__proof",
+     "path": [
+      "htn_receipt",
+      "proof"
+     ],
+     "object": "htn_receipt",
+     "field": "proof",
+     "type": {
+      "type": "text"
+     },
+     "concept": "100d65bd-92f8-5c1b-be36-db333e517531",
+     "label": "How receipt was confirmed",
+     "required": true,
+     "mandatory": true,
+     "why": "Every revision of the receipt has it. Read by verify_htn_receipt."
+    }
+   ],
+   "objects": [
+    {
+     "path": [
+      "htn_receipt"
+     ],
+     "object": "htn_receipt",
+     "host": {
+      "patient": {
+       "from": "object",
+       "path": [
+        "previous",
+        "patient"
+       ]
+      },
+      "prescription": {
+       "from": "object",
+       "path": [
+        "previous",
+        "prescription"
+       ]
+      },
+      "dispensing": {
+       "from": "object",
+       "path": [
+        "previous",
+        "dispensing"
+       ]
+      },
+      "time": {
+       "from": "object",
+       "path": [
+        "previous",
+        "time"
+       ]
+      }
+     },
+     "asked": [
+      "received",
+      "proof"
+     ]
+    }
+   ],
+   "host": {},
+   "starts": [],
+   "evidence": "A new revision of this receipt. The protocol reads the fields it named as missing.",
+   "uuid": "5c6c5ce2-cc66-3fc1-8baa-b52e5294837e",
+   "encounterType": {
+    "uuid": "a8a43fdc-1674-5f6b-8c5d-82e20996a6f9",
+    "name": "Nexo Update receipt",
+    "description": "Nexo update update_htn_receipt (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "5c6c5ce2-cc66-3fc1-8baa-b52e5294837e",
+    "name": "Nexo: Update receipt"
+   }
+  },
+  {
+   "name": "update_htn_supply",
+   "title": "Update dispensing",
+   "kind": "update",
+   "object": "htn_supply",
+   "content": {},
+   "questions": [
+    {
+     "id": "htn_supply__medicine",
+     "path": [
+      "htn_supply",
+      "medicine"
+     ],
+     "object": "htn_supply",
+     "field": "medicine",
+     "type": {
+      "type": "listed",
+      "values": [
+       "amlodipine",
+       "hydrochlorothiazide",
+       "indapamide_sr",
+       "enalapril",
+       "lisinopril"
+      ]
+     },
+     "concept": "b1a469c6-4e8e-5d5d-a680-709acebb8fc0",
+     "answers": {
+      "amlodipine": "CIEL:71137",
+      "hydrochlorothiazide": "CIEL:77696",
+      "indapamide_sr": "CIEL:77985",
+      "enalapril": "CIEL:75633",
+      "lisinopril": "CIEL:78945"
+     },
+     "label": "Medicine",
+     "required": true,
+     "mandatory": true,
+     "why": "Every revision of the dispensing has it. Read by verify_htn_dispensing."
+    },
+    {
+     "id": "htn_supply__dose",
+     "path": [
+      "htn_supply",
+      "dose"
+     ],
+     "object": "htn_supply",
+     "field": "dose",
+     "type": {
+      "type": "quantity",
+      "unit": "mg"
+     },
+     "concept": "c8248a33-e8a5-5011-8386-24f9c1d2daf3",
+     "label": "Dose",
+     "required": true,
+     "mandatory": true,
+     "why": "Every revision of the dispensing has it. Read by verify_htn_dispensing."
+    },
+    {
+     "id": "htn_supply__second_medicine",
+     "path": [
+      "htn_supply",
+      "second_medicine"
+     ],
+     "object": "htn_supply",
+     "field": "second_medicine",
+     "type": {
+      "type": "listed",
+      "values": [
+       "none",
+       "amlodipine",
+       "hydrochlorothiazide",
+       "indapamide_sr"
+      ]
+     },
+     "concept": "2b0abcbc-b575-5298-8525-4960ee0cc425",
+     "answers": {
+      "none": "5f7e7e31-77da-5c92-b714-f61ece2b9ed8",
+      "amlodipine": "CIEL:71137",
+      "hydrochlorothiazide": "CIEL:77696",
+      "indapamide_sr": "CIEL:77985"
+     },
+     "label": "Second medicine",
+     "required": true,
+     "mandatory": true,
+     "why": "Every revision of the dispensing has it. Read by verify_htn_dispensing."
+    },
+    {
+     "id": "htn_supply__second_dose",
+     "path": [
+      "htn_supply",
+      "second_dose"
+     ],
+     "object": "htn_supply",
+     "field": "second_dose",
+     "type": {
+      "type": "quantity",
+      "unit": "mg"
+     },
+     "concept": "6f88ad22-712b-5e5f-a3c4-d0b8bec5daa6",
+     "label": "Second medicine dose",
+     "required": false,
+     "why": "Read by verify_htn_dispensing. Required when the protocol names it as missing."
+    },
+    {
+     "id": "htn_supply__stock_available",
+     "path": [
+      "htn_supply",
+      "stock_available"
+     ],
+     "object": "htn_supply",
+     "field": "stock_available",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "b316d3b0-5b55-512e-9ba3-f4255b74fa0b",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Medicine in stock",
+     "required": false,
+     "why": "Read by verify_htn_dispensing. Required when the protocol names it as missing."
+    },
+    {
+     "id": "htn_supply__packed",
+     "path": [
+      "htn_supply",
+      "packed"
+     ],
+     "object": "htn_supply",
+     "field": "packed",
+     "type": {
+      "type": "yes_no"
+     },
+     "concept": "5aecf5f2-c80d-5d82-936d-41ba22433f06",
+     "answers": {
+      "yes": "CIEL:1065",
+      "no": "CIEL:1066"
+     },
+     "label": "Supply packed for the patient",
+     "required": false,
+     "why": "Read by verify_htn_dispensing. Required when the protocol names it as missing."
+    },
+    {
+     "id": "htn_supply__coverage_until",
+     "path": [
+      "htn_supply",
+      "coverage_until"
+     ],
+     "object": "htn_supply",
+     "field": "coverage_until",
+     "type": {
+      "type": "instant"
+     },
+     "concept": "5ec48ad1-69b7-5c72-9cee-d12c736951cc",
+     "label": "Supply lasts until",
+     "required": false,
+     "why": "Read by verify_htn_dispensing. Required when the protocol names it as missing."
+    }
+   ],
+   "objects": [
+    {
+     "path": [
+      "htn_supply"
+     ],
+     "object": "htn_supply",
+     "host": {
+      "patient": {
+       "from": "object",
+       "path": [
+        "previous",
+        "patient"
+       ]
+      },
+      "prescription": {
+       "from": "object",
+       "path": [
+        "previous",
+        "prescription"
+       ]
+      },
+      "time": {
+       "from": "object",
+       "path": [
+        "previous",
+        "time"
+       ]
+      }
+     },
+     "asked": [
+      "medicine",
+      "dose",
+      "second_medicine",
+      "second_dose",
+      "stock_available",
+      "packed",
+      "coverage_until"
+     ]
+    }
+   ],
+   "host": {},
+   "starts": [],
+   "evidence": "A new revision of this dispensing. The protocol reads the fields it named as missing.",
+   "uuid": "b1e4aaf8-4fda-38f8-9bca-45c7b92c2695",
+   "encounterType": {
+    "uuid": "add87053-1aa2-58d9-a27c-5fb0bed82c54",
+    "name": "Nexo Update dispensing",
+    "description": "Nexo update update_htn_supply (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "b1e4aaf8-4fda-38f8-9bca-45c7b92c2695",
+    "name": "Nexo: Update dispensing"
+   }
+  },
+  {
+   "name": "update_laboratory_result",
+   "title": "Update laboratory result",
+   "kind": "update",
+   "object": "laboratory_result",
+   "content": {},
+   "questions": [
+    {
+     "id": "laboratory_result__potassium",
+     "path": [
+      "laboratory_result",
+      "potassium"
+     ],
+     "object": "laboratory_result",
+     "field": "potassium",
+     "type": {
+      "type": "quantity",
+      "unit": "mmol/L"
+     },
+     "concept": "CIEL:1133",
+     "label": "Serum potassium",
+     "required": false,
+     "why": "Read by authorize_htn_prescription, authorize_htn_first_prescription. Required when the protocol names it as missing."
+    }
+   ],
+   "objects": [
+    {
+     "path": [
+      "laboratory_result"
+     ],
+     "object": "laboratory_result",
+     "host": {
+      "patient": {
+       "from": "object",
+       "path": [
+        "previous",
+        "patient"
+       ]
+      }
+     },
+     "asked": [
+      "potassium"
+     ]
+    }
+   ],
+   "host": {},
+   "starts": [],
+   "evidence": "A new revision of this laboratory result. The protocol reads the fields it named as missing.",
+   "uuid": "0c01af9d-8dd6-3aa3-a280-f5a0c1c79605",
+   "encounterType": {
+    "uuid": "bdd70d19-30af-5c78-b620-a62dc0b66850",
+    "name": "Nexo Update laboratory result",
+    "description": "Nexo update update_laboratory_result (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "0c01af9d-8dd6-3aa3-a280-f5a0c1c79605",
+    "name": "Nexo: Update laboratory result"
+   }
+  },
+  {
+   "name": "update_observation",
+   "title": "Update blood-pressure reading",
+   "kind": "update",
+   "object": "observation",
+   "content": {},
+   "questions": [
+    {
+     "id": "observation__systolic",
+     "path": [
+      "observation",
+      "systolic"
+     ],
+     "object": "observation",
+     "field": "systolic",
+     "type": {
+      "type": "quantity",
+      "unit": "mm[Hg]"
+     },
+     "concept": "CIEL:5085",
+     "label": "Systolic BP",
+     "required": true,
+     "mandatory": true,
+     "why": "Every revision of the blood-pressure reading has it. Read by categorize_screening, route_first_visit, resume_screening_reading, select_fig9_band, review_htn_assessment, authorize_htn_prescription, authorize_htn_first_prescription."
+    },
+    {
+     "id": "observation__diastolic",
+     "path": [
+      "observation",
+      "diastolic"
+     ],
+     "object": "observation",
+     "field": "diastolic",
+     "type": {
+      "type": "quantity",
+      "unit": "mm[Hg]"
+     },
+     "concept": "CIEL:5086",
+     "label": "Diastolic BP",
+     "required": true,
+     "mandatory": true,
+     "why": "Every revision of the blood-pressure reading has it. Read by categorize_screening, route_first_visit, resume_screening_reading, select_fig9_band, review_htn_assessment, authorize_htn_prescription, authorize_htn_first_prescription."
+    },
+    {
+     "id": "observation__setting",
+     "path": [
+      "observation",
+      "setting"
+     ],
+     "object": "observation",
+     "field": "setting",
+     "type": {
+      "type": "listed",
+      "values": [
+       "office",
+       "home",
+       "ambulatory"
+      ]
+     },
+     "concept": "dbade085-4113-5dac-bc64-fd3bdd5ed476",
+     "answers": {
+      "office": "bc59db88-d16e-5fc5-9905-d9b8c3a2afca",
+      "home": "c0770136-933c-592a-9c4d-eb8818bc2e50",
+      "ambulatory": "77d83b25-e9ce-5bb3-bd9f-ee7e25d700db"
+     },
+     "label": "Where was BP measured",
+     "required": true,
+     "mandatory": true,
+     "why": "Every revision of the blood-pressure reading has it. Read by categorize_screening, resume_screening_reading, review_htn_assessment."
+    }
+   ],
+   "objects": [
+    {
+     "path": [
+      "observation"
+     ],
+     "object": "observation",
+     "host": {
+      "patient": {
+       "from": "object",
+       "path": [
+        "previous",
+        "patient"
+       ]
+      },
+      "encounter": {
+       "from": "object",
+       "path": [
+        "previous",
+        "encounter"
+       ]
+      },
+      "time": {
+       "from": "object",
+       "path": [
+        "previous",
+        "time"
+       ]
+      }
+     },
+     "asked": [
+      "systolic",
+      "diastolic",
+      "setting"
+     ]
+    }
+   ],
+   "host": {},
+   "starts": [],
+   "evidence": "A new revision of this blood-pressure reading. The protocol reads the fields it named as missing.",
+   "uuid": "9af46791-a2d9-3547-8240-7268e46da13f",
+   "encounterType": {
+    "uuid": "1efd4deb-b8d1-586f-a5df-84386d2d7b73",
+    "name": "Nexo Update blood-pressure reading",
+    "description": "Nexo update update_observation (rwanda.htn_screening_assessment_2024)"
+   },
+   "o3": {
+    "uuid": "9af46791-a2d9-3547-8240-7268e46da13f",
+    "name": "Nexo: Update blood-pressure reading"
+   }
+  }
+ ]
+}

@@ -1,0 +1,118 @@
+{
+  "name": "Nexo: Update accepted next care",
+  "uuid": "b743c1f4-c0e0-3768-99e0-d5c6ac5020e8",
+  "version": "1",
+  "description": "A new revision of this accepted next care. The protocol reads the fields it named as missing. Nexo rwanda.htn_screening_assessment_2024 1.0 (sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca).",
+  "encounterType": "d7248c44-76fc-5963-80c9-71e2fa1354da",
+  "encounter": "Nexo Update accepted next care",
+  "processor": "EncounterFormProcessor",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Update accepted next care",
+      "sections": [
+        {
+          "label": "About this step",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "nexo_context",
+              "label": "About this step",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Update accepted next care**",
+                "What the protocol needs: A new revision of this accepted next care. The protocol reads the fields it named as missing.",
+                "Generated from Nexo. Draft for clinical review, not for care."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Accepted next care",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "htn_external_work__destination",
+              "label": "Receiving service",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "e9732eb6-dbc2-554a-bf18-fad787a298e3"
+              }
+            },
+            {
+              "id": "htn_external_work__kind",
+              "label": "Type of next care",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "2e9a1d14-dc2b-5c6f-bf80-c089dbb7efa9",
+                "answers": [
+                  {
+                    "concept": "04f03bd2-d749-5dab-ba70-ac8eddb18f9f",
+                    "label": "Clinical assessment"
+                  },
+                  {
+                    "concept": "82f0b1ba-921d-578d-8537-1cb1372e5112",
+                    "label": "Medicine supply"
+                  },
+                  {
+                    "concept": "16f6fcbb-dac6-5384-b0ae-053859970d61",
+                    "label": "Diagnostic assessment"
+                  },
+                  {
+                    "concept": "f17c8cff-7ea4-517b-8af8-1cf41eb62ddc",
+                    "label": "Maternal assessment"
+                  },
+                  {
+                    "concept": "c014fe9c-26cd-5c62-a5d2-bc816d161820",
+                    "label": "Child assessment"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "htn_external_work__status",
+              "label": "Status of next care",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "a478fd08-a94e-5609-a636-72099e9c6dcc",
+                "answers": [
+                  {
+                    "concept": "6691a58c-d5e6-59fd-b89b-dbd4f095c0a4",
+                    "label": "Accepted"
+                  },
+                  {
+                    "concept": "3e1935d9-c200-5e51-8af9-1b22203b3df8",
+                    "label": "Planned"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "htn_external_work__due_at",
+              "label": "Next care due",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "datetime",
+                "concept": "98b20e1a-00bf-537c-99c1-e9f0c264e33c"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+# Adds the @nexo/esm-nexo-care-app frontend module to the O3 3.8.0 frontend, without rebuilding the image.
+# Build the module and write the import map first (the build runs rspack, which needs Node):
+#   (cd packages/esm-nexo-care-app && bun run build)
+#   bun distro/frontend/add-nexo-care-app.mjs
+# Then use this file on top of the others:
+#   docker-compose -p nexo-o3 -f distro/docker-compose.yml -f distro/docker-compose.nexo.yml \
+#     -f distro/docker-compose.frontend.yml up -d frontend
+# Change the folder name when the module version in packages/esm-nexo-care-app/package.json changes.
+# Paths are relative to this distro/ folder.
+services:
+  frontend:
+    volumes:
+      - ../packages/esm-nexo-care-app/dist:/usr/share/nginx/html/nexo-esm-nexo-care-app-0.1.0:ro
+      # The image's nginx serves the precompressed .br and .gz copies first, so replace them too.
+      - ./frontend/dist/importmap.json:/usr/share/nginx/html/importmap.json:ro
+      - ./frontend/dist/importmap.json.gz:/usr/share/nginx/html/importmap.json.gz:ro
+      - ./frontend/dist/importmap.json.br:/usr/share/nginx/html/importmap.json.br:ro
+      - ./frontend/dist/routes.registry.json:/usr/share/nginx/html/routes.registry.json:ro
+      - ./frontend/dist/routes.registry.json.gz:/usr/share/nginx/html/routes.registry.json.gz:ro
+      - ./frontend/dist/routes.registry.json.br:/usr/share/nginx/html/routes.registry.json.br:ro

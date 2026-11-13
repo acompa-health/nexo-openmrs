@@ -1,0 +1,772 @@
+{
+  "name": "Nexo: Assess hypertension and reconcile current medicines",
+  "uuid": "5fe29477-5569-3eca-8041-8022f64d9174",
+  "version": "1",
+  "description": "Review build: shows why each question is asked. Attributed clinician assessment for this patient and the task reading, with time, confirmed diagnosis, pregnancy, symptoms, organ damage, comorbidities, renal and contraindication review, medicines, adherence, adverse effects and target tolerance. The host supplies the assessment object; a task request alone proves none of these. Nexo rwanda.htn_screening_assessment_2024 1.0 (sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca).",
+  "encounterType": "1f844276-fb1f-5326-b836-47c5b060eab0",
+  "encounter": "Nexo HTN assessment",
+  "processor": "EncounterFormProcessor",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Assess hypertension and reconcile current medicines",
+      "sections": [
+        {
+          "label": "About this step",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "nexo_context",
+              "label": "About this step",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Assess hypertension and reconcile current medicines**",
+                "Done by: Assessing clinician.",
+                "What the protocol needs: Attributed clinician assessment for this patient and the task reading, with time, confirmed diagnosis, pregnancy, symptoms, organ damage, comorbidities, renal and contraindication review, medicines, adherence, adverse effects and target tolerance. The host supplies the assessment object; a task request alone proves none of these.",
+                "Generated from Nexo. Draft for clinical review, not for care.",
+                "**Review build.** Each section and question shows why it is there. Production shows only the ⓘ."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Danger signs",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "review__section__1",
+              "label": "Why these questions",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Why these questions are together.** One answer here can end this step: the rule ends this pathway (\"Urgent assessment requested\") and hands the patient over to the urgent assessment service (stop row `urgent_assessment_source_limit`). So these questions come first.",
+                "**Heading** \"Danger signs\": agent's choice, review pending. B1: one answer here sends the patient to urgent assessment (stop row urgent_assessment_source_limit). Heading proposed in the form design research, 4.2."
+              ]
+            },
+            {
+              "id": "assessment__symptoms",
+              "label": "Symptoms of hypertension",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "bdc986eb-99ea-5c00-9510-0a7babbf6d6f",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__assessment__symptoms",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`review_htn_assessment`)",
+                "**Required:** yes. A rule needs the answer to decide. \"Not known\" is allowed: the protocol then asks for it later.",
+                "**Shows:** always.",
+                "**How the rules use it:** one answer alone can end this step: the rule ends this pathway (\"Urgent assessment requested\") and hands the patient over to the urgent assessment service.",
+                "**ⓘ in production:** none."
+              ]
+            },
+            {
+              "id": "assessment__organ_damage",
+              "label": "Evidence of organ damage",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "3ef1fac4-b486-5420-8549-d286132f0239",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__assessment__organ_damage",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`review_htn_assessment`)",
+                "**Required:** yes. A rule needs the answer to decide. \"Not known\" is allowed: the protocol then asks for it later.",
+                "**Shows:** always.",
+                "**How the rules use it:** one answer alone can end this step: the rule ends this pathway (\"Urgent assessment requested\") and hands the patient over to the urgent assessment service.",
+                "**ⓘ in production:** none."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Reasons for other care",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "review__section__2",
+              "label": "Why these questions",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Why these questions are together.** One answer here can end this step: the rule ends this pathway (\"Individual care handover requested\") and hands the patient over to the maternal hypertension service, the child adolescent service or the NCD advanced care service, by the other answers (stop row `excluded_care_source_limit`). So these questions come first.",
+                "**Heading** \"Reasons for other care\": agent's choice, review pending. B1: one answer here hands the patient over for individual care (stop row excluded_care_source_limit). Heading proposed in the form design research, 4.2."
+              ]
+            },
+            {
+              "id": "assessment__pregnant",
+              "label": "Currently pregnant",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "CIEL:5272",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__assessment__pregnant",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`review_htn_assessment`)",
+                "**Required:** yes. A rule needs the answer to decide. \"Not known\" is allowed: the protocol then asks for it later.",
+                "**Shows:** always.",
+                "**How the rules use it:** one answer alone can end this step: the rule ends this pathway (\"Individual care handover requested\") and hands the patient over to the maternal hypertension service, the child adolescent service or the NCD advanced care service, by the other answers.",
+                "**ⓘ in production:** none."
+              ]
+            },
+            {
+              "id": "assessment__new_concern",
+              "label": "New clinical concern",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "0a248287-6efd-5ea0-ba3a-867711e82c16",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__assessment__new_concern",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`review_htn_assessment`)",
+                "**Required:** yes. A rule needs the answer to decide. \"Not known\" is allowed: the protocol then asks for it later.",
+                "**Shows:** always.",
+                "**How the rules use it:** one answer alone can end this step: the rule ends this pathway (\"Individual care handover requested\") and hands the patient over to the maternal hypertension service, the child adolescent service or the NCD advanced care service, by the other answers.",
+                "**ⓘ in production:** none."
+              ]
+            },
+            {
+              "id": "assessment__adverse_effects",
+              "label": "Adverse effects of medicines",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "35c64bc2-679c-5022-9b98-5fef67bf6735",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__assessment__adverse_effects",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`review_htn_assessment`)",
+                "**Required:** yes. A rule needs the answer to decide. \"Not known\" is allowed: the protocol then asks for it later.",
+                "**Shows:** always.",
+                "**How the rules use it:** one answer alone can end this step: the rule ends this pathway (\"Individual care handover requested\") and hands the patient over to the maternal hypertension service, the child adolescent service or the NCD advanced care service, by the other answers.",
+                "**ⓘ in production:** none."
+              ]
+            },
+            {
+              "id": "assessment__specialist_required",
+              "label": "Specialist care required",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "94faed82-a865-59ec-9397-ca6ae4723c53",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__assessment__specialist_required",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`review_htn_assessment`)",
+                "**Required:** yes. A rule needs the answer to decide. \"Not known\" is allowed: the protocol then asks for it later.",
+                "**Shows:** always.",
+                "**How the rules use it:** one answer alone can end this step: the rule ends this pathway (\"Individual care handover requested\") and hands the patient over to the maternal hypertension service, the child adolescent service or the NCD advanced care service, by the other answers.",
+                "**ⓘ in production:** none."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Conditions that change the medicines",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "review__section__3",
+              "label": "Why these questions",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Why these questions are together.** One answer here can end this step: the rule ends this pathway (\"Comorbid regimen handover requested\") and hands the patient over to the NCD advanced care service (stop row `comorbid_regimen_source_limit`). So these questions come first.",
+                "**Heading** \"Conditions that change the medicines\": agent's choice, review pending. B1: diabetes or CKD hands the patient over for a condition-specific regimen (stop row comorbid_regimen_source_limit). Heading proposed in the form design research, 4.2."
+              ]
+            },
+            {
+              "id": "assessment__diabetes",
+              "label": "Diabetes",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "25fb5acd-b0c4-555f-9c21-7641fa6215d4",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__assessment__diabetes",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`review_htn_assessment`)",
+                "**Required:** yes. A rule needs the answer to decide. \"Not known\" is allowed: the protocol then asks for it later.",
+                "**Shows:** always.",
+                "**How the rules use it:** one answer alone can end this step: the rule ends this pathway (\"Comorbid regimen handover requested\") and hands the patient over to the NCD advanced care service.",
+                "**ⓘ in production:** none."
+              ]
+            },
+            {
+              "id": "assessment__ckd",
+              "label": "Chronic kidney disease",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "fe7c4653-7124-51fe-a457-a340af6a7c1d",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__assessment__ckd",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`review_htn_assessment`)",
+                "**Required:** yes. A rule needs the answer to decide. \"Not known\" is allowed: the protocol then asks for it later.",
+                "**Shows:** always.",
+                "**How the rules use it:** one answer alone can end this step: the rule ends this pathway (\"Comorbid regimen handover requested\") and hands the patient over to the NCD advanced care service.",
+                "**ⓘ in production:** none."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Diagnosis",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "review__section__4",
+              "label": "Why these questions",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Why these questions are together.** One answer here can end this step: the rule ends this pathway (\"Diagnostic handover requested\") and hands the patient over to the NCD diagnostic service (stop row `diagnosis_not_confirmed_handover`). So these questions come first.",
+                "**Heading** \"Diagnosis\": agent's choice, review pending. B1: an unconfirmed diagnosis hands the patient over for diagnostic assessment (stop row diagnosis_not_confirmed_handover)."
+              ]
+            },
+            {
+              "id": "assessment__confirmed_htn",
+              "label": "Hypertension confirmed",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "f1326165-4f1d-5a9b-a291-610f53d519db",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__assessment__confirmed_htn",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`review_htn_assessment`)",
+                "**Required:** yes. A rule needs the answer to decide. \"Not known\" is allowed: the protocol then asks for it later.",
+                "**Shows:** always.",
+                "**How the rules use it:** one answer alone can end this step: the rule ends this pathway (\"Diagnostic handover requested\") and hands the patient over to the NCD diagnostic service.",
+                "**ⓘ in production:** none."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Review checklist",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "review__section__5",
+              "label": "Why these questions",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Why these questions are together.** The other answers of this step. They keep the order of the protocol, except that a question that shows after an answer follows that answer, and questions whose answer changes nothing, and free text, go last.",
+                "**Heading** \"Review checklist\": agent's choice, review pending. B1: the questions that the main path reads together before the prescription decision; the four review items must be yes. Heading proposed in the form design research, 4.2."
+              ]
+            },
+            {
+              "id": "assessment__renal_reviewed",
+              "label": "Renal function reviewed",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "9679ddd9-a72c-5170-864f-1c8f3d27835a",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__assessment__renal_reviewed",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`review_htn_assessment`)",
+                "**Required:** yes. A rule needs the answer to decide. \"Not known\" is allowed: the protocol then asks for it later.",
+                "**Shows:** always.",
+                "**How the rules use it:** the answer must hold together with the other answers that the rule reads.",
+                "**ⓘ in production:** none."
+              ]
+            },
+            {
+              "id": "assessment__contraindications_reviewed",
+              "label": "Contraindications reviewed",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "850ae865-8189-5b14-baad-c836b71383b1",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__assessment__contraindications_reviewed",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`review_htn_assessment`)",
+                "**Required:** yes. A rule needs the answer to decide. \"Not known\" is allowed: the protocol then asks for it later.",
+                "**Shows:** always.",
+                "**How the rules use it:** the answer must hold together with the other answers that the rule reads.",
+                "**ⓘ in production:** none."
+              ]
+            },
+            {
+              "id": "assessment__medication_reviewed",
+              "label": "Current medicines reviewed",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "eff17080-fe09-55b6-bfa6-d4cfb62e1888",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__assessment__medication_reviewed",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`review_htn_assessment`)",
+                "**Required:** yes. A rule needs the answer to decide. \"Not known\" is allowed: the protocol then asks for it later.",
+                "**Shows:** always.",
+                "**How the rules use it:** the answer must hold together with the other answers that the rule reads.",
+                "**ⓘ in production:** none."
+              ]
+            },
+            {
+              "id": "assessment__adherence_reviewed",
+              "label": "Adherence reviewed",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "bfbca7d2-9a06-56ab-b6ce-5be179fa1cca",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__assessment__adherence_reviewed",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`review_htn_assessment`)",
+                "**Required:** yes. A rule needs the answer to decide. \"Not known\" is allowed: the protocol then asks for it later.",
+                "**Shows:** always.",
+                "**How the rules use it:** the answer must hold together with the other answers that the rule reads.",
+                "**ⓘ in production:** none."
+              ]
+            },
+            {
+              "id": "assessment__target_tolerated",
+              "label": "Patient tolerates the BP target",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "2b7f9834-f258-5257-a7c7-311641d1315b",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              },
+              "questionInfo": "Asked here because the prescription step uses it. A dose above the usual range is allowed only when this is yes (RBCNCD24 PDF p.27)."
+            },
+            {
+              "id": "review__assessment__target_tolerated",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`review_htn_assessment`); a later step: \"Make the hypertension prescription decision\" (`authorize_htn_prescription`), \"Make the first hypertension prescription decision\" (`authorize_htn_first_prescription`)",
+                "**Required:** yes. A rule needs the answer to decide. \"Not known\" is allowed: the protocol then asks for it later.",
+                "**Shows:** always.",
+                "**How the rules use it:** every rule here accepts any answer; the rule only needs an answer. A later step uses the answer.",
+                "**ⓘ in production:** \"Asked here because the prescription step uses it. A dose above the usual range is allowed only when this is yes (RBCNCD24 PDF p.27).\" (agent's choice, review pending)."
+              ]
+            },
+            {
+              "id": "assessment__current_regimen",
+              "label": "Current antihypertensive regimen",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "964c606d-ffc9-53f1-abb6-a6d59cdbd5ad",
+                "answers": [
+                  {
+                    "concept": "e8832494-4adf-5be0-bc26-50e407af4356",
+                    "label": "Use the current prescription shown above"
+                  },
+                  {
+                    "concept": "120faafb-a3b1-5397-b9a6-c20cda558e0b",
+                    "label": "I confirm that this patient takes no antihypertensive medicine"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              },
+              "questionInfo": "Choose the current prescription shown above, or confirm that this patient takes no antihypertensive medicine. Your confirmation records you and this encounter date as the evidence for the first prescription."
+            },
+            {
+              "id": "review__assessment__current_regimen",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`review_htn_assessment`)",
+                "**Required:** yes. A rule needs the answer to decide. \"Not known\" is allowed: the protocol then asks for it later.",
+                "**Shows:** always.",
+                "**ⓘ in production:** \"Choose the current prescription shown above, or confirm that this patient takes no antihypertensive medicine. Your confirmation records you and this encounter date as the evidence for the first prescription.\" (agent's choice, review pending)."
+              ]
+            },
+            {
+              "id": "assessment__cad",
+              "label": "Coronary artery disease",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "42219279-330a-5c1b-9fa1-05e9130a0dc8",
+                "answers": [
+                  {
+                    "concept": "CIEL:1065",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "CIEL:1066",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "CIEL:1067",
+                    "label": "Not known"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__assessment__cad",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** the rules that run when this step is saved (`review_htn_assessment`)",
+                "**Required:** yes. A rule needs the answer to decide. \"Not known\" is allowed: the protocol then asks for it later.",
+                "**Shows:** always.",
+                "**How the rules use it:** every rule here accepts any answer; the rule only needs an answer.",
+                "**ⓘ in production:** none.",
+                "**For the protocol author:** \"Coronary artery disease\" (assessment.cad) must be answered, but every rule accepts any answer and no later step reads it. The form keeps it, because the rule cannot run without an answer."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

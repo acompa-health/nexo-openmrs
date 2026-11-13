@@ -1,0 +1,77 @@
+@use '@carbon/layout';
+@use '@carbon/type';
+@use '@openmrs/esm-styleguide/src/vars' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: layout.$spacing-04;
+}
+
+.context {
+  background-color: $ui-01;
+  border-left: 4px solid $interactive-01;
+  padding: layout.$spacing-05;
+  margin: layout.$spacing-05 layout.$spacing-05 0;
+}
+
+.kicker {
+  @include type.type-style('label-01');
+  color: $text-02;
+}
+
+.title {
+  @include type.type-style('heading-compact-02');
+  margin: layout.$spacing-02 0 layout.$spacing-03;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: layout.$spacing-02;
+}
+
+.subhead {
+  @include type.type-style('label-01');
+  color: $text-02;
+  margin-top: layout.$spacing-04;
+  margin-bottom: layout.$spacing-02;
+}
+
+.contextList {
+  display: grid;
+  grid-template-columns: fit-content(40%) minmax(0, 1fr);
+  column-gap: layout.$spacing-05;
+  row-gap: layout.$spacing-02;
+  @include type.type-style('body-compact-01');
+
+  dt {
+    color: $text-02;
+  }
+}
+
+.note {
+  @include type.type-style('body-compact-01');
+  color: $text-02;
+  margin-top: layout.$spacing-04;
+}
+
+.prefilled {
+  @include type.type-style('body-compact-01');
+  list-style: none;
+
+  li {
+    padding: layout.$spacing-01 0;
+  }
+}
+
+.status {
+  max-inline-size: none;
+  inline-size: auto;
+  margin: 0 layout.$spacing-05;
+}
+
+// Carbon's fixed time input clips the native time control's AM/PM segment.
+.container :global(.cds--time-picker__input-field) {
+  inline-size: 10rem;
+}

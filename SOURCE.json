@@ -1,0 +1,9 @@
+{
+ "repository": "acompa-health/abrazos-v2",
+ "commit": "6356db6b18fc57bfaf17c20c02f16a978d84da4f",
+ "date": "2026-11-13",
+ "files": {
+  "openmrs": 179,
+  "outside": 40
+ }
+}

@@ -1,0 +1,148 @@
+{
+  "name": "Nexo: Update blood-pressure reading",
+  "uuid": "9af46791-a2d9-3547-8240-7268e46da13f",
+  "version": "1",
+  "description": "Review build: shows why each question is asked. A new revision of this blood-pressure reading. The protocol reads the fields it named as missing. Nexo rwanda.htn_screening_assessment_2024 1.0 (sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca).",
+  "encounterType": "1efd4deb-b8d1-586f-a5df-84386d2d7b73",
+  "encounter": "Nexo Update blood-pressure reading",
+  "processor": "EncounterFormProcessor",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Update blood-pressure reading",
+      "sections": [
+        {
+          "label": "About this step",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "nexo_context",
+              "label": "About this step",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Update blood-pressure reading**",
+                "What the protocol needs: A new revision of this blood-pressure reading. The protocol reads the fields it named as missing.",
+                "Generated from Nexo. Draft for clinical review, not for care.",
+                "**Review build.** Each section and question shows why it is there. Production shows only the ⓘ."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Blood-pressure reading",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "review__section__1",
+              "label": "Why these questions",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Why these questions are together.** The other answers of this step. They keep the order of the protocol, except that a question that shows after an answer follows that answer, and questions whose answer changes nothing, and free text, go last.",
+                "**Heading** \"Blood-pressure reading\": the name of the record or task. No person chose it."
+              ]
+            },
+            {
+              "id": "observation__systolic",
+              "label": "Systolic BP (mmHg)",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "CIEL:5085",
+                "min": "0"
+              },
+              "hideSteppers": true
+            },
+            {
+              "id": "review__observation__systolic",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** a later step: `categorize_screening`, `route_first_visit`, \"Collect the named missing information\" (`resume_screening_reading`), `select_fig9_band`, \"Assess hypertension and reconcile current medicines\" (`review_htn_assessment`), \"Make the hypertension prescription decision\" (`authorize_htn_prescription`), \"Make the first hypertension prescription decision\" (`authorize_htn_first_prescription`)",
+                "**Required:** when the protocol names it as missing.",
+                "**Shows:** always.",
+                "**ⓘ in production:** none."
+              ]
+            },
+            {
+              "id": "observation__diastolic",
+              "label": "Diastolic BP (mmHg)",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "CIEL:5086",
+                "min": "0"
+              },
+              "hideSteppers": true
+            },
+            {
+              "id": "review__observation__diastolic",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** a later step: `categorize_screening`, `route_first_visit`, \"Collect the named missing information\" (`resume_screening_reading`), `select_fig9_band`, \"Assess hypertension and reconcile current medicines\" (`review_htn_assessment`), \"Make the hypertension prescription decision\" (`authorize_htn_prescription`), \"Make the first hypertension prescription decision\" (`authorize_htn_first_prescription`)",
+                "**Required:** when the protocol names it as missing.",
+                "**Shows:** always.",
+                "**ⓘ in production:** none."
+              ]
+            },
+            {
+              "id": "observation__setting",
+              "label": "Where was BP measured",
+              "type": "obs",
+              "required": true,
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "dbade085-4113-5dac-bc64-fd3bdd5ed476",
+                "answers": [
+                  {
+                    "concept": "bc59db88-d16e-5fc5-9905-d9b8c3a2afca",
+                    "label": "Office or clinic"
+                  },
+                  {
+                    "concept": "c0770136-933c-592a-9c4d-eb8818bc2e50",
+                    "label": "Home"
+                  },
+                  {
+                    "concept": "77d83b25-e9ce-5bb3-bd9f-ee7e25d700db",
+                    "label": "Ambulatory (24 h)"
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "id": "review__observation__setting",
+              "label": "Why this question",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Used by:** a later step: `categorize_screening`, \"Collect the named missing information\" (`resume_screening_reading`), \"Assess hypertension and reconcile current medicines\" (`review_htn_assessment`)",
+                "**Required:** when the protocol names it as missing.",
+                "**Shows:** always.",
+                "**ⓘ in production:** none."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "$comment": "Layout decisions for the generated forms. The compiler derives each section, order and control from the rule tables (docs/form-design.md). This file holds only the decisions that differ from that default: section headings (groups) and, for a question named by its Nexo path (fields), the clinician ⓘ text (info), the control (radio or dropdown) and the radio orientation. Each entry gives its reason, who decided (agent or Kuang) and its status (review pending or accepted). It never sets required, never hides a question and never changes a rule. Section IDs are the stop rows and object paths that the report lists. Clinical wording needs clinician sign-off before production.",
+  "htn_clinical_review": {
+    "groups": {
+      "urgent_assessment_source_limit": {
+        "label": "Danger signs",
+        "reason": "B1: one answer here sends the patient to urgent assessment (stop row urgent_assessment_source_limit). Heading proposed in the form design research, 4.2.",
+        "decidedBy": "agent",
+        "status": "review pending"
+      },
+      "excluded_care_source_limit": {
+        "label": "Reasons for other care",
+        "reason": "B1: one answer here hands the patient over for individual care (stop row excluded_care_source_limit). Heading proposed in the form design research, 4.2.",
+        "decidedBy": "agent",
+        "status": "review pending"
+      },
+      "comorbid_regimen_source_limit": {
+        "label": "Conditions that change the medicines",
+        "reason": "B1: diabetes or CKD hands the patient over for a condition-specific regimen (stop row comorbid_regimen_source_limit). Heading proposed in the form design research, 4.2.",
+        "decidedBy": "agent",
+        "status": "review pending"
+      },
+      "diagnosis_not_confirmed_handover": {
+        "label": "Diagnosis",
+        "reason": "B1: an unconfirmed diagnosis hands the patient over for diagnostic assessment (stop row diagnosis_not_confirmed_handover).",
+        "decidedBy": "agent",
+        "status": "review pending"
+      },
+      "assessment": {
+        "label": "Review checklist",
+        "reason": "B1: the questions that the main path reads together before the prescription decision; the four review items must be yes. Heading proposed in the form design research, 4.2.",
+        "decidedBy": "agent",
+        "status": "review pending"
+      }
+    },
+    "fields": {
+      "assessment.target_tolerated": {
+        "info": "Asked here because the prescription step uses it. A dose above the usual range is allowed only when this is yes (RBCNCD24 PDF p.27).",
+        "reason": "D3 (2): no rule of this step changes on the answer, but the prescription step reads it (authorize_htn_prescription, row regimen_change_source_limit). A clinician may ask why it is asked now. Clinical wording needs sign-off.",
+        "decidedBy": "agent",
+        "status": "review pending"
+      },
+      "assessment.current_regimen": {
+        "info": "Choose the current prescription shown above, or confirm that this patient takes no antihypertensive medicine. Your confirmation records you and this encounter date as the evidence for the first prescription.",
+        "reason": "The shared facility SOP requires one current-regimen reference (PR#202). Explain the explicit dated attestation and the prescription source without changing the care rules.",
+        "decidedBy": "agent",
+        "status": "review pending"
+      }
+    }
+  },
+  "htn_prescription_review": {
+    "groups": {
+      "refer_for_individual_plan": {
+        "label": "Prescribe or refer",
+        "reason": "B1, A2: the decision comes before the details. \"Refer\" alone ends this step (stop row refer_for_individual_plan).",
+        "decidedBy": "agent",
+        "status": "review pending"
+      },
+      "decision": {
+        "label": "Prescription",
+        "reason": "B1: the medicine, dose, potassium and validity that the prescribing rows read, then the reason.",
+        "decidedBy": "agent",
+        "status": "review pending"
+      }
+    },
+    "fields": {
+      "potassium_result.potassium": {
+        "info": "Asked because enalapril and lisinopril need a potassium result for this patient (RBCNCD24 PDF p.27, Fig. 9).",
+        "reason": "D3 (1): the question shows only after an ACE inhibitor is chosen, so a clinician may ask why it appeared. Text from the task evidence (\"ACE inhibitors require a patient-correlated potassium result\") and evidence interp_p27_n5_potassium. Clinical wording needs sign-off.",
+        "decidedBy": "agent",
+        "status": "review pending"
+      },
+      "second_dose": {
+        "info": "none",
+        "reason": "D3: it shows only after a second medicine is chosen, which a clinician expects. An ⓘ would add nothing.",
+        "decidedBy": "agent",
+        "status": "review pending"
+      }
+    }
+  },
+  "htn_dispense": {
+    "groups": {
+      "supply_unavailable": {
+        "label": "Stock and packing",
+        "reason": "B1, A4: a \"no\" to either question sends the supply to recovery (stop row supply_unavailable), so they come first.",
+        "decidedBy": "agent",
+        "status": "review pending"
+      },
+      "supply": {
+        "label": "Medicines dispensed",
+        "reason": "B1: what the pharmacy gave and until when, checked against the prescription.",
+        "decidedBy": "agent",
+        "status": "review pending"
+      }
+    }
+  },
+  "htn_first_prescription_review": {
+    "groups": {
+      "refer_for_individual_plan": {
+        "label": "Prescribe or refer",
+        "reason": "B1, A2: the decision comes before the details. \"Refer\" alone ends this step (stop row refer_for_individual_plan).",
+        "decidedBy": "agent",
+        "status": "review pending"
+      },
+      "decision": {
+        "label": "Prescription",
+        "reason": "B1: the medicine, dose, potassium and validity that the prescribing rows read, then the reason.",
+        "decidedBy": "agent",
+        "status": "review pending"
+      }
+    },
+    "fields": {
+      "potassium_result.potassium": {
+        "info": "Asked because enalapril and lisinopril need a potassium result for this patient (RBCNCD24 PDF p.27, Fig. 9).",
+        "reason": "D3 (1): the question shows only after an ACE inhibitor is chosen, so a clinician may ask why it appeared. Text from the task evidence (\"ACE inhibitors require a patient-correlated potassium result\") and evidence interp_p27_n5_potassium. Clinical wording needs sign-off.",
+        "decidedBy": "agent",
+        "status": "review pending"
+      },
+      "second_dose": {
+        "info": "none",
+        "reason": "D3: it shows only after a second medicine is chosen, which a clinician expects. An ⓘ would add nothing.",
+        "decidedBy": "agent",
+        "status": "review pending"
+      }
+    }
+  }
+}

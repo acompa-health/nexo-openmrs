@@ -1,0 +1,57 @@
+{
+  "name": "Nexo: Update no current antihypertensive attestation",
+  "uuid": "a6f48d7e-4b5d-3c4a-847f-48dd355ec286",
+  "version": "1",
+  "description": "Review build: shows why each question is asked. A new revision of this no current antihypertensive attestation. The protocol reads the fields it named as missing. Nexo rwanda.htn_screening_assessment_2024 1.0 (sha256:7b277361f58cd538b356654dce56db47ca3e6439d954aa75cd4f60f4cbb648ca).",
+  "encounterType": "b66b86cf-b3dc-5c53-8fa8-8b8873471944",
+  "encounter": "Nexo Update no current antihypertensive attestat…",
+  "processor": "EncounterFormProcessor",
+  "published": true,
+  "retired": false,
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Update no current antihypertensive attestation",
+      "sections": [
+        {
+          "label": "About this step",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "nexo_context",
+              "label": "About this step",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Update no current antihypertensive attestation**",
+                "What the protocol needs: A new revision of this no current antihypertensive attestation. The protocol reads the fields it named as missing.",
+                "Generated from Nexo. Draft for clinical review, not for care.",
+                "**Review build.** Each section and question shows why it is there. Production shows only the ⓘ."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "No current antihypertensive attestation",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "id": "review__section__1",
+              "label": "Why these questions",
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "value": [
+                "**Why these questions are together.** The other answers of this step. They keep the order of the protocol, except that a question that shows after an answer follows that answer, and questions whose answer changes nothing, and free text, go last.",
+                "**Heading** \"No current antihypertensive attestation\": the name of the record or task. No person chose it."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

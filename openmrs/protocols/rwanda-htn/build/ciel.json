@@ -1,0 +1,139 @@
+{
+ "version": "v2026-09-24",
+ "concepts": [
+  {
+   "uuid": "5085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+   "code": "5085",
+   "name": "Systolic blood pressure",
+   "datatype": "Numeric",
+   "conceptClass": "Finding",
+   "units": "mmHg",
+   "used_as": "observation.systolic"
+  },
+  {
+   "uuid": "5086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+   "code": "5086",
+   "name": "Diastolic blood pressure",
+   "datatype": "Numeric",
+   "conceptClass": "Finding",
+   "units": "mmHg",
+   "used_as": "observation.diastolic"
+  },
+  {
+   "uuid": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+   "code": "1065",
+   "name": "Yes",
+   "datatype": "N/A",
+   "conceptClass": "Misc",
+   "used_as": "value:yes"
+  },
+  {
+   "uuid": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+   "code": "1066",
+   "name": "No",
+   "datatype": "N/A",
+   "conceptClass": "Misc",
+   "used_as": "value:no"
+  },
+  {
+   "uuid": "5272AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+   "code": "5272",
+   "name": "Pregnancy status",
+   "datatype": "Coded",
+   "conceptClass": "Question",
+   "used_as": "encounter.pregnant"
+  },
+  {
+   "uuid": "1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+   "code": "1067",
+   "name": "Unknown",
+   "datatype": "N/A",
+   "conceptClass": "Misc",
+   "used_as": "value:not_known"
+  },
+  {
+   "uuid": "117399AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+   "code": "117399",
+   "name": "Hypertension",
+   "datatype": "N/A",
+   "conceptClass": "Diagnosis",
+   "used_as": "value:hypertension"
+  },
+  {
+   "uuid": "71137AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+   "code": "71137",
+   "name": "Amlodipine",
+   "datatype": "N/A",
+   "conceptClass": "Drug",
+   "used_as": "value:amlodipine"
+  },
+  {
+   "uuid": "77696AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+   "code": "77696",
+   "name": "Hydrochlorothiazide",
+   "datatype": "N/A",
+   "conceptClass": "Drug",
+   "used_as": "value:hydrochlorothiazide"
+  },
+  {
+   "uuid": "77985AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+   "code": "77985",
+   "name": "Indapamide",
+   "datatype": "N/A",
+   "conceptClass": "Drug",
+   "used_as": "value:indapamide_sr"
+  },
+  {
+   "uuid": "75633AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+   "code": "75633",
+   "name": "Enalapril",
+   "datatype": "N/A",
+   "conceptClass": "Drug",
+   "used_as": "value:enalapril"
+  },
+  {
+   "uuid": "78945AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+   "code": "78945",
+   "name": "Lisinopril",
+   "datatype": "N/A",
+   "conceptClass": "Drug",
+   "used_as": "value:lisinopril"
+  },
+  {
+   "uuid": "1133AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+   "code": "1133",
+   "name": "Serum potassium",
+   "datatype": "Numeric",
+   "conceptClass": "Test",
+   "units": "mmol/L",
+   "used_as": "laboratory_result.potassium"
+  },
+  {
+   "uuid": "5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+   "code": "5089",
+   "name": "Weight (kg)",
+   "datatype": "Numeric",
+   "conceptClass": "Finding",
+   "units": "kg",
+   "used_as": "event_measurement_recorded.extra.weight"
+  },
+  {
+   "uuid": "5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+   "code": "5090",
+   "name": "Height (cm)",
+   "datatype": "Numeric",
+   "conceptClass": "Finding",
+   "units": "cm",
+   "used_as": "event_measurement_recorded.extra.height"
+  },
+  {
+   "uuid": "163080AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+   "code": "163080",
+   "name": "Waist circumference (cm)",
+   "datatype": "Numeric",
+   "conceptClass": "Finding",
+   "units": "cm",
+   "used_as": "event_measurement_recorded.extra.waist"
+  }
+ ]
+}
